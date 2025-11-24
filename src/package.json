@@ -1,0 +1,66 @@
+{
+  "name": "openli-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page premium pour Openli - Solution d'accès hôtelier via Apple/Google Wallet",
+  "author": {
+    "name": "Samuel Chetrit",
+    "email": "sam.grailled@gmail.com",
+    "url": "https://www.linkedin.com/in/samuel-chetrit/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuel-chetrit/openli-landing"
+  },
+  "keywords": [
+    "hotel",
+    "keyless",
+    "apple-wallet",
+    "google-wallet",
+    "nextjs",
+    "landing-page",
+    "hospitality",
+    "digital-key"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "type-check": "tsc --noEmit",
+    "convert": "node scripts/convert-to-nextjs.js",
+    "setup": "node scripts/convert-to-nextjs.js && npm install",
+    "deploy-ready": "npm run format && npm run lint && npm run build",
+    "test:build": "npm run build && npm start",
+    "clean": "rm -rf .next node_modules",
+    "reinstall": "npm run clean && npm install",
+    "preview": "npm run build && npm start"
+  },
+  "dependencies": {
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "motion": "^10.18.0",
+    "lucide-react": "^0.394.0",
+    "tailwindcss": "^4.0.0",
+    "sonner": "^1.5.0",
+    "react-hook-form": "^7.55.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "prettier": "^3.1.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  }
+}

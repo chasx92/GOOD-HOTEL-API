@@ -1,0 +1,81 @@
+{
+  "name": "Keylessly - Clés Digitales Hôtel",
+  "short_name": "Keylessly",
+  "description": "Solution premium de clés digitales Apple & Google Wallet pour hôtels de luxe",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#C3A36E",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "business",
+    "hospitality",
+    "productivity"
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.jpg",
+      "sizes": "390x844",
+      "type": "image/jpeg",
+      "platform": "narrow",
+      "label": "Interface mobile Keylessly"
+    },
+    {
+      "src": "/screenshot-desktop.jpg",
+      "sizes": "1440x900",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Dashboard Keylessly"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Demander une démo",
+      "short_name": "Démo",
+      "description": "Demander une démonstration personnalisée",
+      "url": "/#form",
+      "icons": [
+        {
+          "src": "/shortcut-demo.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "FAQ",
+      "short_name": "Questions",
+      "description": "Questions fréquentes",
+      "url": "/#faq",
+      "icons": [
+        {
+          "src": "/shortcut-faq.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

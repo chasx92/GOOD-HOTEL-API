@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === PERFORMANCE OPTIMIZATIONS === */
+:root {
+  /* Enable GPU acceleration for transforms */
+  --gpu-acceleration: translateZ(0);
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  --font-size: 16px;
+  
+  /* iOS-inspired Colors */
+  --ios-background: #F2F2F7;
+  --ios-surface: #FFFFFF;
+  --ios-label: #000000;
+  --ios-secondary-label: #3C3C43;
+  --ios-tertiary-label: #3C3C4399;
+  --ios-separator: #3C3C4349;
+  --ios-blue: #007AFF;
+  --ios-green: #34C759;
+  --ios-red: #FF3B30;
+  
+  /* Openli Brand Colors */
+  --ink: #1C1C1E;
+  --ivory: #F7F4EE;
+  --nocturne: #0E1B2B;
+  --champagne: #C3A36E;
+  --slate: #8E8E93;
+  --slate-dark: #7A7A7E;
+  --accent-nfc: #007AFF;
+  --accent-nfc-dark: #005FC4;
+  --accent-nfc-light: #4DA3FF;
+  --success: #34C759;
+  
+  /* Polished Spacing System (4px base) */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-14: 56px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-32: 128px;
+  
+  /* Polished Transition System */
+  --transition-fast: 150ms;
+  --transition-base: 250ms;
+  --transition-slow: 350ms;
+  --transition-slower: 500ms;
+  --easing-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --easing-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --easing-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --easing-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  
+  /* Premium Design System */
+  --radius-card: 12px;
+  --radius-button: 16px;
+  --radius-hero: 24px;
+  
+  /* Shadow System - iOS Premium */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 24px 80px rgba(0, 0, 0, 0.16), 0 8px 32px rgba(0, 0, 0, 0.12);
+  
+  /* Gold Shadow System */
+  --shadow-gold-sm: 0 2px 8px rgba(195, 163, 110, 0.15), 0 1px 2px rgba(195, 163, 110, 0.1);
+  --shadow-gold-md: 0 4px 16px rgba(195, 163, 110, 0.2), 0 2px 4px rgba(195, 163, 110, 0.12);
+  --shadow-gold-lg: 0 8px 32px rgba(195, 163, 110, 0.25), 0 2px 8px rgba(195, 163, 110, 0.15);
+  
+  /* Blue Shadow System */
+  --shadow-blue-sm: 0 2px 8px rgba(0, 122, 255, 0.12), 0 1px 2px rgba(0, 122, 255, 0.08);
+  --shadow-blue-md: 0 4px 16px rgba(0, 122, 255, 0.18), 0 2px 4px rgba(0, 122, 255, 0.1);
+  --shadow-blue-lg: 0 8px 32px rgba(0, 122, 255, 0.22), 0 2px 8px rgba(0, 122, 255, 0.12);
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    background: #F2F2F7;
+    overflow-x: hidden;
+    color: #1C1C1E;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+/* Premium Noise Texture Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: overlay;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Accessibility: Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: initial;
+  margin: initial;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Polished Utilities */
+.smooth-transition {
+  transition-timing-function: var(--easing-smooth);
+  transition-duration: var(--transition-base);
+}
+
+.smooth-transition-fast {
+  transition-timing-function: var(--easing-smooth);
+  transition-duration: var(--transition-fast);
+}
+
+.spring-transition {
+  transition-timing-function: var(--easing-spring);
+  transition-duration: var(--transition-base);
+}
+
+/* Improved text readability */
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}

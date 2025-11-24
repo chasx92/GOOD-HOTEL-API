@@ -1,0 +1,53 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { LanguageProvider } from '@/contexts/LanguageContext'
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+export const metadata: Metadata = {
+  title: 'Openli - Clé d\'hôtel dans Apple & Google Wallet',
+  description: 'La clé est déjà dans le téléphone de vos clients. Solution d\'accès mobile premium pour hôtels 5 étoiles.',
+  keywords: 'openli, keylessly, clé mobile, apple wallet, google wallet, hôtel, accès mobile, NFC',
+  authors: [{ name: 'Openli' }],
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
+  themeColor: '#C3A36E',
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    alternateLocale: 'en_US',
+    title: 'Openli - Clé d\'hôtel dans Apple & Google Wallet',
+    description: 'La clé est déjà dans le téléphone de vos clients.',
+    siteName: 'Openli',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Openli - Clé d\'hôtel dans Apple & Google Wallet',
+    description: 'La clé est déjà dans le téléphone de vos clients.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="fr" className={inter.variable}>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
+    </html>
+  )
+}

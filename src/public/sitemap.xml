@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Page d'accueil / Landing Page -->
+  <url>
+    <loc>https://keylessly.com/</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://keylessly.com/og-image.jpg</image:loc>
+      <image:title>Keylessly - Clé digitale Apple Wallet</image:title>
+      <image:caption>Interface de clé d'hôtel dans Apple Wallet sur iPhone 15 Pro</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Section Comment ça marche -->
+  <url>
+    <loc>https://keylessly.com/#steps</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section Sécurité -->
+  <url>
+    <loc>https://keylessly.com/#security</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section Bénéfices -->
+  <url>
+    <loc>https://keylessly.com/#benefits</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Section Tarification -->
+  <url>
+    <loc>https://keylessly.com/#pricing</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Section FAQ -->
+  <url>
+    <loc>https://keylessly.com/#faq</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section Contact / Démo -->
+  <url>
+    <loc>https://keylessly.com/#form</loc>
+    <lastmod>2024-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 
+  Pages futures à ajouter au sitemap :
+  - /blog
+  - /documentation
+  - /integrations
+  - /case-studies
+  - /pricing
+  - /contact
+  -->
+
+</urlset>

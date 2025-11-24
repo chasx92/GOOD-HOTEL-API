@@ -1,0 +1,35 @@
+# robots.txt pour Keylessly
+# Généré le 13 novembre 2024
+
+# Permettre tous les robots d'exploration
+User-agent: *
+Allow: /
+
+# Désactiver l'exploration de chemins administratifs (si futurs)
+Disallow: /admin/
+Disallow: /api/private/
+Disallow: /*.json$
+
+# Crawler-specific rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Bad bots (si besoin de bloquer)
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://keylessly.com/sitemap.xml
+
+# Informations additionnelles
+# Site: https://keylessly.com
+# Email: contact@keylessly.com
