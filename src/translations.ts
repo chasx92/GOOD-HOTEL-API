@@ -271,7 +271,7 @@ export const translations: Record<Language, Translations> = {
     },
 
     steps: {
-      title: 'Simple. Rapide. Sans friction.',
+      title: 'Clés digitales. Simplicité. Efficacité',
       subtitle: 'Trois étapes pour une expérience d\'arrivée révolutionnaire',
       step1: {
         title: 'Réservation confirmée',
@@ -555,7 +555,7 @@ export const translations: Record<Language, Translations> = {
     },
 
     steps: {
-      title: 'Simple. Fast. Frictionless.',
+      title: 'Digital Keys. Simplicity. Efficiency',
       subtitle: 'Three steps to a revolutionary arrival experience',
       step1: {
         title: 'Booking confirmed',
