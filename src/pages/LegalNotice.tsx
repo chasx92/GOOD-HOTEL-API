@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { LegalNavbar } from '../components/LegalNavbar';
-import { Footer } from '../components/Footer';
 
 export function LegalNotice() {
     return (
@@ -109,7 +108,6 @@ export function LegalNotice() {
                     </motion.div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

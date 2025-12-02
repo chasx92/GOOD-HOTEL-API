@@ -8,6 +8,7 @@ import { SmoothScroll } from './components/SmoothScroll';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { Home } from './pages/Home';
 import { LegalNotice } from './pages/LegalNotice';
+import { TermsOfSales } from './pages/TermsOfSales';
 
 function AppContent() {
   const { language } = useLanguage();
@@ -41,6 +42,7 @@ function AppContent() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/legal" element={<LegalNotice />} />
+            <Route path="/terms" element={<TermsOfSales />} />
           </Routes>
         </main>
 

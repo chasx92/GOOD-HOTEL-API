@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { LegalNavbar } from '../components/LegalNavbar';
-import { Footer } from '../components/Footer';
 
 export function TermsOfSales() {
     return (
@@ -168,7 +167,6 @@ export function TermsOfSales() {
                     </motion.div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }
