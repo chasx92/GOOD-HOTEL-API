@@ -1,36 +1,10 @@
-import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function Footer() {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
-
-  const footerLinks = {
-    product: [
-      { label: t.footer.features, href: '#steps' },
-      { label: t.footer.pricing, href: '#pricing' },
-    ],
-    company: [
-      { label: t.footer.about, href: '#' },
-      { label: t.footer.contact, href: '#form' },
-    ],
-    legal: [
-      { label: t.footer.privacy, href: '#' },
-      { label: t.footer.terms, href: '#' },
-      { label: t.footer.methodology, href: '#' },
-    ],
-  };
-
-  const scrollToSection = (href: string) => {
-    if (href.startsWith('#')) {
-      const id = href.substring(1);
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
 
   return (
     <footer
@@ -42,13 +16,12 @@ export function Footer() {
         fontFamily: '-apple-system, SF Pro Display, sans-serif',
       }}
     >
-      <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-16 pb-8">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12">
 
-          {/* Brand Column */}
-          <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5 mb-5">
+          {/* Brand & Contact */}
+          <div>
+            <div className="flex items-center gap-2.5 mb-4">
               {/* Logo */}
               <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
                 <circle cx="14" cy="14" r="9" stroke="#C3A36E" strokeWidth="1.5" fill="none" />
@@ -59,106 +32,32 @@ export function Footer() {
               </span>
             </div>
 
-            <p className="max-w-sm text-sm leading-relaxed text-gray-600 mb-6">
-              La solution premium pour transformer votre hôtel avec des clés digitales dans Apple & Google Wallet.
-            </p>
-
-            {/* Contact Info */}
-            <div className="space-y-2.5 mb-6">
-              <a
-                href="mailto:sam.grailled@gmail.com"
-                className="flex items-center gap-2.5 text-sm text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <Mail className="w-4 h-4" aria-hidden="true" />
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-sm text-gray-600">
+              <a href="mailto:sam.grailled@gmail.com" className="hover:text-gray-900 transition-colors flex items-center gap-2">
+                <Mail className="w-4 h-4" />
                 sam.grailled@gmail.com
               </a>
-              <a
-                href="tel:+33629644854"
-                className="flex items-center gap-2.5 text-sm text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <Phone className="w-4 h-4" aria-hidden="true" />
+              <a href="tel:+33629644854" className="hover:text-gray-900 transition-colors flex items-center gap-2">
+                <Phone className="w-4 h-4" />
                 +33 6 29 64 48 54
               </a>
-              <p className="flex items-center gap-2.5 text-sm text-gray-600">
-                <MapPin className="w-4 h-4" aria-hidden="true" />
-                Paris, France
-              </p>
             </div>
+          </div>
 
-            {/* Social Links */}
-            <a
-              href="https://www.linkedin.com/in/samuel-chetrit/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Suivez-nous sur LinkedIn"
-              className="inline-flex w-9 h-9 rounded-lg items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors"
+          {/* Legal Links */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+            <Link
+              to="/legal"
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
             >
-              <Linkedin className="w-4.5 h-4.5" aria-hidden="true" />
-            </a>
-          </div>
-
-          {/* Spacer */}
-          <div className="hidden lg:block lg:col-span-2" />
-
-          {/* Links Columns */}
-          <div className="lg:col-span-2">
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-900">
-              {t.footer.product}
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.product.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(link.href);
-                    }}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-900">
-              {t.footer.company}
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => e.preventDefault()}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h4 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-900">
-              {t.footer.legal}
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => e.preventDefault()}
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+              Mentions Légales
+            </Link>
+            <button
+              onClick={() => alert("Gestion des cookies à implémenter")}
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium text-left"
+            >
+              Paramètres de cookies
+            </button>
           </div>
         </div>
 
