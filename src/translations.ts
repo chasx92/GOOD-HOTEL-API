@@ -246,7 +246,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Transformez l\'expérience d\'arrivée avec des clés Apple Wallet et Google Wallet. Sans app à télécharger, sans carte plastique, sans friction.',
       statusAvailable: 'Disponible maintenant',
       cta: 'Demander une démo',
-      ctaSecondary: 'Voir comment ça marche',
+      ctaSecondary: 'Comment ça marche',
       trustIndicator1: 'Plus de cartes perdues',
       trustIndicator2: 'Support sous 10 min',
       quickProofs: {
@@ -530,7 +530,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Transform the arrival experience with Apple Wallet and Google Wallet keys. No app to download, no plastic card, no friction.',
       statusAvailable: 'Available now',
       cta: 'Request a Demo',
-      ctaSecondary: 'See how it works',
+      ctaSecondary: 'How it works',
       trustIndicator1: 'No more lost cards',
       trustIndicator2: 'Support in 10 min',
       quickProofs: {
