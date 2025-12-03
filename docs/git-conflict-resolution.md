@@ -6,7 +6,13 @@ Si une mise à jour affiche un message comme :
 Resolving conflicts between codex/reorganiser-le-footer-pour-centrer-cgv-et-mentions-legales-b2nwir and main and committing changes
 ```
 
-utilisez la procédure suivante pour nettoyer l'arborescence et finaliser le merge :
+ou
+
+```
+Resolving conflicts between codex/centre-cgv-et-mentions-legales-sous-icones-668prl and main and committing changes
+```
+
+utilisez la procédure suivante pour nettoyer l'arborescence et finaliser le merge (en remplaçant le nom de la branche codex par le vôtre le cas échéant) :
 
 1. **Mettre à jour la branche principale**
    ```bash
@@ -17,6 +23,9 @@ utilisez la procédure suivante pour nettoyer l'arborescence et finaliser le mer
    ```bash
    git checkout codex/reorganiser-le-footer-pour-centrer-cgv-et-mentions-legales-b2nwir
    ```
+   # ...ou la branche indiquée dans le message d'erreur, par exemple :
+   git checkout codex/centre-cgv-et-mentions-legales-sous-icones-668prl
+
 3. **Fusionner main dans la branche et résoudre les conflits**
    ```bash
    git merge main
