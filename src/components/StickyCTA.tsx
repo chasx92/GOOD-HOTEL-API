@@ -51,11 +51,7 @@ export function StickyCTA() {
           <motion.button
             onClick={scrollToForm}
             aria-label={`${t.stickyCTA.button} - ${t.stickyCTA.text}`}
-            className="group relative w-full px-5 md:px-6 py-3.5 md:py-4 rounded-[14px] md:rounded-[16px] overflow-hidden shadow-2xl focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[#C3A36E] focus-visible:ring-offset-4"
-            style={{
-              background: 'linear-gradient(135deg, #B8935C 0%, #C3A36E 35%, #D4B886 70%, #E5D4A8 100%)',
-              boxShadow: '0 8px 32px rgba(195, 163, 110, 0.25), 0 4px 16px rgba(195, 163, 110, 0.15)',
-            }}
+            className="group relative w-full px-5 md:px-6 py-3.5 md:py-4 rounded-[14px] md:rounded-[16px] overflow-hidden shadow-2xl btn-gradient"
             whileTap={{ scale: 0.96 }}
           >
             <span 

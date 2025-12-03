@@ -275,12 +275,8 @@ export function Pricing() {
               onClick={() => {
                 document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="w-full px-8 py-4 rounded-[16px] relative overflow-hidden group focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[#007AFF] focus-visible:ring-offset-4"
-              style={{
-                background: 'linear-gradient(135deg, #005FC4 0%, #007AFF 50%, #4DA3FF 100%)',
-                boxShadow: '0 4px 16px rgba(0, 122, 255, 0.18), 0 2px 4px rgba(0, 122, 255, 0.1)',
-              }}
-              whileHover={{ 
+              className="w-full px-8 py-4 rounded-[16px] relative overflow-hidden group btn-gradient"
+              whileHover={{
                 scale: 1.02,
                 boxShadow: '0 8px 24px rgba(0, 122, 255, 0.25), 0 4px 8px rgba(0, 122, 255, 0.15)',
               }}

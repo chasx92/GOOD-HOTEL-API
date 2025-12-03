@@ -32,14 +32,7 @@ export function BackToTop() {
         <motion.button
           onClick={scrollToTop}
           aria-label={t.backToTop.label}
-          className="hidden md:flex fixed bottom-6 md:bottom-8 right-6 md:right-8 z-40 w-11 h-11 md:w-12 md:h-12 rounded-full items-center justify-center shadow-lg focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[#007AFF] focus-visible:ring-offset-4"
-          style={{
-            background: 'rgba(255, 255, 255, 0.95)',
-            border: '1px solid rgba(0, 0, 0, 0.08)',
-            backdropFilter: 'blur(20px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-            boxShadow: '0 4px 16px rgba(0, 122, 255, 0.12), 0 2px 4px rgba(0, 0, 0, 0.06)',
-          }}
+          className="hidden md:flex fixed bottom-6 md:bottom-8 right-6 md:right-8 z-40 w-11 h-11 md:w-12 md:h-12 rounded-full items-center justify-center btn-gradient"
           initial={{ opacity: 0, scale: 0, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0, y: 20 }}
@@ -62,9 +55,9 @@ export function BackToTop() {
               ease: "easeInOut"
             }}
           >
-            <ArrowUp 
-              className="w-4.5 md:w-5 h-4.5 md:h-5" 
-              style={{ color: '#007AFF' }}
+            <ArrowUp
+              className="w-4.5 md:w-5 h-4.5 md:h-5"
+              style={{ color: '#FFFFFF' }}
               strokeWidth={2.5}
             />
           </motion.div>

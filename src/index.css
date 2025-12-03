@@ -59,6 +59,21 @@
 }
 
 @layer components {
+  .btn-gradient {
+    @apply relative overflow-hidden text-white transition-all focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-[#007AFF] focus-visible:ring-offset-2;
+    background: linear-gradient(135deg, #005FC4 0%, #007AFF 50%, #4DA3FF 100%);
+    box-shadow: 0 4px 16px rgba(0, 122, 255, 0.18), 0 2px 4px rgba(0, 122, 255, 0.1);
+  }
+
+  .btn-gradient:hover {
+    box-shadow: 0 8px 24px rgba(0, 122, 255, 0.25), 0 4px 8px rgba(0, 122, 255, 0.15);
+    transform: translateY(-1px);
+  }
+
+  .btn-gradient:active {
+    transform: translateY(0);
+  }
+
   .glass {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px) saturate(180%);

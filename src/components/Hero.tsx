@@ -21,8 +21,8 @@ const CLASS_NAMES = {
   walletIcon: 'w-3.5 h-3.5 fill-current',
   heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight',
   subtitle: 'text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed',
-  primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg',
-  secondaryButton: 'group rounded-xl bg-gray-100 px-8 py-3.5 text-gray-900 transition-all hover:bg-gray-200',
+  primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg btn-gradient',
+  secondaryButton: 'group rounded-xl px-8 py-3.5 transition-all hover:shadow-lg btn-gradient text-white',
   trustIndicators: 'flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-600',
 } as const;
 
@@ -126,7 +126,6 @@ export function Hero({ onPrimaryClick, onSecondaryClick }: HeroProps) {
               <motion.button
                 onClick={scrollToForm}
                 className={CLASS_NAMES.primaryButton}
-                style={{ backgroundColor: HERO_STYLES.brandColor }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

@@ -121,15 +121,11 @@ export function FAQ() {
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
-                  className="w-full px-4 md:px-5 lg:px-6 py-3.5 md:py-4 lg:py-5 flex items-start justify-between gap-3 md:gap-4 text-left cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[#007AFF] focus-visible:ring-inset focus-visible:ring-offset-2"
-                  style={{
-                    background: openIndex === index ? '#FFFFFF' : 'transparent',
-                  }}
+                  className="w-full px-4 md:px-5 lg:px-6 py-3.5 md:py-4 lg:py-5 flex items-start justify-between gap-3 md:gap-4 text-left cursor-pointer transition-colors btn-gradient"
                 >
-                  <span 
-                    className="flex-1 pr-2 text-[15px] md:text-[16px]"
+                  <span
+                    className="flex-1 pr-2 text-[15px] md:text-[16px] text-white"
                     style={{
-                      color: '#1C1C1E',
                       fontFamily: '-apple-system, SF Pro Display, sans-serif',
                       fontWeight: 600,
                       lineHeight: '1.5',
@@ -141,7 +137,9 @@ export function FAQ() {
                   <motion.div
                     className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
                     style={{
-                      background: openIndex === index ? '#C3A36E' : 'rgba(0,0,0,0.06)',
+                      background: openIndex === index
+                        ? 'linear-gradient(135deg, #005FC4 0%, #007AFF 50%, #4DA3FF 100%)'
+                        : 'rgba(255, 255, 255, 0.2)',
                     }}
                     animate={{
                       rotate: openIndex === index ? 180 : 0,

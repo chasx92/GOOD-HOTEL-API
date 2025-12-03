@@ -21,17 +21,17 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
+              className="p-2 rounded-full btn-gradient"
               aria-label="Contact téléphonique"
             >
-              <Phone className="w-4 h-4" aria-hidden="true" />
+              <Phone className="w-4 h-4 text-white" aria-hidden="true" />
             </button>
             <button
               type="button"
-              className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
+              className="p-2 rounded-full btn-gradient"
               aria-label="Contact par email"
             >
-              <Mail className="w-4 h-4" aria-hidden="true" />
+              <Mail className="w-4 h-4 text-white" aria-hidden="true" />
             </button>
           </div>
         </div>

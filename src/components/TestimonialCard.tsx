@@ -67,16 +67,16 @@ export function TestimonialCard() {
 
         {/* CTA Link */}
         <motion.button
-          className="group inline-flex items-center gap-2 text-xs md:text-[13px] text-[var(--champagne)] hover:text-[var(--champagne)]/80 transition-colors"
+          className="group inline-flex items-center gap-2 text-xs md:text-[13px] px-3 py-2 rounded-lg btn-gradient"
           whileHover={{ x: 4 }}
         >
-          <span 
-            className="border-b border-[var(--champagne)]/0 group-hover:border-[var(--champagne)]/100 transition-all"
+          <span
+            className="border-b border-white/0 group-hover:border-white/100 transition-all text-white"
             style={{ fontWeight: 500 }}
           >
             Voir l'étude de cas
           </span>
-          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform text-white" strokeWidth={2} />
         </motion.button>
       </div>
     </motion.div>
