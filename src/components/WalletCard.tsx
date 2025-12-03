@@ -604,35 +604,6 @@ export function WalletCard() {
             </motion.div>
           </div>
 
-          {/* Secondary CTA */}
-          <motion.button
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all bg-black text-white shadow-md hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-offset-white"
-            whileHover={{
-              scale: 1.02,
-            }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.2 }}
-            onClick={() => {
-              const stepsSection = document.getElementById('steps');
-              if (stepsSection) {
-                stepsSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          >
-            Voir comment ça marche
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </motion.button>
         </motion.div>
       </div>
     </div>
