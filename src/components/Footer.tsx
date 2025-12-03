@@ -3,7 +3,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export function Footer() {
   const { t } = useLanguage();
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer
@@ -15,10 +14,9 @@ export function Footer() {
         fontFamily: '-apple-system, SF Pro Display, sans-serif',
       }}
     >
-      <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
-        <div className="flex flex-col gap-8 mb-12 items-center">
-          {/* Legal Links */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-center">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 py-12">
+        <div className="flex flex-col gap-6 items-center text-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center">
             <Link
               to="/terms"
               className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
@@ -32,22 +30,7 @@ export function Footer() {
               Mentions Légales
             </Link>
           </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">
-            {t.footer.copyright.replace('2025', currentYear.toString())}
-          </p>
-
-          <div className="flex items-center gap-3">
-            <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
-              🔒 RGPD Compliant
-            </div>
-            <div className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-100">
-              🇫🇷 Made in France
-            </div>
-          </div>
+          <p className="text-xs text-gray-500">{t.footer.copyright}</p>
         </div>
       </div>
     </footer>
