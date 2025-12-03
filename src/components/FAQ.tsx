@@ -105,14 +105,16 @@ export function FAQ() {
                 key={index}
                 className="rounded-[14px] md:rounded-[16px] overflow-hidden"
                 style={{
-                  background: '#F2F2F7',
-                  border: '1px solid rgba(0,0,0,0.06)',
-                  boxShadow: openIndex === index ? '0 2px 8px rgba(0, 0, 0, 0.08)' : 'none',
+                  background: '#0B0B0F',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  boxShadow: openIndex === index
+                    ? '0 8px 32px rgba(0, 0, 0, 0.25)'
+                    : '0 4px 16px rgba(0, 0, 0, 0.15)',
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.005,
                   transition: { duration: 0.2 }
                 }}
@@ -121,7 +123,11 @@ export function FAQ() {
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
-                  className="w-full px-4 md:px-5 lg:px-6 py-3.5 md:py-4 lg:py-5 flex items-start justify-between gap-3 md:gap-4 text-left cursor-pointer transition-colors btn-gradient"
+                  className="w-full px-4 md:px-5 lg:px-6 py-3.5 md:py-4 lg:py-5 flex items-start justify-between gap-3 md:gap-4 text-left cursor-pointer transition-colors"
+                  style={{
+                    background: '#0B0B0F',
+                    borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
+                  }}
                 >
                   <span
                     className="flex-1 pr-2 text-[15px] md:text-[16px] text-white"
@@ -133,13 +139,13 @@ export function FAQ() {
                   >
                     {faq.question}
                   </span>
-                  
+
                   <motion.div
                     className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
                     style={{
                       background: openIndex === index
-                        ? 'linear-gradient(135deg, #005FC4 0%, #007AFF 50%, #4DA3FF 100%)'
-                        : 'rgba(255, 255, 255, 0.2)',
+                        ? 'rgba(255, 255, 255, 0.18)'
+                        : 'rgba(255, 255, 255, 0.12)',
                     }}
                     animate={{
                       rotate: openIndex === index ? 180 : 0,
