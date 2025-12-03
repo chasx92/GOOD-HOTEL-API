@@ -17,9 +17,26 @@ export function Footer() {
       }}
     >
       <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
-        <div className="flex justify-center mb-12">
+        <div className="flex flex-col items-center gap-4 mb-12 text-center">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
+              aria-label="Contact téléphonique"
+            >
+              <Phone className="w-4 h-4" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
+              aria-label="Contact par email"
+            >
+              <Mail className="w-4 h-4" aria-hidden="true" />
+            </button>
+          </div>
+
           {/* Legal Links */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 items-center">
             <Link
               to="/terms"
               className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
@@ -32,22 +49,6 @@ export function Footer() {
             >
               Mentions Légales
             </Link>
-            <div className="flex items-center gap-3">
-              <button
-                type="button"
-                className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
-                aria-label="Contact téléphonique"
-              >
-                <Phone className="w-4 h-4" aria-hidden="true" />
-              </button>
-              <button
-                type="button"
-                className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
-                aria-label="Contact par email"
-              >
-                <Mail className="w-4 h-4" aria-hidden="true" />
-              </button>
-            </div>
           </div>
         </div>
 
