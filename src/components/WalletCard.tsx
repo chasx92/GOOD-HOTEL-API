@@ -606,17 +606,8 @@ export function WalletCard() {
 
           {/* Secondary CTA */}
           <motion.button
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all"
-            style={{
-              border: '1.5px solid rgba(195, 163, 110, 0.25)',
-              background: 'rgba(195, 163, 110, 0.06)',
-              color: '#1C1C1E',
-              fontSize: '14px',
-              fontWeight: 600,
-            }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all btn-gradient text-white"
             whileHover={{
-              background: 'rgba(195, 163, 110, 0.12)',
-              borderColor: 'rgba(195, 163, 110, 0.4)',
               scale: 1.02,
             }}
             whileTap={{ scale: 0.98 }}

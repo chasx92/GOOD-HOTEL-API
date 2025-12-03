@@ -873,14 +873,10 @@ export function LeadForm() {
           {/* Submit Button */}
           <motion.button
             type="submit"
-            className="w-full group relative overflow-hidden rounded-[14px] py-4 mt-2"
-            style={{
-              background: 'linear-gradient(135deg, #B8935C 0%, #C3A36E 35%, #D4B886 70%, #E5D4A8 100%)',
-              boxShadow: '0 4px 16px rgba(195, 163, 110, 0.25)',
-            }}
-            whileHover={{ 
+            className="w-full group relative overflow-hidden rounded-[14px] py-4 mt-2 btn-gradient"
+            whileHover={{
               scale: 1.01,
-              boxShadow: '0 8px 24px rgba(195, 163, 110, 0.35)',
+              boxShadow: '0 8px 24px rgba(0, 122, 255, 0.25)',
             }}
             whileTap={{ scale: 0.99 }}
           >
