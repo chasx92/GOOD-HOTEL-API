@@ -17,7 +17,7 @@ export function Footer() {
       }}
     >
       <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
-        <div className="flex flex-col items-center gap-4 mb-12 text-center">
+        <div className="flex flex-col gap-4 mb-12 text-left">
           <div className="flex items-center gap-3">
             <button
               type="button"
@@ -37,7 +37,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-gray-200 flex flex-col items-center gap-4 text-center">
+        <div className="pt-6 border-t border-gray-200 flex flex-col gap-4 text-left">
           <p className="text-xs text-gray-500">
             {t.footer.copyright.replace('2025', currentYear.toString())}
           </p>
@@ -57,7 +57,7 @@ export function Footer() {
             </Link>
           </div>
 
-          <div className="flex items-center flex-wrap justify-center gap-3">
+          <div className="flex items-center flex-wrap gap-3">
             <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
               🔒 RGPD Compliant
             </div>
