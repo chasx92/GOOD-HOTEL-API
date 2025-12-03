@@ -48,13 +48,13 @@ export function Footer() {
                 to="/terms"
                 className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
               >
-                CGV
+                {t.footer.terms}
               </Link>
               <Link
                 to="/legal"
                 className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
               >
-                Mentions Légales
+                {t.footer.legal}
               </Link>
             </div>
 
