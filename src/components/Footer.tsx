@@ -4,8 +4,10 @@ import { useLanguage } from '../contexts/LanguageContext';
 export function Footer() {
   const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
-  const copyrightText = t.footer?.copyright?.replace?.('2025', currentYear.toString()) ??
-    `© ${currentYear}`;
+  const translation = t.footer?.copyright;
+  const copyrightText = typeof translation === 'string'
+    ? translation.replace('2025', currentYear.toString())
+    : `© ${currentYear}`;
 
   return (
     <footer
