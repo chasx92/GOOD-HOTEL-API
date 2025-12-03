@@ -606,7 +606,7 @@ export function WalletCard() {
 
           {/* Secondary CTA */}
           <motion.button
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all btn-gradient text-white"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all bg-black text-white shadow-md hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-offset-white"
             whileHover={{
               scale: 1.02,
             }}

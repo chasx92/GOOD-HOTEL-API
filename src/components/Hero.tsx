@@ -22,7 +22,8 @@ const CLASS_NAMES = {
   heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight',
   subtitle: 'text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed',
   primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg btn-gradient',
-  secondaryButton: 'group rounded-xl px-8 py-3.5 transition-all hover:shadow-lg btn-gradient text-white',
+  secondaryButton:
+    'group rounded-xl px-8 py-3.5 transition-all hover:shadow-lg bg-black text-white shadow-md hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-offset-white',
   trustIndicators: 'flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-600',
 } as const;
 
