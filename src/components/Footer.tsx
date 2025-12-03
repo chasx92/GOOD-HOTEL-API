@@ -34,22 +34,6 @@ export function Footer() {
               <Mail className="w-4 h-4" aria-hidden="true" />
             </button>
           </div>
-
-          {/* Legal Links */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 items-center">
-            <Link
-              to="/terms"
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
-            >
-              CGV
-            </Link>
-            <Link
-              to="/legal"
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
-            >
-              Mentions Légales
-            </Link>
-          </div>
         </div>
 
         {/* Bottom Bar */}
@@ -58,12 +42,29 @@ export function Footer() {
             {t.footer.copyright.replace('2025', currentYear.toString())}
           </p>
 
-          <div className="flex items-center gap-3">
-            <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
-              🔒 RGPD Compliant
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
+              <Link
+                to="/terms"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
+              >
+                CGV
+              </Link>
+              <Link
+                to="/legal"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
+              >
+                Mentions Légales
+              </Link>
             </div>
-            <div className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-100">
-              🇫🇷 Made in France
+
+            <div className="flex items-center gap-3">
+              <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
+                🔒 RGPD Compliant
+              </div>
+              <div className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-100">
+                🇫🇷 Made in France
+              </div>
             </div>
           </div>
         </div>
