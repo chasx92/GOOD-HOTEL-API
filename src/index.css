@@ -74,6 +74,22 @@
     transform: translateY(0);
   }
 
+  .btn-black {
+    @apply relative overflow-hidden text-white transition-all focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-[#0c0c0d] focus-visible:ring-offset-2;
+    background: #000;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-black:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    background: #0f0f0f;
+  }
+
+  .btn-black:active {
+    transform: translateY(0);
+  }
+
   .glass {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px) saturate(180%);

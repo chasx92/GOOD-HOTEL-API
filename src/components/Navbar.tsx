@@ -128,7 +128,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               {/* CTA Desktop */}
               <motion.button
                 onClick={scrollToForm}
-                className="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full text-[15px] font-semibold btn-gradient"
+                className="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full text-[15px] font-semibold btn-black"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
