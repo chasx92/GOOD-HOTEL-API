@@ -43,21 +43,6 @@ export function Footer() {
           </p>
 
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
-              <Link
-                to="/terms"
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
-              >
-                {t.footer.terms}
-              </Link>
-              <Link
-                to="/legal"
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
-              >
-                {t.footer.legal}
-              </Link>
-            </div>
-
             <div className="flex items-center flex-wrap justify-center gap-3">
               <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
                 🔒 RGPD Compliant
