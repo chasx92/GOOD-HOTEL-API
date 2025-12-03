@@ -37,29 +37,27 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-gray-200 flex flex-col gap-4 text-left md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-4 md:items-start">
-            <p className="text-xs text-gray-500">
-              {t.footer.copyright.replace('2025', currentYear.toString())}
-            </p>
+        <div className="pt-6 border-t border-gray-200 flex flex-col gap-4 text-left">
+          <p className="text-xs text-gray-500">
+            {t.footer.copyright.replace('2025', currentYear.toString())}
+          </p>
 
-            <div className="flex flex-wrap justify-center md:justify-start gap-3">
-              <Link
-                to="/terms"
-                className="px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-semibold text-gray-800 shadow-sm hover:text-gray-900 hover:border-gray-300 transition-colors"
-              >
-                {t.footer.terms}
-              </Link>
-              <Link
-                to="/legal"
-                className="px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-semibold text-gray-800 shadow-sm hover:text-gray-900 hover:border-gray-300 transition-colors"
-              >
-                {t.footer.legal}
-              </Link>
-            </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              to="/terms"
+              className="px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-semibold text-gray-800 shadow-sm hover:text-gray-900 hover:border-gray-300 transition-colors"
+            >
+              {t.footer.terms}
+            </Link>
+            <Link
+              to="/legal"
+              className="px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-semibold text-gray-800 shadow-sm hover:text-gray-900 hover:border-gray-300 transition-colors"
+            >
+              {t.footer.legal}
+            </Link>
           </div>
 
-          <div className="flex items-center flex-wrap gap-3 md:justify-end md:w-full">
+          <div className="flex items-center flex-wrap gap-3">
             <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
               🔒 RGPD Compliant
             </div>
