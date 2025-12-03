@@ -37,46 +37,32 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-6 border-t border-gray-200 flex flex-col items-center gap-4 text-center">
           <p className="text-xs text-gray-500">
             {t.footer.copyright.replace('2025', currentYear.toString())}
           </p>
 
-          <div className="flex flex-col md:flex-row items-center gap-4">
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 items-center">
-              <Link
-                to="/terms"
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
-              >
-                {t.footer.terms}
-              </Link>
-              <Link
-                to="/legal"
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
-              >
-                {t.footer.legal}
-              </Link>
-            </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              to="/terms"
+              className="px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-semibold text-gray-800 shadow-sm hover:text-gray-900 hover:border-gray-300 transition-colors"
+            >
+              {t.footer.terms}
+            </Link>
+            <Link
+              to="/legal"
+              className="px-4 py-2 rounded-full border border-gray-200 bg-white text-sm font-semibold text-gray-800 shadow-sm hover:text-gray-900 hover:border-gray-300 transition-colors"
+            >
+              {t.footer.legal}
+            </Link>
+          </div>
 
-            <div className="flex items-center flex-wrap justify-center gap-3">
-              <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
-                🔒 RGPD Compliant
-              </div>
-              <div className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-100">
-                🇫🇷 Made in France
-              </div>
-              <Link
-                to="/terms"
-                className="px-3 py-1 rounded-md border border-gray-200 bg-white text-xs font-medium text-gray-700 hover:text-gray-900 hover:border-gray-300 transition-colors"
-              >
-                CGV
-              </Link>
-              <Link
-                to="/legal"
-                className="px-3 py-1 rounded-md border border-gray-200 bg-white text-xs font-medium text-gray-700 hover:text-gray-900 hover:border-gray-300 transition-colors"
-              >
-                Mentions légales
-              </Link>
+          <div className="flex items-center flex-wrap justify-center gap-3">
+            <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
+              🔒 RGPD Compliant
+            </div>
+            <div className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-100">
+              🇫🇷 Made in France
             </div>
           </div>
         </div>
