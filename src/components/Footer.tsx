@@ -3,6 +3,9 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export function Footer() {
   const { t } = useLanguage();
+  const currentYear = new Date().getFullYear();
+  const copyrightText = t.footer?.copyright?.replace?.('2025', currentYear.toString()) ??
+    `© ${currentYear}`;
 
   return (
     <footer
@@ -30,7 +33,7 @@ export function Footer() {
               Mentions Légales
             </Link>
           </div>
-          <p className="text-xs text-gray-500">{t.footer.copyright}</p>
+          <p className="text-xs text-gray-500">{copyrightText}</p>
         </div>
       </div>
     </footer>
