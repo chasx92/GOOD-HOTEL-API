@@ -17,7 +17,7 @@ export function Footer() {
       }}
     >
       <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mb-12">
 
           {/* Brand & Contact */}
           <div>
@@ -45,7 +45,7 @@ export function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center flex-1 text-center">
             <Link
               to="/terms"
               className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
@@ -58,12 +58,6 @@ export function Footer() {
             >
               Mentions Légales
             </Link>
-            <button
-              onClick={() => alert("Gestion des cookies à implémenter")}
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium text-left"
-            >
-              Paramètres de cookies
-            </button>
           </div>
         </div>
 
