@@ -58,13 +58,25 @@ export function Footer() {
               </Link>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center flex-wrap justify-center gap-3">
               <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
                 🔒 RGPD Compliant
               </div>
               <div className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-100">
                 🇫🇷 Made in France
               </div>
+              <Link
+                to="/terms"
+                className="px-3 py-1 rounded-md border border-gray-200 bg-white text-xs font-medium text-gray-700 hover:text-gray-900 hover:border-gray-300 transition-colors"
+              >
+                CGV
+              </Link>
+              <Link
+                to="/legal"
+                className="px-3 py-1 rounded-md border border-gray-200 bg-white text-xs font-medium text-gray-700 hover:text-gray-900 hover:border-gray-300 transition-colors"
+              >
+                Mentions légales
+              </Link>
             </div>
           </div>
         </div>
