@@ -22,17 +22,14 @@ const CLASS_NAMES = {
   heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight',
   subtitle: 'text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed',
   primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg btn-gradient',
-  secondaryButton:
-    'group rounded-xl px-8 py-3.5 transition-all hover:shadow-lg bg-black text-white shadow-md hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-black focus-visible:ring-offset-white',
   trustIndicators: 'flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-600',
 } as const;
 
 interface HeroProps {
   onPrimaryClick?: () => void;
-  onSecondaryClick?: () => void;
 }
 
-export function Hero({ onPrimaryClick, onSecondaryClick }: HeroProps) {
+export function Hero({ onPrimaryClick }: HeroProps) {
   const { t } = useLanguage();
 
   // Unified scroll handler
@@ -47,10 +44,6 @@ export function Hero({ onPrimaryClick, onSecondaryClick }: HeroProps) {
   const scrollToForm = useCallback(() => {
     scrollToSection('form', onPrimaryClick);
   }, [scrollToSection, onPrimaryClick]);
-
-  const scrollToSteps = useCallback(() => {
-    scrollToSection('steps', onSecondaryClick);
-  }, [scrollToSection, onSecondaryClick]);
 
   return (
     <section
@@ -122,7 +115,7 @@ export function Hero({ onPrimaryClick, onSecondaryClick }: HeroProps) {
               {t.hero.subtitle}
             </p>
 
-            {/* CTAs */}
+            {/* Primary CTA */}
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <motion.button
                 onClick={scrollToForm}
@@ -133,18 +126,6 @@ export function Hero({ onPrimaryClick, onSecondaryClick }: HeroProps) {
                 <span className="relative z-10 flex items-center justify-center gap-2 font-semibold">
                   {t.hero.cta}
                   <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </span>
-              </motion.button>
-
-              <motion.button
-                onClick={scrollToSteps}
-                className={CLASS_NAMES.secondaryButton}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span className="flex items-center justify-center gap-2 font-semibold">
-                  {t.hero.ctaSecondary}
-                  <ChevronRight className="w-5 h-5 opacity-50 transition-transform group-hover:translate-x-1" />
                 </span>
               </motion.button>
             </div>
