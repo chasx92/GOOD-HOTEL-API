@@ -17,37 +17,22 @@ export function Footer() {
       }}
     >
       <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
-        <div className="flex justify-center mb-12">
-          {/* Legal Links */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-center">
-            <Link
-              to="/terms"
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
+        <div className="flex flex-col items-center gap-4 mb-12 text-center">
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
+              aria-label="Contact téléphonique"
             >
-              CGV
-            </Link>
-            <Link
-              to="/legal"
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
+              <Phone className="w-4 h-4" aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
+              aria-label="Contact par email"
             >
-              Mentions Légales
-            </Link>
-            <div className="flex items-center gap-3">
-              <button
-                type="button"
-                className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
-                aria-label="Contact téléphonique"
-              >
-                <Phone className="w-4 h-4" aria-hidden="true" />
-              </button>
-              <button
-                type="button"
-                className="p-2 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors"
-                aria-label="Contact par email"
-              >
-                <Mail className="w-4 h-4" aria-hidden="true" />
-              </button>
-            </div>
+              <Mail className="w-4 h-4" aria-hidden="true" />
+            </button>
           </div>
         </div>
 
@@ -57,12 +42,30 @@ export function Footer() {
             {t.footer.copyright.replace('2025', currentYear.toString())}
           </p>
 
-          <div className="flex items-center gap-3">
-            <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
-              🔒 RGPD Compliant
+          <div className="flex flex-col items-center gap-3 md:flex-row md:items-center md:gap-6">
+            <div className="flex items-center gap-3">
+              <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
+                🔒 RGPD Compliant
+              </div>
+              <div className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-100">
+                🇫🇷 Made in France
+              </div>
             </div>
-            <div className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium border border-blue-100">
-              🇫🇷 Made in France
+
+            {/* Legal Links */}
+            <div className="flex items-center gap-6">
+              <Link
+                to="/terms"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
+              >
+                CGV
+              </Link>
+              <Link
+                to="/legal"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
+              >
+                Mentions Légales
+              </Link>
             </div>
           </div>
         </div>
