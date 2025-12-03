@@ -22,6 +22,7 @@ const CLASS_NAMES = {
   heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight',
   subtitle: 'text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed',
   primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg btn-gradient',
+  secondaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg',
   trustIndicators: 'flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-600',
 } as const;
 
@@ -44,6 +45,10 @@ export function Hero({ onPrimaryClick }: HeroProps) {
   const scrollToForm = useCallback(() => {
     scrollToSection('form', onPrimaryClick);
   }, [scrollToSection, onPrimaryClick]);
+
+  const scrollToSteps = useCallback(() => {
+    scrollToSection('steps');
+  }, [scrollToSection]);
 
   return (
     <section
@@ -125,6 +130,19 @@ export function Hero({ onPrimaryClick }: HeroProps) {
               >
                 <span className="relative z-10 flex items-center justify-center gap-2 font-semibold">
                   {t.hero.cta}
+                  <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </motion.button>
+
+              <motion.button
+                onClick={scrollToSteps}
+                className={CLASS_NAMES.secondaryButton}
+                style={{ background: '#0B0B0F' }}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2 font-semibold">
+                  {t.hero.ctaSecondary || 'Comment ça marche'}
                   <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </span>
               </motion.button>
