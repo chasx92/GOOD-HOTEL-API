@@ -34,9 +34,15 @@ export function Footer() {
               <Mail className="w-4 h-4" aria-hidden="true" />
             </button>
           </div>
+        </div>
 
-          {/* Legal Links */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 items-center">
+        {/* Bottom Bar */}
+        <div className="pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-gray-500">
+            {t.footer.copyright.replace('2025', currentYear.toString())}
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 sm:gap-4">
             <Link
               to="/terms"
               className="text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium"
@@ -49,16 +55,6 @@ export function Footer() {
             >
               Mentions Légales
             </Link>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">
-            {t.footer.copyright.replace('2025', currentYear.toString())}
-          </p>
-
-          <div className="flex items-center gap-3">
             <div className="px-2.5 py-1 rounded-md bg-green-50 text-green-700 text-xs font-medium border border-green-100">
               🔒 RGPD Compliant
             </div>
