@@ -56,6 +56,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true,
+    // Disable auto-open to avoid spawn errors in headless/container environments
+    open: false,
   },
 });
