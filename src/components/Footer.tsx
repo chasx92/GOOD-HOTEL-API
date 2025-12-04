@@ -19,20 +19,20 @@ export function Footer() {
       <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
         <div className="flex flex-col items-center gap-4 mb-12 text-center">
           <div className="flex items-center gap-3">
-            <button
-              type="button"
+            <a
+              href="tel:0695857756"
               className="p-2 rounded-full btn-gradient"
               aria-label="Contact téléphonique"
             >
               <Phone className="w-4 h-4 text-white" aria-hidden="true" />
-            </button>
-            <button
-              type="button"
+            </a>
+            <a
+              href="mailto:samuel@letincelle.pro"
               className="p-2 rounded-full btn-gradient"
               aria-label="Contact par email"
             >
               <Mail className="w-4 h-4 text-white" aria-hidden="true" />
-            </button>
+            </a>
           </div>
         </div>
 

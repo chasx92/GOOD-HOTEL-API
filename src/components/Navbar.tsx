@@ -106,7 +106,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="relative text-[15px] font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                  className="relative text-[15px] font-bold text-black hover:text-black transition-colors"
                   whileHover={{ y: -1 }}
                 >
                   {link.label}
@@ -171,7 +171,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="block text-lg font-medium text-gray-900"
+                  className="block text-lg font-bold text-black"
                 >
                   {link.label}
                 </a>
