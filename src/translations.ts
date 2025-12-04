@@ -508,17 +508,14 @@ export const translations: Record<Language, Translations> = {
         },
         q3: {
           question: 'Comment gérez-vous la sécurité des données clients ?',
-          answer: 'Nous utilisons un chiffrement AES-256 de niveau bancaire, nos serveurs sont hébergés en Europe (conformité RGPD), et nous sommes certifiés ISO 27001. Aucune donnée personnelle n\'est stockée sur les appareils.',
+          answer: 'La sécurité des données client est déjà mise en place par vos PMS, aucune donnée n\'en sortira.',
         },
         q4: {
-          question: 'Quel est le délai de mise en place ?',
-          answer: 'Après l\'audit de compatibilité (48h), l\'installation technique prend 4 à 8 heures selon la taille de l\'établissement. La formation de votre équipe se fait en 2h. Vous pouvez être opérationnel en moins d\'une semaine.',
+          question: 'Y a-t-il des frais cachés ou d\'engagement longue durée ?',
+          answer:
+            "Non. Notre tarification est simple : Des frais d’installations suivit d’un simple abonnement mensuel. Vous pouvez annuler à tout moment.",
         },
         q5: {
-          question: 'Y a-t-il des frais cachés ou d\'engagement longue durée ?',
-          answer: 'Non. Notre tarification est transparente : uniquement le coût par chambre/mois selon la formule choisie. Pas de frais d\'installation, pas d\'engagement minimum. Vous pouvez annuler à tout moment.',
-        },
-        q6: {
           question: 'Quels PMS sont compatibles ?',
           answer: 'Nous sommes intégrés avec les principaux PMS : Opera, Mews, Cloudbeds, Protel, Apaleo, et bien d\'autres. Si votre PMS dispose d\'une API, nous pouvons réaliser l\'intégration rapidement.',
         },
