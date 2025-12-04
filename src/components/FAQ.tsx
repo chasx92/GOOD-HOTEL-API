@@ -132,7 +132,7 @@ export function FAQ() {
                   <span
                     className="flex-1 pr-2 text-[15px] md:text-[16px]"
                     style={{
-                      color: '#1C1C1E',
+                      color: '#FFFFFF',
                       fontFamily: '-apple-system, SF Pro Display, sans-serif',
                       fontWeight: 600,
                       lineHeight: '1.5',
@@ -145,8 +145,8 @@ export function FAQ() {
                     className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
                     style={{
                       background: openIndex === index
-                        ? 'rgba(28, 28, 30, 0.18)'
-                        : 'rgba(28, 28, 30, 0.12)',
+                        ? 'rgba(255, 255, 255, 0.22)'
+                        : 'rgba(255, 255, 255, 0.16)',
                     }}
                     animate={{
                       rotate: openIndex === index ? 180 : 0,
@@ -154,9 +154,9 @@ export function FAQ() {
                     transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                   >
                     {openIndex === index ? (
-                      <Minus className="w-4 h-4" style={{ color: '#1C1C1E' }} strokeWidth={2.5} />
+                      <Minus className="w-4 h-4" style={{ color: '#FFFFFF' }} strokeWidth={2.5} />
                     ) : (
-                      <Plus className="w-4 h-4" style={{ color: '#3C3C43' }} strokeWidth={2.5} />
+                      <Plus className="w-4 h-4" style={{ color: '#FFFFFF' }} strokeWidth={2.5} />
                     )}
                   </motion.div>
                 </button>
