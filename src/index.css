@@ -154,6 +154,14 @@
     transform: translateY(-1px);
   }
 
+  .cta-hover-effect:hover > span,
+  .cta-hover-effect:hover svg,
+  .cta-hover-effect:hover path {
+    color: #0B0B0F;
+    stroke: #0B0B0F;
+    fill: #0B0B0F;
+  }
+
   .cta-hover-effect:hover::before {
     opacity: 1;
     transform: scale(1);
