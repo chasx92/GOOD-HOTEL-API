@@ -169,21 +169,22 @@ export function Benefits() {
                 <motion.div
                   className="relative z-10 flex items-center justify-center rounded-[10px] mb-3"
                   style={{
-                    width: '32px',
-                    height: '32px',
+                    width: '40px',
+                    height: '40px',
                     // OPTIMIZED: Background @10% et border @22%
                     background: `${benefit.color}10`,
                     border: `1.5px solid ${benefit.color}22`,
                   }}
-                  whileHover={{ 
-                    // OPTIMIZED: Icône translateY -1px au lieu de rotate
-                    y: -1,
+                  whileHover={{
+                    // OPTIMIZED: Icône translateY -2px au lieu de rotate
+                    y: -2,
+                    scale: 1.08,
                   }}
-                  transition={{ duration: 0.16 }}
+                  transition={{ duration: 0.1, ease: 'easeOut' }}
                 >
-                  {/* OPTIMIZED: Icône 24px fixe au lieu de 24→28→32px */}
-                  <Icon 
-                    className="w-6 h-6" 
+                  {/* OPTIMIZED: Icône 28px pour une présence renforcée */}
+                  <Icon
+                    className="w-7 h-7"
                     style={{ color: benefit.color }}
                     strokeWidth={1.5}
                     aria-hidden="true"
