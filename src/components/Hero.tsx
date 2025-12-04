@@ -22,8 +22,8 @@ const CLASS_NAMES = {
   walletIcon: 'w-3.5 h-3.5 fill-current',
   heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight font-heading',
   subtitle: 'text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed',
-  primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg btn-gradient',
-  secondaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg',
+  primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg btn-gradient cta-hover-effect',
+  secondaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg cta-hover-effect',
   trustIndicators: 'flex flex-wrap gap-x-8 gap-y-3 text-sm text-gray-600',
 } as const;
 

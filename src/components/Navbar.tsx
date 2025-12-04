@@ -118,16 +118,16 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               {/* Language Switcher */}
               <button
                 onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
-                className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium btn-gradient"
+                className="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium btn-gradient cta-hover-effect"
               >
-                <Globe className="w-4 h-4 text-white" />
-                <span className="text-white">{language === 'fr' ? 'FR' : 'EN'}</span>
+                <Globe className="w-4 h-4" />
+                <span className="transition-colors">{language === 'fr' ? 'FR' : 'EN'}</span>
               </button>
 
               {/* CTA Desktop */}
               <motion.button
                 onClick={scrollToForm}
-                className="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full text-[15px] font-semibold btn-black"
+                className="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full text-[15px] font-semibold btn-black cta-hover-effect"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
@@ -179,15 +179,15 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               <div className="pt-4 border-t border-gray-100 flex flex-col gap-4">
                 <button
                   onClick={() => setLanguage(language === 'fr' ? 'en' : 'fr')}
-                  className="flex items-center gap-2 font-medium btn-gradient rounded-lg px-3 py-2"
+                  className="flex items-center gap-2 font-medium btn-gradient rounded-lg px-3 py-2 cta-hover-effect"
                 >
-                  <Globe className="w-5 h-5 text-white" />
-                  <span className="text-white">{language === 'fr' ? 'Passer en Anglais' : 'Switch to French'}</span>
+                  <Globe className="w-5 h-5" />
+                  <span className="transition-colors">{language === 'fr' ? 'Passer en Anglais' : 'Switch to French'}</span>
                 </button>
 
                 <button
                   onClick={scrollToForm}
-                  className="w-full py-3 rounded-xl font-semibold text-center btn-black"
+                  className="w-full py-3 rounded-xl font-semibold text-center btn-black cta-hover-effect"
                 >
                   {t.navbar.cta}
                 </button>
