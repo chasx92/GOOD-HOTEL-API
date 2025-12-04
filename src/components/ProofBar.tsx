@@ -1,6 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { FONT_HEADING } from '../styles/typography';
 
 // Premium SVG Logos - Detailed versions - LARGER SIZE
 const SaltoLogo = () => (
@@ -17,8 +18,8 @@ const SaltoLogo = () => (
     <circle cx="14" cy="32" r="3" fill="white" opacity="0.9"/>
     <rect x="12.5" y="34" width="3" height="5" rx="1.5" fill="white" opacity="0.9"/>
     {/* SALTO wordmark */}
-    <text x="32" y="36" fontFamily="-apple-system, SF Pro Display, Arial, sans-serif" fontSize="28" fontWeight="800" fill="#0066CC" letterSpacing="-0.5">SALTO</text>
-    <text x="32" y="47" fontFamily="-apple-system, SF Pro Display, Arial, sans-serif" fontSize="11" fontWeight="500" fill="#0066CC" opacity="0.6">ACCESS SYSTEMS</text>
+    <text x="32" y="36" fontFamily={FONT_HEADING} fontSize="28" fontWeight="800" fill="#0066CC" letterSpacing="-0.5">SALTO</text>
+    <text x="32" y="47" fontFamily={FONT_HEADING} fontSize="11" fontWeight="500" fill="#0066CC" opacity="0.6">ACCESS SYSTEMS</text>
   </svg>
 );
 
@@ -34,7 +35,7 @@ const DormakabaLogo = () => (
     <path d="M6 10L16 27L6 44V10Z" fill="url(#dormaGrad)"/>
     <path d="M11 16L19 27L11 38V16Z" fill="#E31E24" opacity="0.6"/>
     {/* dormakaba wordmark - lowercase modern style */}
-    <text x="28" y="34" fontFamily="-apple-system, SF Pro Display, Arial, sans-serif" fontSize="24" fontWeight="600" fill="#005596" letterSpacing="-0.3">dormakaba</text>
+    <text x="28" y="34" fontFamily={FONT_HEADING} fontSize="24" fontWeight="600" fill="#005596" letterSpacing="-0.3">dormakaba</text>
     <rect x="28" y="38" width="125" height="2" fill="#005596" opacity="0.2"/>
   </svg>
 );
@@ -52,7 +53,7 @@ const AssaAbloyLogo = () => (
     <path d="M11 19L7.5 27L11 35L14.5 27L11 19Z" fill="url(#assaGrad)"/>
     <circle cx="11" cy="27" r="3.5" fill="white" opacity="0.8"/>
     {/* ASSA ABLOY wordmark - Bold industrial style */}
-    <text x="24" y="34" fontFamily="-apple-system, SF Pro Display, Arial, sans-serif" fontSize="25" fontWeight="800" fill="#005596" letterSpacing="0.5">
+    <text x="24" y="34" fontFamily={FONT_HEADING} fontSize="25" fontWeight="800" fill="#005596" letterSpacing="0.5">
       ASSA ABLOY
     </text>
     <rect x="24" y="38" width="50" height="2.5" rx="1.25" fill="#005596" opacity="0.3"/>
@@ -94,11 +95,11 @@ export function ProofBar() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h2 
+          <h2
             className="text-sm md:text-base lg:text-lg px-4"
-            style={{ 
+            style={{
               color: '#8E8E93',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: FONT_HEADING,
               fontWeight: 500,
               letterSpacing: '0.01em',
               textTransform: 'uppercase',

@@ -9,6 +9,7 @@ import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { Home } from './pages/Home';
 import { LegalNotice } from './pages/LegalNotice';
 import { TermsOfSales } from './pages/TermsOfSales';
+import { FONT_BODY } from './styles/typography';
 
 function AppContent() {
   const { language } = useLanguage();
@@ -26,7 +27,7 @@ function AppContent() {
           style={{
             background: '#007AFF',
             color: '#FFFFFF',
-            fontFamily: '-apple-system, SF Pro Display, sans-serif',
+            fontFamily: FONT_BODY,
             fontSize: '15px',
             fontWeight: 600,
           }}

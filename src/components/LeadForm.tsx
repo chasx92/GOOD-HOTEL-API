@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { Building2, Mail, Phone, MapPin, ChevronDown, Check, AlertCircle, Send, Briefcase, MessageSquare, Shield } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { FONT_BODY, FONT_HEADING } from '../styles/typography';
 
 interface FormData {
   hotelName: string;
@@ -185,7 +186,7 @@ export function LeadForm() {
               className="text-2xl md:text-3xl text-balance"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_HEADING,
                 fontWeight: 700,
                 marginBottom: 'calc(var(--spacing) * 4)',
               }}
@@ -200,7 +201,7 @@ export function LeadForm() {
               className="max-w-md mx-auto text-pretty"
               style={{
                 color: '#3C3C43',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_BODY,
                 fontSize: '16px',
                 lineHeight: 1.6,
               }}
@@ -240,11 +241,11 @@ export function LeadForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h2 
+          <h2
             className="text-[28px] md:text-3xl lg:text-4xl text-balance"
             style={{
               color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: FONT_HEADING,
               fontWeight: 700,
               letterSpacing: '-0.02em',
               marginBottom: 'calc(var(--spacing) * 4)',
@@ -256,7 +257,7 @@ export function LeadForm() {
             className="text-[15px] md:text-[16px] max-w-md mx-auto text-pretty"
             style={{
               color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: FONT_BODY,
               lineHeight: 1.6,
             }}
           >
@@ -284,7 +285,7 @@ export function LeadForm() {
               className="block mb-2 text-[14px] md:text-[15px]"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_BODY,
                 fontWeight: 600,
               }}
             >
@@ -308,7 +309,7 @@ export function LeadForm() {
                   background: '#F2F2F7',
                   border: touched.hotelName && errors.hotelName ? '2px solid #FF3B30' : '2px solid transparent',
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                 }}
                 placeholder={t.form.fields.hotelName.placeholder}
               />
@@ -337,7 +338,7 @@ export function LeadForm() {
                 className="block mb-2 text-[14px] md:text-[15px]"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                   fontWeight: 600,
                 }}
               >
@@ -359,7 +360,7 @@ export function LeadForm() {
                     background: '#F2F2F7',
                     border: '2px solid transparent',
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                   }}
                   placeholder={t.form.fields.city.placeholder}
                 />
@@ -372,7 +373,7 @@ export function LeadForm() {
                 className="block mb-2 text-[14px] md:text-[15px]"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                   fontWeight: 600,
                 }}
               >
@@ -389,7 +390,7 @@ export function LeadForm() {
                   background: '#F2F2F7',
                   border: '2px solid transparent',
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                 }}
                 placeholder={t.form.fields.country.placeholder}
               />
@@ -403,7 +404,7 @@ export function LeadForm() {
               className="block mb-2 text-[14px] md:text-[15px]"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_BODY,
                 fontWeight: 600,
               }}
             >
@@ -426,7 +427,7 @@ export function LeadForm() {
                   background: '#F2F2F7',
                   border: touched.roomCount && errors.roomCount ? '2px solid #FF3B30' : '2px solid transparent',
                   color: formData.roomCount ? '#1C1C1E' : '#8E8E93',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                 }}
               >
                 <option value="">{t.form.fields.roomCount.placeholder}</option>
@@ -458,7 +459,7 @@ export function LeadForm() {
               className="block mb-2 text-[14px] md:text-[15px]"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_BODY,
                 fontWeight: 600,
               }}
             >
@@ -479,7 +480,7 @@ export function LeadForm() {
                   background: '#F2F2F7',
                   border: '2px solid transparent',
                   color: formData.lockProvider ? '#1C1C1E' : '#8E8E93',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                 }}
               >
                 <option value="">{t.form.fields.lockProvider.placeholder}</option>
@@ -504,7 +505,7 @@ export function LeadForm() {
                   className="block mb-2 text-[14px] md:text-[15px]"
                   style={{
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                     fontWeight: 600,
                   }}
                 >
@@ -521,7 +522,7 @@ export function LeadForm() {
                     background: '#F2F2F7',
                     border: '2px solid transparent',
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                   }}
                   placeholder={t.form.fields.lockProviderOther.placeholder}
                 />
@@ -535,7 +536,7 @@ export function LeadForm() {
               className="block mb-3 text-[14px] md:text-[15px]"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_BODY,
                 fontWeight: 600,
               }}
             >
@@ -552,7 +553,7 @@ export function LeadForm() {
                     background: formData.pms.includes(pms.value) ? 'rgba(0, 122, 255, 0.1)' : '#F2F2F7',
                     border: formData.pms.includes(pms.value) ? '2px solid #007AFF' : '2px solid transparent',
                     color: formData.pms.includes(pms.value) ? '#007AFF' : '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                     fontWeight: formData.pms.includes(pms.value) ? 600 : 500,
                   }}
                   whileHover={{ scale: 1.02 }}
@@ -571,11 +572,11 @@ export function LeadForm() {
 
           {/* Contact Info Header */}
           <div className="pt-4 border-t" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
-            <h3 
+            <h3
               className="text-[16px] mb-4"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_HEADING,
                 fontWeight: 600,
               }}
             >
@@ -591,7 +592,7 @@ export function LeadForm() {
                 className="block mb-2 text-[14px] md:text-[15px]"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                   fontWeight: 600,
                 }}
               >
@@ -608,7 +609,7 @@ export function LeadForm() {
                   background: '#F2F2F7',
                   border: '2px solid transparent',
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                 }}
                 placeholder={t.form.fields.name.placeholder}
               />
@@ -620,7 +621,7 @@ export function LeadForm() {
                 className="block mb-2 text-[14px] md:text-[15px]"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                   fontWeight: 600,
                 }}
               >
@@ -642,7 +643,7 @@ export function LeadForm() {
                     background: '#F2F2F7',
                     border: '2px solid transparent',
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                   }}
                   placeholder={t.form.fields.role.placeholder}
                 />
@@ -658,7 +659,7 @@ export function LeadForm() {
                 className="block mb-2 text-[14px] md:text-[15px]"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                   fontWeight: 600,
                 }}
               >
@@ -682,7 +683,7 @@ export function LeadForm() {
                     background: '#F2F2F7',
                     border: touched.email && errors.email ? '2px solid #FF3B30' : '2px solid transparent',
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                   }}
                   placeholder={t.form.fields.email.placeholder}
                 />
@@ -709,7 +710,7 @@ export function LeadForm() {
                 className="block mb-2 text-[14px] md:text-[15px]"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                   fontWeight: 600,
                 }}
               >
@@ -731,7 +732,7 @@ export function LeadForm() {
                     background: '#F2F2F7',
                     border: '2px solid transparent',
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                   }}
                   placeholder={t.form.fields.phone.placeholder}
                 />
@@ -753,7 +754,7 @@ export function LeadForm() {
                   className="block mb-2 text-[14px] md:text-[15px]"
                   style={{
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                     fontWeight: 600,
                   }}
                 >
@@ -774,7 +775,7 @@ export function LeadForm() {
                       background: '#F2F2F7',
                       border: '2px solid transparent',
                       color: formData.timeline ? '#1C1C1E' : '#8E8E93',
-                      fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                      fontFamily: FONT_BODY,
                     }}
                   >
                     <option value="">{t.form.fields.timeline.placeholder}</option>
@@ -794,7 +795,7 @@ export function LeadForm() {
               className="block mb-2 text-[14px] md:text-[15px]"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_BODY,
                 fontWeight: 600,
               }}
             >
@@ -816,7 +817,7 @@ export function LeadForm() {
                   background: '#F2F2F7',
                   border: '2px solid transparent',
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                 }}
                 placeholder={t.form.fields.comment.placeholder}
               />
@@ -847,7 +848,7 @@ export function LeadForm() {
                 className="text-[13px] md:text-[14px] flex-1"
                 style={{
                   color: '#3C3C43',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                  fontFamily: FONT_BODY,
                   lineHeight: '1.5',
                 }}
               >
@@ -885,7 +886,7 @@ export function LeadForm() {
               style={{ 
                 fontSize: '17px',
                 fontWeight: 600,
-                fontFamily: '-apple-system, SF Pro Display, sans-serif'
+                fontFamily: FONT_BODY
               }}
             >
               {t.form.submit}
@@ -898,7 +899,7 @@ export function LeadForm() {
             className="flex items-start gap-2 pt-4 text-[12px] md:text-[13px]"
             style={{
               color: '#8E8E93',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: FONT_BODY,
             }}
           >
             <Shield className="w-4 h-4 flex-shrink-0 mt-0.5" />

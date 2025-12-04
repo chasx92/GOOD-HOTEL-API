@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { motion, AnimatePresence, useInView } from 'motion/react';
 import { Plus, Minus } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { FONT_BODY, FONT_HEADING } from '../styles/typography';
 
 export function FAQ() {
   const { t } = useLanguage();
@@ -65,7 +66,7 @@ export function FAQ() {
             className="text-[11px] md:text-xs tracking-[0.12em] uppercase"
             style={{
               color: '#C3A36E',
-              fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
+              fontFamily: FONT_HEADING,
               fontWeight: 600,
               marginBottom: 'calc(var(--spacing) * 3)',
             }}
@@ -77,7 +78,7 @@ export function FAQ() {
             className="text-[26px] md:text-3xl lg:text-4xl xl:text-5xl text-balance"
             style={{
               color: '#1C1C1E',
-              fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
+              fontFamily: FONT_HEADING,
               fontWeight: 700,
               letterSpacing: '-0.02em',
               marginBottom: 'calc(var(--spacing) * 4)',
@@ -89,7 +90,7 @@ export function FAQ() {
             className="max-w-[650px] mx-auto text-[15px] md:text-base lg:text-lg px-4"
             style={{
               color: '#3C3C43',
-              fontFamily: 'Inter, "Plus Jakarta Sans", sans-serif',
+              fontFamily: FONT_BODY,
               fontWeight: 400,
             }}
           >
@@ -133,7 +134,7 @@ export function FAQ() {
                     className="flex-1 pr-2 text-[15px] md:text-[16px]"
                     style={{
                       color: '#FFFFFF',
-                      fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
+                      fontFamily: FONT_HEADING,
                       fontWeight: 600,
                       lineHeight: '1.5',
                     }}
@@ -186,7 +187,7 @@ export function FAQ() {
                           className="leading-relaxed"
                           style={{
                             color: '#3C3C43',
-                            fontFamily: 'Inter, "Plus Jakarta Sans", sans-serif',
+                            fontFamily: FONT_BODY,
                             fontSize: '15px',
                             fontWeight: 400,
                           }}
@@ -213,7 +214,7 @@ export function FAQ() {
             className="mb-4"
             style={{
               color: '#3C3C43',
-              fontFamily: 'Inter, "Plus Jakarta Sans", sans-serif',
+              fontFamily: FONT_BODY,
               fontSize: '15px',
             }}
           >
@@ -230,7 +231,7 @@ export function FAQ() {
               background: 'rgba(195, 163, 110, 0.1)',
               border: '1.5px solid rgba(195, 163, 110, 0.3)',
               color: '#C3A36E',
-              fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
+              fontFamily: FONT_HEADING,
               fontSize: '15px',
               fontWeight: 600,
             }}

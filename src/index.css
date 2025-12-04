@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +8,9 @@
 
   :root,
   :host {
+    /* Typography - Modern Pairing */
+    --font-inter: 'Inter', 'Plus Jakarta Sans';
+    --font-jakarta: 'Plus Jakarta Sans', 'Inter';
     /* Typography - Original System Stack */
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -55,6 +58,21 @@
     --ease-out: cubic-bezier(0.25, 0.1, 0.25, 1);
     --ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
     --spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  body {
+    font-family: var(--font-inter), 'Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Segoe UI', sans-serif;
+    color: #1C1C1E;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-jakarta), 'Inter', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
   }
 }
 

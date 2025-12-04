@@ -91,8 +91,7 @@ export function Benefits() {
             className="text-[26px] md:text-3xl lg:text-4xl xl:text-5xl text-balance"
             style={{
               color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 700,
+                            fontWeight: 700,
               letterSpacing: '-0.02em',
               marginBottom: 'calc(var(--spacing) * 4)',
             }}
@@ -103,8 +102,7 @@ export function Benefits() {
             className="max-w-[700px] mx-auto text-[15px] md:text-base lg:text-lg text-pretty"
             style={{
               color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 400,
+                            fontWeight: 400,
               lineHeight: 1.6,
             }}
           >
@@ -191,8 +189,7 @@ export function Benefits() {
                     className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md mb-2"
                     style={{
                       background: `${benefit.color}12`,
-                      fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    }}
+                                          }}
                   >
                     <span
                       style={{
@@ -225,8 +222,7 @@ export function Benefits() {
                       fontSize: '20px',
                       lineHeight: '28px',
                       color: '#1C1C1E',
-                      fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                      fontWeight: 600,
+                                            fontWeight: 600,
                       // OPTIMIZED: Tracking -0.5% au lieu de -2%
                       letterSpacing: '-0.005em',
                     }}
@@ -242,8 +238,7 @@ export function Benefits() {
                     fontSize: '15px',
                     lineHeight: '24px',
                     color: '#3C3C43',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 400,
+                                        fontWeight: 400,
                   }}
                 >
                   {benefit.description}

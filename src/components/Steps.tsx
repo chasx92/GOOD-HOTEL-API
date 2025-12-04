@@ -57,8 +57,7 @@ export function Steps() {
             className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-balance"
             style={{
               color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 700,
+                            fontWeight: 700,
               letterSpacing: '-0.02em',
               marginBottom: 'calc(var(--spacing) * 4)',
             }}
@@ -69,8 +68,7 @@ export function Steps() {
             className="max-w-[600px] mx-auto text-[15px] md:text-base lg:text-lg text-pretty"
             style={{
               color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 400,
+                            fontWeight: 400,
               lineHeight: 1.6,
             }}
           >
@@ -113,8 +111,7 @@ export function Steps() {
                   style={{
                     background: step.color,
                     color: '#FFFFFF',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontSize: '15px',
+                                        fontSize: '15px',
                     fontWeight: 700,
                   }}
                   initial={{ scale: 0, rotate: -180 }}
@@ -160,8 +157,7 @@ export function Steps() {
                   className="text-xl md:text-2xl text-balance"
                   style={{
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 600,
+                                        fontWeight: 600,
                     letterSpacing: '-0.01em',
                     marginBottom: 'calc(var(--spacing) * 3)',
                   }}
@@ -172,8 +168,7 @@ export function Steps() {
                   className="text-sm md:text-base text-pretty"
                   style={{
                     color: '#3C3C43',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 400,
+                                        fontWeight: 400,
                     lineHeight: 1.6,
                     marginBottom: 'calc(var(--spacing) * 4)',
                   }}
@@ -184,8 +179,7 @@ export function Steps() {
                   className="text-xs md:text-sm"
                   style={{
                     color: '#8E8E93',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 500,
+                                        fontWeight: 500,
                   }}
                 >
                   {step.subtext}

@@ -29,8 +29,7 @@ export function TestimonialCard() {
           className="text-[15px] leading-[1.7] mb-5"
           style={{
             color: '#E8E8ED',
-            fontFamily: '-apple-system, SF Pro Display, sans-serif',
-          }}
+                      }}
         >
           "Keylessly a transformé l'expérience de nos clients. Plus de file d'attente à la réception, 
           plus de cartes perdues. Le taux de satisfaction a augmenté de 34 % en 3 mois."
