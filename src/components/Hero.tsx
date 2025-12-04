@@ -85,7 +85,7 @@ export function Hero({ onPrimaryClick }: HeroProps) {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
                 <span className="text-sm font-medium text-gray-900">
-                  {t.hero.statusAvailable || 'Disponible maintenant'}
+                  {t.hero.statusAvailable || 'Available now'}
                 </span>
               </div>
               <div className="flex items-center gap-1.5 text-sm text-gray-600">
@@ -113,7 +113,7 @@ export function Hero({ onPrimaryClick }: HeroProps) {
               id="hero-heading"
               className={CLASS_NAMES.heading}
             >
-              La clé est déjà dans le <span style={{ color: HERO_STYLES.brandColor }}>téléphone</span> de vos clients
+              The key is already in your guests' <span style={{ color: HERO_STYLES.brandColor }}>phones</span>
             </h1>
 
             {/* Subtitle */}
