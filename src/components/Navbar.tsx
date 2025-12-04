@@ -188,7 +188,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
 
                 <button
                   onClick={scrollToForm}
-                  className="w-full py-3 rounded-xl font-semibold text-center btn-gradient"
+                  className="w-full py-3 rounded-xl font-semibold text-center btn-black"
                 >
                   {t.navbar.cta}
                 </button>
