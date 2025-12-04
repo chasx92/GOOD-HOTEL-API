@@ -54,6 +54,36 @@ export function LeadForm() {
     return re.test(email);
   };
 
+  const buildEmailBody = (data: FormData) => {
+    const lines = [
+      `Nom de l'établissement : ${data.hotelName || 'Non fourni'}`,
+      data.city || data.country ? `Localisation : ${[data.city, data.country].filter(Boolean).join(', ')}` : null,
+      data.roomCount ? `Nombre de chambres : ${data.roomCount}` : null,
+      data.lockProvider ? `Fournisseur de serrures : ${data.lockProvider}` : null,
+      data.lockProviderOther ? `Autre fournisseur : ${data.lockProviderOther}` : null,
+      data.pms.length ? `PMS : ${data.pms.join(', ')}` : null,
+      data.name ? `Nom du contact : ${data.name}` : null,
+      data.role ? `Rôle : ${data.role}` : null,
+      `Email : ${data.email}`,
+      data.phone ? `Téléphone : ${data.phone}` : null,
+      data.timeline ? `Planning d'implémentation : ${data.timeline}` : null,
+      data.comment ? `Commentaire : ${data.comment}` : null,
+      data.consent ? 'Consentement RGPD : donné' : null,
+    ];
+
+    return lines.filter(Boolean).join('\n');
+  };
+
+  const sendEmail = (data: FormData) => {
+    if (typeof window === 'undefined') return;
+
+    const subject = encodeURIComponent(`Nouvelle demande de démo - ${data.hotelName || 'Client'}`);
+    const body = encodeURIComponent(buildEmailBody(data));
+    const mailtoLink = `mailto:samuel@letincelle.pro?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+  };
+
   const validateField = (name: string, value: any) => {
     switch (name) {
       case 'hotelName':
@@ -120,6 +150,7 @@ export function LeadForm() {
       return;
     }
 
+    sendEmail(formData);
     setFormState('success');
     
     setTimeout(() => {
