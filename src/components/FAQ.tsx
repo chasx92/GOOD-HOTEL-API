@@ -65,7 +65,7 @@ export function FAQ() {
           <p
             className="text-[11px] md:text-xs tracking-[0.12em] uppercase"
             style={{
-              color: '#C3A36E',
+              color: '#0A84FF',
               fontFamily: FONT_HEADING,
               fontWeight: 600,
               marginBottom: 'calc(var(--spacing) * 3)',
@@ -104,13 +104,13 @@ export function FAQ() {
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
-                className="rounded-[14px] md:rounded-[16px] overflow-hidden"
+                className="relative rounded-[14px] md:rounded-[16px] overflow-hidden"
                 style={{
-                  background: 'linear-gradient(135deg, #D9B365 0%, #C3A36E 50%, #B8923A 100%)',
-                  border: '1px solid rgba(109, 76, 26, 0.35)',
+                  background: 'linear-gradient(135deg, #005FC4 0%, #007AFF 50%, #4DA3FF 100%)',
+                  border: '1px solid rgba(0, 122, 255, 0.35)',
                   boxShadow: openIndex === index
-                    ? '0 10px 36px rgba(128, 94, 31, 0.35)'
-                    : '0 6px 20px rgba(128, 94, 31, 0.25)',
+                    ? '0 10px 36px rgba(0, 122, 255, 0.32)'
+                    : '0 6px 20px rgba(0, 122, 255, 0.24)',
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -120,84 +120,96 @@ export function FAQ() {
                   transition: { duration: 0.2 }
                 }}
               >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  aria-expanded={openIndex === index}
-                  aria-controls={`faq-answer-${index}`}
-                  className="w-full px-4 md:px-5 lg:px-6 py-3.5 md:py-4 lg:py-5 flex items-start justify-between gap-3 md:gap-4 text-left cursor-pointer transition-colors"
+                <motion.div
+                  className="absolute inset-0 pointer-events-none opacity-45"
                   style={{
-                    background: 'transparent',
-                    borderBottom: '1px solid rgba(109, 76, 26, 0.25)',
+                    background: 'linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.28) 50%, transparent 70%)',
                   }}
-                >
-                  <span
-                    className="flex-1 pr-2 text-[15px] md:text-[16px]"
+                  animate={{ x: ['-120%', '120%'] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+                  aria-hidden
+                />
+
+                <div className="relative z-10">
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    aria-expanded={openIndex === index}
+                    aria-controls={`faq-answer-${index}`}
+                    className="w-full px-4 md:px-5 lg:px-6 py-3.5 md:py-4 lg:py-5 flex items-start justify-between gap-3 md:gap-4 text-left cursor-pointer transition-colors"
                     style={{
-                      color: '#FFFFFF',
-                      fontFamily: FONT_HEADING,
-                      fontWeight: 600,
-                      lineHeight: '1.5',
+                      background: 'transparent',
+                      borderBottom: '1px solid rgba(0, 122, 255, 0.28)',
                     }}
                   >
-                    {faq.question}
-                  </span>
-
-                  <motion.div
-                    className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
-                    style={{
-                      background: openIndex === index
-                        ? 'rgba(255, 255, 255, 0.22)'
-                        : 'rgba(255, 255, 255, 0.16)',
-                    }}
-                    animate={{
-                      rotate: openIndex === index ? 180 : 0,
-                    }}
-                    transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-                  >
-                    {openIndex === index ? (
-                      <Minus className="w-4 h-4" style={{ color: '#FFFFFF' }} strokeWidth={2.5} />
-                    ) : (
-                      <Plus className="w-4 h-4" style={{ color: '#FFFFFF' }} strokeWidth={2.5} />
-                    )}
-                  </motion.div>
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {openIndex === index && (
-                    <motion.div
-                      id={`faq-answer-${index}`}
-                      role="region"
-                      aria-labelledby={`faq-question-${index}`}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ 
-                        duration: 0.3,
-                        ease: [0.25, 0.1, 0.25, 1]
+                    <span
+                      className="flex-1 pr-2 text-[15px] md:text-[16px]"
+                      style={{
+                        color: '#FFFFFF',
+                        fontFamily: FONT_HEADING,
+                        fontWeight: 600,
+                        lineHeight: '1.5',
                       }}
-                      style={{ overflow: 'hidden' }}
                     >
-                      <div 
-                        className="px-5 md:px-6 pb-5 md:pb-6 pt-1"
-                        style={{
-                          background: '#FFFFFF',
+                      {faq.question}
+                    </span>
+
+                    <motion.div
+                      className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
+                      style={{
+                        background: openIndex === index
+                          ? 'rgba(255, 255, 255, 0.22)'
+                          : 'rgba(255, 255, 255, 0.16)',
+                      }}
+                      animate={{
+                        rotate: openIndex === index ? 180 : 0,
+                      }}
+                      transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                    >
+                      {openIndex === index ? (
+                        <Minus className="w-4 h-4" style={{ color: '#FFFFFF' }} strokeWidth={2.5} />
+                      ) : (
+                        <Plus className="w-4 h-4" style={{ color: '#FFFFFF' }} strokeWidth={2.5} />
+                      )}
+                    </motion.div>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {openIndex === index && (
+                      <motion.div
+                        id={`faq-answer-${index}`}
+                        role="region"
+                        aria-labelledby={`faq-question-${index}`}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{
+                          duration: 0.3,
+                          ease: [0.25, 0.1, 0.25, 1]
                         }}
+                        style={{ overflow: 'hidden' }}
                       >
-                        <p
-                          className="leading-relaxed"
+                        <div
+                          className="px-5 md:px-6 pb-5 md:pb-6 pt-1"
                           style={{
-                            color: '#3C3C43',
-                            fontFamily: FONT_BODY,
-                            fontSize: '15px',
-                            fontWeight: 400,
+                            background: '#FFFFFF',
                           }}
                         >
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                          <p
+                            className="leading-relaxed"
+                            style={{
+                              color: '#3C3C43',
+                              fontFamily: FONT_BODY,
+                              fontSize: '15px',
+                              fontWeight: 400,
+                            }}
+                          >
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -226,22 +238,28 @@ export function FAQ() {
               e.preventDefault();
               document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[12px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF]"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[12px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF] text-white overflow-hidden btn-gradient"
             style={{
-              background: 'rgba(195, 163, 110, 0.1)',
-              border: '1.5px solid rgba(195, 163, 110, 0.3)',
-              color: '#C3A36E',
               fontFamily: FONT_HEADING,
               fontSize: '15px',
               fontWeight: 600,
             }}
             whileHover={{
-              background: 'rgba(195, 163, 110, 0.15)',
-              scale: 1.02
+              scale: 1.02,
+              boxShadow: '0 8px 24px rgba(0, 122, 255, 0.25), 0 4px 8px rgba(0, 122, 255, 0.15)'
             }}
             whileTap={{ scale: 0.98 }}
           >
-            {t.faq.contactCta}
+            <span className="relative z-10">{t.faq.contactCta}</span>
+            <motion.div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background: 'linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.28) 50%, transparent 70%)',
+              }}
+              animate={{ x: ['-120%', '120%'] }}
+              transition={{ duration: 2.2, repeat: Infinity, ease: 'linear' }}
+              aria-hidden
+            />
           </motion.a>
         </motion.div>
       </div>
