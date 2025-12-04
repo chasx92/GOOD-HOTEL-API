@@ -163,6 +163,10 @@
     transform: scaleX(1);
   }
 
+  .cta-hover-effect.no-underline::after {
+    display: none;
+  }
+
   .glass {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
