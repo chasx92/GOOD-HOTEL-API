@@ -129,7 +129,7 @@ export function Pricing() {
               </h3>
               <div className="flex items-baseline gap-2 mb-3">
                 <span
-                  className="text-4xl md:text-5xl lg:text-6xl"
+                  className="text-3xl md:text-4xl lg:text-5xl"
                   style={{
                     color: '#007AFF',
                                         fontWeight: 700,

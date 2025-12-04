@@ -14,6 +14,7 @@ export interface Translations {
   // Hero
   hero: {
     title: string;
+    titleHighlight: string;
     subtitle: string;
     statusAvailable: string;
     cta: string;
@@ -280,7 +281,8 @@ export const translations: Record<Language, Translations> = {
     },
 
     hero: {
-      title: 'La clé est déjà dans le téléphone de vos clients',
+      title: 'La clé est déjà dans le {highlight} de vos clients',
+      titleHighlight: 'téléphone',
       subtitle: 'Transformez l\'expérience d\'arrivée avec des clés Apple Wallet et Google Wallet. Sans app à télécharger, sans carte plastique, sans friction.',
       statusAvailable: 'Disponible maintenant',
       cta: 'Demander une démo',
@@ -629,7 +631,8 @@ export const translations: Record<Language, Translations> = {
     },
 
     hero: {
-      title: 'The key is already in your guests\' phones',
+      title: 'The key is already in your guests\' {highlight}',
+      titleHighlight: 'phones',
       subtitle: 'Transform the arrival experience with Apple Wallet and Google Wallet keys. No app to download, no plastic card, no friction.',
       statusAvailable: 'Available now',
       cta: 'Request a Demo',
