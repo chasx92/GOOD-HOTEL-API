@@ -105,11 +105,11 @@ export function FAQ() {
                 key={index}
                 className="rounded-[14px] md:rounded-[16px] overflow-hidden"
                 style={{
-                  background: '#0B0B0F',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  background: 'linear-gradient(135deg, #D9B365 0%, #C3A36E 50%, #B8923A 100%)',
+                  border: '1px solid rgba(109, 76, 26, 0.35)',
                   boxShadow: openIndex === index
-                    ? '0 8px 32px rgba(0, 0, 0, 0.25)'
-                    : '0 4px 16px rgba(0, 0, 0, 0.15)',
+                    ? '0 10px 36px rgba(128, 94, 31, 0.35)'
+                    : '0 6px 20px rgba(128, 94, 31, 0.25)',
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -125,13 +125,14 @@ export function FAQ() {
                   aria-controls={`faq-answer-${index}`}
                   className="w-full px-4 md:px-5 lg:px-6 py-3.5 md:py-4 lg:py-5 flex items-start justify-between gap-3 md:gap-4 text-left cursor-pointer transition-colors"
                   style={{
-                    background: '#0B0B0F',
-                    borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
+                    background: 'transparent',
+                    borderBottom: '1px solid rgba(109, 76, 26, 0.25)',
                   }}
                 >
                   <span
-                    className="flex-1 pr-2 text-[15px] md:text-[16px] text-white"
+                    className="flex-1 pr-2 text-[15px] md:text-[16px]"
                     style={{
+                      color: '#1C1C1E',
                       fontFamily: '-apple-system, SF Pro Display, sans-serif',
                       fontWeight: 600,
                       lineHeight: '1.5',
@@ -144,8 +145,8 @@ export function FAQ() {
                     className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
                     style={{
                       background: openIndex === index
-                        ? 'rgba(255, 255, 255, 0.18)'
-                        : 'rgba(255, 255, 255, 0.12)',
+                        ? 'rgba(28, 28, 30, 0.18)'
+                        : 'rgba(28, 28, 30, 0.12)',
                     }}
                     animate={{
                       rotate: openIndex === index ? 180 : 0,
@@ -153,9 +154,9 @@ export function FAQ() {
                     transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                   >
                     {openIndex === index ? (
-                      <Minus className="w-4 h-4 text-white" strokeWidth={2.5} />
+                      <Minus className="w-4 h-4" style={{ color: '#1C1C1E' }} strokeWidth={2.5} />
                     ) : (
-                      <Plus className="w-4 h-4" style={{ color: '#8E8E93' }} strokeWidth={2.5} />
+                      <Plus className="w-4 h-4" style={{ color: '#3C3C43' }} strokeWidth={2.5} />
                     )}
                   </motion.div>
                 </button>
