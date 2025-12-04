@@ -142,14 +142,16 @@ export function Benefits() {
                   // OPTIMIZED: Hover shadow Y16/B40 @12% + border @12%
                   boxShadow: '0 16px 40px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
                   borderColor: 'rgba(0,0,0,0.12)',
-                  scale: 1.02,
-                  y: -2,
+                  scale: 1.1,
+                  y: -4,
+                  transition: { duration: 0.2, ease: 'easeOut' },
                 }}
                 whileFocus={{
                   boxShadow: '0 16px 40px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
                   borderColor: 'rgba(0,0,0,0.12)',
-                  scale: 1.02,
-                  y: -2,
+                  scale: 1.1,
+                  y: -4,
+                  transition: { duration: 0.2, ease: 'easeOut' },
                 }}
                 whileTap={{
                   // OPTIMIZED: Press translateY +1px + opacity 96%
@@ -159,7 +161,7 @@ export function Benefits() {
               >
                 {/* Gradient background on hover */}
                 <motion.div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none"
                   style={{
                     background: `radial-gradient(circle at top right, ${benefit.color}08 0%, transparent 60%)`,
                   }}
