@@ -15,7 +15,7 @@ export function Footer() {
         borderTop: '1px solid #E5E5EA',
               }}
     >
-      <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
+      <div id="contact" className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
         <div className="flex flex-col items-center gap-4 mb-12 text-center">
           <div className="flex items-center gap-3">
             <a

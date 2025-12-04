@@ -43,6 +43,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
     { label: t.navbar.security, href: 'security' },
     { label: t.navbar.pricing, href: 'pricing' },
     { label: t.navbar.faq, href: 'faq' },
+    { label: t.navbar.contact, href: 'contact' },
   ];
 
   return (
@@ -89,7 +90,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="relative text-[15px] font-bold text-black hover:text-black transition-colors"
+                  className="relative text-[15px] font-bold text-black nav-link-underline transition-colors"
                   whileHover={{ y: -1 }}
                 >
                   {link.label}
