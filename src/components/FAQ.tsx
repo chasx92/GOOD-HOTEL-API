@@ -61,23 +61,23 @@ export function FAQ() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <p 
+          <p
             className="text-[11px] md:text-xs tracking-[0.12em] uppercase"
-            style={{ 
+            style={{
               color: '#C3A36E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
               fontWeight: 600,
               marginBottom: 'calc(var(--spacing) * 3)',
             }}
           >
             Questions fréquentes
           </p>
-          <h2 
+          <h2
             id="faq-heading"
             className="text-[26px] md:text-3xl lg:text-4xl xl:text-5xl text-balance"
             style={{
               color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
               fontWeight: 700,
               letterSpacing: '-0.02em',
               marginBottom: 'calc(var(--spacing) * 4)',
@@ -85,11 +85,11 @@ export function FAQ() {
           >
             Tout ce que vous devez savoir
           </h2>
-          <p 
+          <p
             className="max-w-[650px] mx-auto text-[15px] md:text-base lg:text-lg px-4"
             style={{
               color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: 'Inter, "Plus Jakarta Sans", sans-serif',
               fontWeight: 400,
             }}
           >
@@ -133,7 +133,7 @@ export function FAQ() {
                     className="flex-1 pr-2 text-[15px] md:text-[16px]"
                     style={{
                       color: '#FFFFFF',
-                      fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                      fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
                       fontWeight: 600,
                       lineHeight: '1.5',
                     }}
@@ -182,11 +182,11 @@ export function FAQ() {
                           background: '#FFFFFF',
                         }}
                       >
-                        <p 
+                        <p
                           className="leading-relaxed"
                           style={{
                             color: '#3C3C43',
-                            fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                            fontFamily: 'Inter, "Plus Jakarta Sans", sans-serif',
                             fontSize: '15px',
                             fontWeight: 400,
                           }}
@@ -209,11 +209,11 @@ export function FAQ() {
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.6 }}
         >
-          <p 
+          <p
             className="mb-4"
             style={{
               color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: 'Inter, "Plus Jakarta Sans", sans-serif',
               fontSize: '15px',
             }}
           >
@@ -230,13 +230,13 @@ export function FAQ() {
               background: 'rgba(195, 163, 110, 0.1)',
               border: '1.5px solid rgba(195, 163, 110, 0.3)',
               color: '#C3A36E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: '"Plus Jakarta Sans", "Inter", sans-serif',
               fontSize: '15px',
               fontWeight: 600,
             }}
-            whileHover={{ 
+            whileHover={{
               background: 'rgba(195, 163, 110, 0.15)',
-              scale: 1.02 
+              scale: 1.02
             }}
             whileTap={{ scale: 0.98 }}
           >
