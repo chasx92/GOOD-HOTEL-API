@@ -164,6 +164,21 @@ export interface Translations {
     };
   };
 
+  // Pricing Card (Premium)
+  pricingCard: {
+    badge: string;
+    planName: string;
+    priceLabel: string;
+    priceDescription: string;
+    featuresTitle: string;
+    features: string[];
+    addonsTitle: string;
+    addons: { label: string; desc: string }[];
+    cta: string;
+    roiTitle: string;
+    roiDescription: string;
+  };
+
   // FAQ
   faq: {
     eyebrow: string;
@@ -443,6 +458,35 @@ export const translations: Record<Language, Translations> = {
         ],
         cta: 'Nous contacter',
       },
+    },
+
+    pricingCard: {
+      badge: 'Le plus populaire',
+      planName: 'Keylessly Premium',
+      priceLabel: 'Devis personnalisé',
+      priceDescription:
+        'Tarification sur mesure selon la taille de votre établissement. Devis gratuit sous 24h.',
+      featuresTitle: 'Tout est inclus :',
+      features: [
+        'Intégration complète avec votre PMS',
+        'Clés Apple & Google Wallet illimitées',
+        'Formation incluse pour vos équipes',
+        'Support technique 24/7',
+        'Mises à jour et améliorations incluses',
+        'Tableau de bord analytique en temps réel',
+        'Multi-propriétés (groupes hôteliers)',
+        'API complète pour personnalisation',
+      ],
+      addonsTitle: 'Options disponibles :',
+      addons: [
+        { label: 'Apple Watch', desc: 'Clé sur montre connectée' },
+        { label: 'Parking & Spa', desc: 'Accès aux espaces parking & spa' },
+        { label: 'Check-in mobile', desc: 'Interface de réservation intégrée' },
+      ],
+      cta: 'Obtenir un devis personnalisé',
+      roiTitle: '💰 ROI moyen : rentabilisé en 4 mois',
+      roiDescription:
+        "Économies sur les cartes perdues, fluidification de l’accueil et satisfaction client accrue. Nos hôtels partenaires rentabilisent l’investissement dès le 3ᵉ ou 4ᵉ mois.",
     },
 
     faq: {
@@ -763,6 +807,35 @@ export const translations: Record<Language, Translations> = {
         ],
         cta: 'Contact Us',
       },
+    },
+
+    pricingCard: {
+      badge: 'Most popular',
+      planName: 'Keylessly Premium',
+      priceLabel: 'Custom quote',
+      priceDescription:
+        'Custom pricing based on your property size and needs. Free quote within 24h.',
+      featuresTitle: 'Everything included:',
+      features: [
+        'Full integration with your PMS',
+        'Unlimited Apple & Google Wallet keys',
+        'Training for your teams included',
+        '24/7 technical support',
+        'Updates and enhancements included',
+        'Real-time analytics dashboard',
+        'Multi-property (hotel groups)',
+        'Full API for customization',
+      ],
+      addonsTitle: 'Available add-ons:',
+      addons: [
+        { label: 'Apple Watch', desc: 'Key on smartwatch' },
+        { label: 'Parking & Spa', desc: 'Access to amenity areas' },
+        { label: 'Mobile Check-in', desc: 'Integrated booking interface' },
+      ],
+      cta: 'Get a personalized quote',
+      roiTitle: '💰 Average ROI: paid back in 4 months',
+      roiDescription:
+        'Savings on lost cards, faster front-desk operations, and higher guest satisfaction. Our partner hotels see a return on investment by month 3 or 4.',
     },
 
     faq: {
