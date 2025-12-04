@@ -874,7 +874,7 @@ export function LeadForm() {
           {/* Submit Button */}
           <motion.button
             type="submit"
-            className="w-full group relative overflow-hidden rounded-[14px] py-4 mt-2 btn-gradient"
+            className="w-full group relative overflow-hidden rounded-[14px] py-4 mt-2 btn-gradient cta-hover-effect"
             whileHover={{
               scale: 1.01,
               boxShadow: '0 8px 24px rgba(0, 122, 255, 0.25)',

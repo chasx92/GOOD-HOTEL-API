@@ -263,7 +263,7 @@ export function Pricing() {
               onClick={() => {
                 document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="w-full px-8 py-4 rounded-[16px] relative overflow-hidden group btn-gradient"
+              className="w-full px-8 py-4 rounded-[16px] relative overflow-hidden group btn-gradient cta-hover-effect"
               whileHover={{
                 scale: 1.02,
                 boxShadow: '0 8px 24px rgba(0, 122, 255, 0.25), 0 4px 8px rgba(0, 122, 255, 0.15)',
