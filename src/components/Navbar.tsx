@@ -91,7 +91,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
               }}>
-                Openli
+                Unlocky
               </span>
             </motion.a>
 

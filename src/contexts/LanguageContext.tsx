@@ -19,7 +19,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     setMounted(true);
     const browserLang = navigator.language.toLowerCase();
-    const savedLang = localStorage.getItem('openli-language') as Language | null;
+    const savedLang = localStorage.getItem('unlocky-language') as Language | null;
     
     if (savedLang && (savedLang === 'fr' || savedLang === 'en')) {
       setLanguageState(savedLang);
@@ -34,7 +34,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('openli-language', lang);
+      localStorage.setItem('unlocky-language', lang);
       document.documentElement.lang = lang;
     }
   };

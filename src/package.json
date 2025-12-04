@@ -1,8 +1,8 @@
 {
-  "name": "openli-landing-page",
+  "name": "unlocky-landing-page",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing page premium pour Openli - Solution d'accès hôtelier via Apple/Google Wallet",
+  "description": "Landing page premium pour Unlocky - Solution d'accès hôtelier via Apple/Google Wallet",
   "author": {
     "name": "Samuel Chetrit",
     "email": "sam.grailled@gmail.com",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/samuel-chetrit/openli-landing"
+    "url": "https://github.com/samuel-chetrit/unlocky-landing"
   },
   "keywords": [
     "hotel",

@@ -21,7 +21,7 @@
 ## 📁 STRUCTURE FINALE (PROPRE)
 
 ```
-openli-landing/
+unlocky-landing/
 ├── 📄 README.md                    ← Guide principal
 ├── 📄 COMMENCER_ICI.md            ← Quick start FR
 ├── 📄 CHANGELOG.md                ← Historique versions
@@ -134,11 +134,11 @@ npm run build
 # 2. Git init
 git init
 git add .
-git commit -m "🚀 Initial commit - Openli landing page v1.0.0"
+git commit -m "🚀 Initial commit - Unlocky landing page v1.0.0"
 git branch -M main
 
 # 3. Push sur GitHub
-git remote add origin https://github.com/samuel-chetrit/openli-landing.git
+git remote add origin https://github.com/samuel-chetrit/unlocky-landing.git
 git push -u origin main
 
 # 4. Deploy Vercel

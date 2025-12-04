@@ -8,10 +8,10 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = "Openli - Clés Digitales Apple & Google Wallet pour Hôtels Premium",
+  title = "Unlocky - Clés Digitales Apple & Google Wallet pour Hôtels Premium",
   description = "Transformez l'expérience de vos clients avec des clés digitales dans Apple & Google Wallet. Solution premium pour hôtels 5 étoiles. Intégration ASSA ABLOY, dormakaba, SALTO. Réduisez vos coûts, augmentez la satisfaction client.",
-  ogImage = "https://openli.io/og-image.jpg",
-  canonicalUrl = "https://openli.io"
+  ogImage = "https://unlocky.io/og-image.jpg",
+  canonicalUrl = "https://unlocky.io"
 }: SEOHeadProps) {
   
   useEffect(() => {
@@ -23,7 +23,7 @@ export function SEOHead({
       // Basic meta tags
       { name: 'description', content: description },
       { name: 'keywords', content: 'clé digitale hôtel, Apple Wallet clé chambre, Google Wallet hôtel, accès mobile chambre, keyless entry hôtel, clé smartphone, ASSA ABLOY, dormakaba, SALTO, clé NFC, hôtel 5 étoiles, digital key hotel' },
-      { name: 'author', content: 'Openli' },
+      { name: 'author', content: 'Unlocky' },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
       
       // Language & Geo
@@ -33,29 +33,29 @@ export function SEOHead({
       
       // Open Graph / Facebook
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Openli' },
+      { property: 'og:site_name', content: 'Unlocky' },
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
       { property: 'og:image', content: ogImage },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
-      { property: 'og:image:alt', content: 'Openli - Clé digitale dans Apple Wallet sur iPhone 15 Pro' },
+      { property: 'og:image:alt', content: 'Unlocky - Clé digitale dans Apple Wallet sur iPhone 15 Pro' },
       { property: 'og:url', content: canonicalUrl },
       { property: 'og:locale', content: 'fr_FR' },
       
       // Twitter Card
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@Openli' },
-      { name: 'twitter:creator', content: '@Openli' },
+      { name: 'twitter:site', content: '@Unlocky' },
+      { name: 'twitter:creator', content: '@Unlocky' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: ogImage },
-      { name: 'twitter:image:alt', content: 'Openli - Clé digitale dans Apple Wallet sur iPhone 15 Pro' },
+      { name: 'twitter:image:alt', content: 'Unlocky - Clé digitale dans Apple Wallet sur iPhone 15 Pro' },
       
       // Mobile & Apple specific
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
-      { name: 'apple-mobile-web-app-title', content: 'Openli' },
+      { name: 'apple-mobile-web-app-title', content: 'Unlocky' },
       { name: 'format-detection', content: 'telephone=no' },
       
       // Theme color
