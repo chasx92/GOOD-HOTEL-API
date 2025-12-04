@@ -195,8 +195,13 @@ export interface Translations {
       consentRequired: string;
     };
     submit: string;
+    submitSending: string;
     securityNote: string;
     success: {
+      title: string;
+      message: string;
+    };
+    error: {
       title: string;
       message: string;
     };
@@ -483,10 +488,15 @@ export const translations: Record<Language, Translations> = {
         consentRequired: 'Vous devez accepter pour continuer',
       },
       submit: 'Envoyer ma demande',
+      submitSending: 'Envoi en cours...',
       securityNote: 'Vos données sont protégées. Nous utilisons un chiffrement de niveau bancaire et sommes conformes RGPD. Aucune donnée n\'est partagée avec des tiers.',
       success: {
         title: 'Demande reçue !',
         message: 'Merci pour votre intérêt ! Notre équipe vous contactera dans les prochaines 24h pour organiser votre démo personnalisée.',
+      },
+      error: {
+        title: 'Une erreur est survenue',
+        message: 'Votre demande n\'a pas pu être envoyée. Merci de vérifier votre connexion et de réessayer.',
       },
     },
 
@@ -767,10 +777,15 @@ export const translations: Record<Language, Translations> = {
         consentRequired: 'You must agree to continue',
       },
       submit: 'Send my request',
+      submitSending: 'Sending...',
       securityNote: 'Your data is protected. We use bank-level encryption and are GDPR compliant. No data is shared with third parties.',
       success: {
         title: 'Request received!',
         message: 'Thank you for your interest! Our team will contact you within the next 24 hours to arrange your personalized demo.',
+      },
+      error: {
+        title: 'Something went wrong',
+        message: 'Your request could not be sent. Please check your connection and try again.',
       },
     },
 
