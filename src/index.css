@@ -196,6 +196,29 @@
     border: 1px solid rgba(0, 0, 0, 0.04);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
   }
+
+  .nav-link-underline {
+    position: relative;
+    transition: color 180ms var(--ease-out);
+  }
+
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 200ms var(--ease-out);
+  }
+
+  .nav-link-underline:hover::after,
+  .nav-link-underline:focus-visible::after {
+    transform: scaleX(1);
+  }
 }
 
 @layer utilities {
