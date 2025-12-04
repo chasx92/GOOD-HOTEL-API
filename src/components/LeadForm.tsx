@@ -95,17 +95,25 @@ export function LeadForm() {
       Détails: detailedBody,
     };
 
-    const response = await fetch('https://formsubmit.co/ajax/samuel@letincelle.pro', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    });
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
 
-    if (!response.ok) {
-      throw new Error('Failed to send email');
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/samuel@letincelle.pro', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+    } finally {
+      clearTimeout(timeoutId);
     }
   };
 
