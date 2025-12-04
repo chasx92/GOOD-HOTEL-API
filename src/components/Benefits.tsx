@@ -142,14 +142,14 @@ export function Benefits() {
                   // OPTIMIZED: Hover shadow Y16/B40 @12% + border @12%
                   boxShadow: '0 16px 40px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
                   borderColor: 'rgba(0,0,0,0.12)',
-                  scale: 1.1,
+                  scale: 1.05,
                   y: -4,
                   transition: { duration: 0.2, ease: 'easeOut' },
                 }}
                 whileFocus={{
                   boxShadow: '0 16px 40px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
                   borderColor: 'rgba(0,0,0,0.12)',
-                  scale: 1.1,
+                  scale: 1.05,
                   y: -4,
                   transition: { duration: 0.2, ease: 'easeOut' },
                 }}
