@@ -121,6 +121,21 @@ export interface Translations {
     role: string;
   };
 
+  // Testimonials / Founders program
+  testimonials: {
+    badge: string;
+    title: string;
+    description: string;
+    benefits: {
+      badge: string;
+      title: string;
+      description: string;
+      highlight: { value: string; label: string };
+    }[];
+    programNote: string;
+    perks: string[];
+  };
+
   // Pricing
   pricing: {
     title: string;
@@ -151,8 +166,11 @@ export interface Translations {
 
   // FAQ
   faq: {
+    eyebrow: string;
     title: string;
     subtitle: string;
+    contactPrompt: string;
+    contactCta: string;
     questions: {
       q1: { question: string; answer: string };
       q2: { question: string; answer: string };
@@ -349,6 +367,34 @@ export const translations: Record<Language, Translations> = {
       role: 'Hôtel pilote confidentiel',
     },
 
+    testimonials: {
+      badge: 'Programme Exclusif',
+      title: 'Rejoignez les Hôtels Fondateurs',
+      description: "Soyez parmi les premiers établissements à adopter Keylessly et bénéficiez d'avantages exclusifs réservés aux pionniers.",
+      benefits: [
+        {
+          badge: 'Avantage #1',
+          title: 'Tarif Préférentiel à Vie',
+          description: 'Verrouillez un tarif avantageux et bénéficiez de toutes les futures évolutions premium sans surcoût.',
+          highlight: { value: '− 40 %', label: 'vs tarif public' },
+        },
+        {
+          badge: 'Avantage #2',
+          title: 'Support VIP & Formation Dédiée',
+          description: 'Ligne directe avec nos ingénieurs, formation approfondie de vos équipes, et accompagnement personnalisé pendant 6 mois.',
+          highlight: { value: '24/7', label: 'réponse prioritaire' },
+        },
+        {
+          badge: 'Avantage #3',
+          title: 'Influence Produit Directe',
+          description: 'Vos retours façonnent le produit. Accès anticipé aux nouvelles fonctionnalités et roadmap co-construite avec votre équipe.',
+          highlight: { value: 'Beta', label: 'accès prioritaire' },
+        },
+      ],
+      programNote: 'Programme limité à 20 hôtels fondateurs',
+      perks: ['Contrat sans engagement', 'Installation en 1 semaine'],
+    },
+
     pricing: {
       title: 'Tarification simple et transparente',
       subtitle: 'Choisissez la formule adaptée à votre établissement',
@@ -400,8 +446,11 @@ export const translations: Record<Language, Translations> = {
     },
 
     faq: {
-      title: 'Questions fréquentes',
-      subtitle: 'Tout ce que vous devez savoir sur Unlocky',
+      eyebrow: 'Questions fréquentes',
+      title: 'Tout ce que vous devez savoir sur Unlocky',
+      subtitle: 'Des réponses claires à vos questions techniques et commerciales.',
+      contactPrompt: 'Une autre question ?',
+      contactCta: 'Contactez-nous',
       questions: {
         q1: {
           question: 'Comment fonctionne Unlocky avec nos serrures actuelles ?',
@@ -638,6 +687,34 @@ export const translations: Record<Language, Translations> = {
       role: 'Confidential pilot hotel',
     },
 
+    testimonials: {
+      badge: 'Exclusive Program',
+      title: 'Join the Founding Hotels',
+      description: 'Be among the first properties to adopt Keylessly and unlock exclusive pioneer benefits.',
+      benefits: [
+        {
+          badge: 'Benefit #1',
+          title: 'Lifetime Preferred Pricing',
+          description: 'Lock in a favorable rate and receive all future premium upgrades at no extra cost.',
+          highlight: { value: '− 40 %', label: 'vs public pricing' },
+        },
+        {
+          badge: 'Benefit #2',
+          title: 'VIP Support & Dedicated Training',
+          description: 'Direct line to our engineers, in-depth training for your teams, and personalized guidance for 6 months.',
+          highlight: { value: '24/7', label: 'priority response' },
+        },
+        {
+          badge: 'Benefit #3',
+          title: 'Direct Product Influence',
+          description: 'Your feedback shapes the product. Early access to new features and a roadmap co-built with your team.',
+          highlight: { value: 'Beta', label: 'priority access' },
+        },
+      ],
+      programNote: 'Program limited to 20 founding hotels',
+      perks: ['No-commitment contract', 'Installation within 1 week'],
+    },
+
     pricing: {
       title: 'Simple and transparent pricing',
       subtitle: 'Choose the plan that fits your property',
@@ -689,8 +766,11 @@ export const translations: Record<Language, Translations> = {
     },
 
     faq: {
-      title: 'Frequently Asked Questions',
-      subtitle: 'Everything you need to know about Unlocky',
+      eyebrow: 'Frequently Asked Questions',
+      title: 'Everything you need to know about Unlocky',
+      subtitle: 'Clear answers to your technical and business questions.',
+      contactPrompt: 'Another question?',
+      contactCta: 'Contact us',
       questions: {
         q1: {
           question: 'How does Unlocky work with our current locks?',
