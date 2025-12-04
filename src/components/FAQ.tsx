@@ -71,7 +71,7 @@ export function FAQ() {
               marginBottom: 'calc(var(--spacing) * 3)',
             }}
           >
-            Questions fréquentes
+            {t.faq.eyebrow}
           </p>
           <h2
             id="faq-heading"
@@ -84,7 +84,7 @@ export function FAQ() {
               marginBottom: 'calc(var(--spacing) * 4)',
             }}
           >
-            Tout ce que vous devez savoir
+            {t.faq.title}
           </h2>
           <p
             className="max-w-[650px] mx-auto text-[15px] md:text-base lg:text-lg px-4"
@@ -94,7 +94,7 @@ export function FAQ() {
               fontWeight: 400,
             }}
           >
-            Des réponses claires à vos questions techniques et commerciales.
+            {t.faq.subtitle}
           </p>
         </motion.div>
 
@@ -218,7 +218,7 @@ export function FAQ() {
               fontSize: '15px',
             }}
           >
-            Une autre question ?
+            {t.faq.contactPrompt}
           </p>
           <motion.a
             href="#form"
@@ -241,7 +241,7 @@ export function FAQ() {
             }}
             whileTap={{ scale: 0.98 }}
           >
-            Contactez-nous
+            {t.faq.contactCta}
           </motion.a>
         </motion.div>
       </div>
