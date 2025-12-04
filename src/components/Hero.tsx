@@ -33,6 +33,7 @@ interface HeroProps {
 
 export function Hero({ onPrimaryClick }: HeroProps) {
   const { t } = useLanguage();
+  const [heroTitleStart = '', heroTitleEnd = ''] = t.hero.title.split('{highlight}');
 
   // Unified scroll handler
   const scrollToSection = useCallback((sectionId: string, callback?: () => void) => {
@@ -113,7 +114,9 @@ export function Hero({ onPrimaryClick }: HeroProps) {
               id="hero-heading"
               className={CLASS_NAMES.heading}
             >
-              The key is already in your guests' <span style={{ color: HERO_STYLES.brandColor }}>phones</span>
+              {heroTitleStart}
+              <span style={{ color: HERO_STYLES.brandColor }}>{t.hero.titleHighlight}</span>
+              {heroTitleEnd ?? ''}
             </h1>
 
             {/* Subtitle */}
