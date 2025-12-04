@@ -24,7 +24,7 @@ interface FormData {
 export function LeadForm() {
   const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
-  const [formState, setFormState] = useState<'idle' | 'success'>('idle');
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
   const [formData, setFormData] = useState<FormData>({
@@ -74,14 +74,39 @@ export function LeadForm() {
     return lines.filter(Boolean).join('\n');
   };
 
-  const sendEmail = (data: FormData) => {
-    if (typeof window === 'undefined') return;
+  const sendEmail = async (data: FormData) => {
+    const detailedBody = buildEmailBody(data);
+    const payload = {
+      _subject: `Nouvelle demande de démo - ${data.hotelName || 'Client'}`,
+      _captcha: 'false',
+      "Nom de l'établissement": data.hotelName || 'Non fourni',
+      Localisation: data.city || data.country ? [data.city, data.country].filter(Boolean).join(', ') : 'Non fournie',
+      "Nombre de chambres": data.roomCount || 'Non fourni',
+      "Fournisseur de serrures": data.lockProvider || 'Non fourni',
+      "Autre fournisseur": data.lockProviderOther || 'Non fourni',
+      PMS: data.pms.length ? data.pms.join(', ') : 'Non fourni',
+      "Nom du contact": data.name || 'Non fourni',
+      Rôle: data.role || 'Non fourni',
+      Email: data.email,
+      Téléphone: data.phone || 'Non fourni',
+      "Planning d'implémentation": data.timeline || 'Non fourni',
+      Commentaire: data.comment || 'Non fourni',
+      "Consentement RGPD": data.consent ? 'Donné' : 'Non fourni',
+      Détails: detailedBody,
+    };
 
-    const subject = encodeURIComponent(`Nouvelle demande de démo - ${data.hotelName || 'Client'}`);
-    const body = encodeURIComponent(buildEmailBody(data));
-    const mailtoLink = `mailto:samuel@letincelle.pro?subject=${subject}&body=${body}`;
+    const response = await fetch('https://formsubmit.co/ajax/samuel@letincelle.pro', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
 
-    window.location.href = mailtoLink;
+    if (!response.ok) {
+      throw new Error('Failed to send email');
+    }
   };
 
   const validateField = (name: string, value: any) => {
@@ -128,9 +153,9 @@ export function LeadForm() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const requiredFields = ['hotelName', 'roomCount', 'email', 'consent'];
     const newErrors: Record<string, string> = {};
     
@@ -150,30 +175,36 @@ export function LeadForm() {
       return;
     }
 
-    sendEmail(formData);
-    setFormState('success');
-    
-    setTimeout(() => {
-      setFormState('idle');
-      setFormData({
-        hotelName: '',
-        city: '',
-        country: '',
-        roomCount: '',
-        lockProvider: '',
-        lockProviderOther: '',
-        pms: [],
-        name: '',
-        role: '',
-        email: '',
-        phone: '',
-        comment: '',
-        timeline: '',
-        consent: false,
-      });
-      setErrors({});
-      setTouched({});
-    }, 5000);
+    try {
+      setFormState('submitting');
+      await sendEmail(formData);
+      setFormState('success');
+
+      setTimeout(() => {
+        setFormState('idle');
+        setFormData({
+          hotelName: '',
+          city: '',
+          country: '',
+          roomCount: '',
+          lockProvider: '',
+          lockProviderOther: '',
+          pms: [],
+          name: '',
+          role: '',
+          email: '',
+          phone: '',
+          comment: '',
+          timeline: '',
+          consent: false,
+        });
+        setErrors({});
+        setTouched({});
+      }, 5000);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setFormState('error');
+    }
   };
 
   if (formState === 'success') {
@@ -902,25 +933,57 @@ export function LeadForm() {
             </AnimatePresence>
           </div>
 
+          {/* Error State */}
+          <AnimatePresence>
+            {formState === 'error' && (
+              <motion.div
+                className="rounded-[12px] border border-red-200 bg-red-50 p-4"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5" style={{ color: '#FF3B30' }} />
+                  <div>
+                    <p
+                      className="font-semibold mb-1"
+                      style={{ color: '#1C1C1E', fontFamily: FONT_BODY }}
+                    >
+                      {t.form.error.title}
+                    </p>
+                    <p
+                      className="text-[14px]"
+                      style={{ color: '#3C3C43', fontFamily: FONT_BODY }}
+                    >
+                      {t.form.error.message}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           {/* Submit Button */}
           <motion.button
             type="submit"
-            className="w-full group relative overflow-hidden rounded-[14px] py-4 mt-2 btn-gradient cta-hover-effect"
-            whileHover={{
+            className="w-full group relative overflow-hidden rounded-[14px] py-4 mt-2 btn-gradient cta-hover-effect disabled:opacity-70 disabled:cursor-not-allowed"
+            whileHover={formState === 'submitting' ? undefined : {
               scale: 1.01,
               boxShadow: '0 8px 24px rgba(0, 122, 255, 0.25)',
             }}
-            whileTap={{ scale: 0.99 }}
+            whileTap={formState === 'submitting' ? undefined : { scale: 0.99 }}
+            disabled={formState === 'submitting'}
           >
-            <span 
+            <span
               className="relative z-10 flex items-center justify-center gap-2.5 text-white"
-              style={{ 
+              style={{
                 fontSize: '17px',
                 fontWeight: 600,
                 fontFamily: FONT_BODY
               }}
             >
-              {t.form.submit}
+              {formState === 'submitting' ? t.form.submitSending : t.form.submit}
               <Send className="w-5 h-5" />
             </span>
           </motion.button>
