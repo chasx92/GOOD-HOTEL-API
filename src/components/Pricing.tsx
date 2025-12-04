@@ -59,8 +59,7 @@ export function Pricing() {
             className="text-[11px] md:text-xs tracking-[0.12em] uppercase"
             style={{ 
               color: '#007AFF',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 600,
+                            fontWeight: 600,
               marginBottom: 'calc(var(--spacing) * 3)',
             }}
           >
@@ -71,8 +70,7 @@ export function Pricing() {
             className="text-[26px] md:text-3xl lg:text-4xl xl:text-5xl text-balance"
             style={{
               color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 700,
+                            fontWeight: 700,
               letterSpacing: '-0.02em',
               marginBottom: 'calc(var(--spacing) * 4)',
             }}
@@ -83,8 +81,7 @@ export function Pricing() {
             className="max-w-[700px] mx-auto text-[15px] md:text-base lg:text-lg text-pretty"
             style={{
               color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 400,
+                            fontWeight: 400,
               lineHeight: 1.6,
             }}
           >
@@ -124,8 +121,7 @@ export function Pricing() {
               <span 
                 className="text-xs text-white"
                 style={{ 
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontWeight: 700,
+                                    fontWeight: 700,
                 }}
               >
                 Le plus demandé
@@ -138,8 +134,7 @@ export function Pricing() {
                 className="mb-2"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontSize: '28px',
+                                    fontSize: '28px',
                   fontWeight: 700,
                 }}
               >
@@ -150,8 +145,7 @@ export function Pricing() {
                   className="text-4xl md:text-5xl lg:text-6xl"
                   style={{
                     color: '#007AFF',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 700,
+                                        fontWeight: 700,
                     letterSpacing: '-0.02em',
                   }}
                 >
@@ -162,8 +156,7 @@ export function Pricing() {
                 className="text-sm"
                 style={{
                   color: '#8E8E93',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                }}
+                                  }}
               >
                 Tarif personnalisé selon la taille de votre établissement et vos besoins. Devis gratuit sous 24h.
               </p>
@@ -175,8 +168,7 @@ export function Pricing() {
                 className="mb-5"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontSize: '16px',
+                                    fontSize: '16px',
                   fontWeight: 600,
                 }}
               >
@@ -205,8 +197,7 @@ export function Pricing() {
                       className="text-sm leading-relaxed"
                       style={{
                         color: '#3C3C43',
-                        fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                        fontWeight: 400,
+                                                fontWeight: 400,
                       }}
                     >
                       {feature}
@@ -225,8 +216,7 @@ export function Pricing() {
                 className="mb-4"
                 style={{
                   color: '#1C1C1E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontSize: '16px',
+                                    fontSize: '16px',
                   fontWeight: 600,
                 }}
               >
@@ -250,8 +240,7 @@ export function Pricing() {
                       className="text-sm mb-0.5"
                       style={{
                         color: '#007AFF',
-                        fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                        fontWeight: 600,
+                                                fontWeight: 600,
                       }}
                     >
                       {addon.label}
@@ -260,8 +249,7 @@ export function Pricing() {
                       className="text-xs"
                       style={{
                         color: '#8E8E93',
-                        fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                      }}
+                                              }}
                     >
                       {addon.desc}
                     </p>
@@ -285,8 +273,7 @@ export function Pricing() {
               <span 
                 className="flex items-center justify-center gap-2 text-white relative z-10"
                 style={{
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontSize: '17px',
+                                    fontSize: '17px',
                   fontWeight: 600,
                 }}
               >
@@ -330,8 +317,7 @@ export function Pricing() {
               className="mb-2"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                fontSize: '16px',
+                                fontSize: '16px',
                 fontWeight: 600,
               }}
             >
@@ -341,8 +327,7 @@ export function Pricing() {
               className="text-sm max-w-[600px] mx-auto"
               style={{
                 color: '#3C3C43',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              }}
+                              }}
             >
               Économies sur cartes perdues, réduction temps réception, et amélioration satisfaction client. Nos hôtels partenaires constatent un retour sur investissement dès le 3 à 4ème mois.
             </p>

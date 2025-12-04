@@ -58,7 +58,7 @@ export function StickyCTA() {
               className="relative z-10 flex items-center justify-center gap-2 text-white text-[16px] md:text-[17px]"
               style={{ 
                 fontWeight: 600,
-                fontFamily: '-apple-system, SF Pro Display, sans-serif'
+                
               }}
             >
               {t.stickyCTA.button}

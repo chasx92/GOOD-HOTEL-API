@@ -69,8 +69,7 @@ export function Testimonials() {
             className="text-xs tracking-[0.12em] uppercase"
             style={{ 
               color: '#C3A36E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 600,
+                            fontWeight: 600,
               marginBottom: 'calc(var(--spacing) * 3)',
             }}
           >
@@ -81,8 +80,7 @@ export function Testimonials() {
             className="text-[26px] md:text-3xl lg:text-4xl xl:text-5xl text-balance"
             style={{
               color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 700,
+                            fontWeight: 700,
               letterSpacing: '-0.02em',
               marginBottom: 'calc(var(--spacing) * 4)',
             }}
@@ -93,8 +91,7 @@ export function Testimonials() {
             className="max-w-[650px] mx-auto text-[15px] md:text-base lg:text-lg text-pretty"
             style={{
               color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 400,
+                            fontWeight: 400,
               lineHeight: 1.6,
             }}
           >
@@ -158,8 +155,7 @@ export function Testimonials() {
                 className="text-xs"
                 style={{
                   color: '#C3A36E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontWeight: 600,
+                                    fontWeight: 600,
                 }}
               >
                 Avantage #1
@@ -171,8 +167,7 @@ export function Testimonials() {
               className="text-xl mb-3"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                fontWeight: 700,
+                                fontWeight: 700,
               }}
             >
               Tarif Préférentiel à Vie
@@ -183,8 +178,7 @@ export function Testimonials() {
               className="text-base text-pretty mb-6"
               style={{
                 color: '#3C3C43',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                fontWeight: 400,
+                                fontWeight: 400,
                 lineHeight: 1.6,
               }}
             >
@@ -207,8 +201,7 @@ export function Testimonials() {
                   className="text-2xl"
                   style={{
                     color: '#C3A36E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 700,
+                                        fontWeight: 700,
                   }}
                 >
                   − 40 %
@@ -217,8 +210,7 @@ export function Testimonials() {
                   className="text-sm"
                   style={{
                     color: '#8E8E93',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 500,
+                                        fontWeight: 500,
                   }}
                 >
                   vs tarif public
@@ -278,8 +270,7 @@ export function Testimonials() {
                 className="text-xs"
                 style={{
                   color: '#C3A36E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontWeight: 600,
+                                    fontWeight: 600,
                 }}
               >
                 Avantage #2
@@ -291,8 +282,7 @@ export function Testimonials() {
               className="text-xl mb-3"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                fontWeight: 700,
+                                fontWeight: 700,
               }}
             >
               Support VIP & Formation Dédiée
@@ -303,8 +293,7 @@ export function Testimonials() {
               className="text-base text-pretty mb-6"
               style={{
                 color: '#3C3C43',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                fontWeight: 400,
+                                fontWeight: 400,
                 lineHeight: 1.6,
               }}
             >
@@ -327,8 +316,7 @@ export function Testimonials() {
                   className="text-2xl"
                   style={{
                     color: '#C3A36E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 700,
+                                        fontWeight: 700,
                   }}
                 >
                   24/7
@@ -337,8 +325,7 @@ export function Testimonials() {
                   className="text-sm"
                   style={{
                     color: '#8E8E93',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 500,
+                                        fontWeight: 500,
                   }}
                 >
                   réponse prioritaire
@@ -398,8 +385,7 @@ export function Testimonials() {
                 className="text-xs"
                 style={{
                   color: '#C3A36E',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontWeight: 600,
+                                    fontWeight: 600,
                 }}
               >
                 Avantage #3
@@ -411,8 +397,7 @@ export function Testimonials() {
               className="text-xl mb-3"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                fontWeight: 700,
+                                fontWeight: 700,
               }}
             >
               Influence Produit Directe
@@ -423,8 +408,7 @@ export function Testimonials() {
               className="text-base text-pretty mb-6"
               style={{
                 color: '#3C3C43',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                fontWeight: 400,
+                                fontWeight: 400,
                 lineHeight: 1.6,
               }}
             >
@@ -447,8 +431,7 @@ export function Testimonials() {
                   className="text-2xl"
                   style={{
                     color: '#C3A36E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 700,
+                                        fontWeight: 700,
                   }}
                 >
                   Beta
@@ -457,8 +440,7 @@ export function Testimonials() {
                   className="text-sm"
                   style={{
                     color: '#8E8E93',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                    fontWeight: 500,
+                                        fontWeight: 500,
                   }}
                 >
                   accès prioritaire
@@ -491,8 +473,7 @@ export function Testimonials() {
               className="text-sm"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                fontWeight: 600,
+                                fontWeight: 600,
               }}
             >
               Programme limité à 20 hôtels fondateurs
@@ -514,8 +495,7 @@ export function Testimonials() {
                 className="text-sm"
                 style={{
                   color: '#3C3C43',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontWeight: 500,
+                                    fontWeight: 500,
                 }}
               >
                 Contrat sans engagement
@@ -533,8 +513,7 @@ export function Testimonials() {
                 className="text-sm"
                 style={{
                   color: '#3C3C43',
-                  fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                  fontWeight: 500,
+                                    fontWeight: 500,
                 }}
               >
                 Installation en 1 semaine

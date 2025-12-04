@@ -13,8 +13,7 @@ export function Footer() {
       style={{
         background: '#FFFFFF',
         borderTop: '1px solid #E5E5EA',
-        fontFamily: '-apple-system, SF Pro Display, sans-serif',
-      }}
+              }}
     >
       <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
         <div className="flex flex-col items-center gap-4 mb-12 text-center">

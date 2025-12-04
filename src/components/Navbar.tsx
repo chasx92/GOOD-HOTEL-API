@@ -53,8 +53,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       style={{
-        fontFamily: '-apple-system, SF Pro Display, sans-serif',
-      }}
+              }}
     >
       <div
         className={`w-full transition-all duration-300 ${isScrolled

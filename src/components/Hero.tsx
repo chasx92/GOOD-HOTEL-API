@@ -3,12 +3,13 @@ import { motion } from 'motion/react';
 import { WalletCard } from './WalletCard';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useCallback } from 'react';
+import { FONT_BODY, FONT_HEADING } from '../styles/typography';
 
 // Constants for Hero component
 const HERO_STYLES = {
   background: '#FFFFFF',
   brandColor: '#C3A36E',
-  fontFamily: '-apple-system, SF Pro Display, sans-serif',
+  fontFamily: FONT_BODY,
   paddingTop: 'calc(var(--spacing) * 12)',
   paddingBottom: 'calc(var(--spacing) * 6)',
   maxWidth: '1440px',
@@ -19,7 +20,7 @@ const CLASS_NAMES = {
   statusBadge: 'inline-flex items-center gap-2.5 mb-6',
   statusDot: 'relative flex h-2 w-2',
   walletIcon: 'w-3.5 h-3.5 fill-current',
-  heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight',
+  heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight font-heading',
   subtitle: 'text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed',
   primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg btn-gradient',
   secondaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg',

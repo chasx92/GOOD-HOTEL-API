@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ChevronLeft } from 'lucide-react';
+import { FONT_HEADING } from '../styles/typography';
 
 export function LegalNavbar() {
     return (
@@ -34,7 +35,7 @@ export function LegalNavbar() {
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
-                            fontFamily: '-apple-system, SF Pro Display, sans-serif'
+                            fontFamily: FONT_HEADING
                         }}>
                             Openli
                         </span>

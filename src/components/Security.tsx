@@ -2,6 +2,7 @@ import { Shield, Zap, Lock, Radio } from 'lucide-react';
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { FONT_BODY, FONT_HEADING } from '../styles/typography';
 
 export function Security() {
   const { t } = useLanguage();
@@ -71,12 +72,12 @@ export function Security() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h2 
+          <h2
             id="security-heading"
             className="text-[26px] md:text-3xl lg:text-4xl xl:text-5xl text-balance"
             style={{
               color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: FONT_HEADING,
               fontWeight: 700,
               letterSpacing: '-0.02em',
               marginBottom: 'calc(var(--spacing) * 4)',
@@ -88,7 +89,7 @@ export function Security() {
             className="max-w-[600px] mx-auto text-[15px] md:text-base lg:text-lg text-pretty"
             style={{
               color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: FONT_BODY,
               fontWeight: 400,
               lineHeight: 1.6,
             }}
@@ -139,11 +140,11 @@ export function Security() {
                   />
                 </motion.div>
 
-                <h3 
+                <h3
                   className="text-lg md:text-xl lg:text-2xl text-balance"
                   style={{
                     color: '#1C1C1E',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_HEADING,
                     fontWeight: 600,
                     letterSpacing: '-0.01em',
                     marginBottom: 'calc(var(--spacing) * 3)',
@@ -155,7 +156,7 @@ export function Security() {
                   className="text-[14px] md:text-sm lg:text-base max-w-[280px] mx-auto text-pretty"
                   style={{
                     color: '#3C3C43',
-                    fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                    fontFamily: FONT_BODY,
                     fontWeight: 400,
                     lineHeight: 1.6,
                   }}
@@ -184,7 +185,7 @@ export function Security() {
             className="flex items-center justify-center gap-2 text-sm md:text-base"
             style={{
               color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
+              fontFamily: FONT_BODY,
               fontWeight: 500,
             }}
           >

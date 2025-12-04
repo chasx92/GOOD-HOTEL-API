@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
+import { FONT_BODY, FONT_HEADING } from '../styles/typography';
 
 export function SocialProof() {
   const ref = useRef(null);
@@ -44,11 +45,11 @@ export function SocialProof() {
             >
               <Check className="w-4 h-4 md:w-5 md:h-5 text-white" strokeWidth={2.5} />
             </motion.div>
-            <span 
+            <span
               className="text-[15px] md:text-[16px]"
               style={{
                 color: '#1C1C1E',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_HEADING,
                 fontWeight: 600,
               }}
             >
@@ -62,11 +63,11 @@ export function SocialProof() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <p 
+            <p
               className="text-[14px] md:text-[15px]"
               style={{
                 color: '#3C3C43',
-                fontFamily: '-apple-system, SF Pro Display, sans-serif',
+                fontFamily: FONT_BODY,
                 fontWeight: 500,
               }}
             >
