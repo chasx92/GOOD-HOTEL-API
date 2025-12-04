@@ -76,36 +76,34 @@ export function LeadForm() {
 
   const sendEmail = async (data: FormData) => {
     const detailedBody = buildEmailBody(data);
-    const payload = {
-      _subject: `Nouvelle demande de démo - ${data.hotelName || 'Client'}`,
-      _captcha: 'false',
-      "Nom de l'établissement": data.hotelName || 'Non fourni',
-      Localisation: data.city || data.country ? [data.city, data.country].filter(Boolean).join(', ') : 'Non fournie',
-      "Nombre de chambres": data.roomCount || 'Non fourni',
-      "Fournisseur de serrures": data.lockProvider || 'Non fourni',
-      "Autre fournisseur": data.lockProviderOther || 'Non fourni',
-      PMS: data.pms.length ? data.pms.join(', ') : 'Non fourni',
-      "Nom du contact": data.name || 'Non fourni',
-      Rôle: data.role || 'Non fourni',
-      Email: data.email,
-      Téléphone: data.phone || 'Non fourni',
-      "Planning d'implémentation": data.timeline || 'Non fourni',
-      Commentaire: data.comment || 'Non fourni',
-      "Consentement RGPD": data.consent ? 'Donné' : 'Non fourni',
-      Détails: detailedBody,
-    };
+    const payload = new FormData();
+
+    payload.append('_subject', `Nouvelle demande de démo - ${data.hotelName || 'Client'}`);
+    payload.append('_email', 'samuel@letincelle.pro');
+    payload.append('_gotcha', '');
+
+    payload.append("Nom de l'établissement", data.hotelName || 'Non fourni');
+    payload.append('Localisation', data.city || data.country ? [data.city, data.country].filter(Boolean).join(', ') : 'Non fournie');
+    payload.append('Nombre de chambres', data.roomCount || 'Non fourni');
+    payload.append('Fournisseur de serrures', data.lockProvider || 'Non fourni');
+    payload.append('Autre fournisseur', data.lockProviderOther || 'Non fourni');
+    payload.append('PMS', data.pms.length ? data.pms.join(', ') : 'Non fourni');
+    payload.append('Nom du contact', data.name || 'Non fourni');
+    payload.append('Rôle', data.role || 'Non fourni');
+    payload.append('Email', data.email);
+    payload.append('Téléphone', data.phone || 'Non fourni');
+    payload.append("Planning d'implémentation", data.timeline || 'Non fourni');
+    payload.append('Commentaire', data.comment || 'Non fourni');
+    payload.append('Consentement RGPD', data.consent ? 'Donné' : 'Non fourni');
+    payload.append('Détails', detailedBody);
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 10000);
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/samuel@letincelle.pro', {
+      const response = await fetch('https://getform.io/f/akkegrma', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json',
-        },
-        body: JSON.stringify(payload),
+        body: payload,
         signal: controller.signal,
       });
 
