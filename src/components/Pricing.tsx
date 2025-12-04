@@ -8,22 +8,9 @@ export function Pricing() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const features = [
-    "Full integration with your PMS",
-    "Unlimited Apple & Google Wallet keys",
-    "Training for your teams included",
-    "24/7 technical support",
-    "Updates and enhancements included",
-    "Real-time analytics dashboard",
-    "Multi-property (hotel groups)",
-    "Full API for customization",
-  ];
+  const features = t.pricingCard.features;
 
-  const addons = [
-    { label: "Apple Watch", desc: "Key on smartwatch" },
-    { label: "Parking & Spa", desc: "Access to amenity areas" },
-    { label: "Mobile Check-in", desc: "Integrated booking interface" },
-  ];
+  const addons = t.pricingCard.addons;
 
   return (
     <section 
@@ -63,7 +50,7 @@ export function Pricing() {
               marginBottom: 'calc(var(--spacing) * 3)',
             }}
           >
-            Pricing
+            {t.navbar.pricing}
           </p>
           <h2 
             id="pricing-heading"
@@ -124,7 +111,7 @@ export function Pricing() {
                                     fontWeight: 700,
                 }}
               >
-                Most popular
+                {t.pricingCard.badge}
               </span>
             </motion.div>
 
@@ -138,7 +125,7 @@ export function Pricing() {
                   fontWeight: 700,
                 }}
               >
-                Keylessly Premium
+                {t.pricingCard.planName}
               </h3>
               <div className="flex items-baseline gap-2 mb-3">
                 <span
@@ -149,7 +136,7 @@ export function Pricing() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Custom quote
+                  {t.pricingCard.priceLabel}
                 </span>
               </div>
               <p
@@ -158,7 +145,7 @@ export function Pricing() {
                   color: '#8E8E93',
                                   }}
               >
-                Custom pricing based on your property size and needs. Free quote within 24h.
+                {t.pricingCard.priceDescription}
               </p>
             </div>
 
@@ -172,7 +159,7 @@ export function Pricing() {
                   fontWeight: 600,
                 }}
               >
-                Everything included:
+                {t.pricingCard.featuresTitle}
               </p>
               <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3">
                 {features.map((feature, index) => (
@@ -220,7 +207,7 @@ export function Pricing() {
                   fontWeight: 600,
                 }}
               >
-                Available add-ons:
+                {t.pricingCard.addonsTitle}
               </p>
               <div className="flex flex-wrap gap-3">
                 {addons.map((addon, index) => (
@@ -277,7 +264,7 @@ export function Pricing() {
                   fontWeight: 600,
                 }}
               >
-                Get a personalized quote
+                {t.pricingCard.cta}
                 <motion.div
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -321,7 +308,7 @@ export function Pricing() {
                 fontWeight: 600,
               }}
             >
-              💰 Average ROI: paid back in 4 months
+              {t.pricingCard.roiTitle}
             </p>
             <p
               className="text-sm max-w-[600px] mx-auto"
@@ -329,7 +316,7 @@ export function Pricing() {
                 color: '#3C3C43',
                               }}
             >
-              Savings on lost cards, faster front-desk operations, and higher guest satisfaction. Our partner hotels see a return on investment by month 3 or 4.
+              {t.pricingCard.roiDescription}
             </p>
           </div>
         </motion.div>
