@@ -138,12 +138,20 @@ export function Benefits() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ 
+                whileHover={{
                   // OPTIMIZED: Hover shadow Y16/B40 @12% + border @12%
                   boxShadow: '0 16px 40px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
                   borderColor: 'rgba(0,0,0,0.12)',
+                  scale: 1.02,
+                  y: -2,
                 }}
-                whileTap={{ 
+                whileFocus={{
+                  boxShadow: '0 16px 40px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
+                  borderColor: 'rgba(0,0,0,0.12)',
+                  scale: 1.02,
+                  y: -2,
+                }}
+                whileTap={{
                   // OPTIMIZED: Press translateY +1px + opacity 96%
                   y: 1,
                   opacity: 0.96,

@@ -1,6 +1,6 @@
 # 🚀 COMMENCER ICI
 
-> **Guide ultra-rapide pour démarrer avec Openli Landing Page**
+> **Guide ultra-rapide pour démarrer avec Unlocky Landing Page**
 
 ---
 
@@ -102,7 +102,7 @@ npm run build
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/VOTRE-USERNAME/openli-landing.git
+git remote add origin https://github.com/VOTRE-USERNAME/unlocky-landing.git
 git push -u origin main
 
 # 3. Déployer
@@ -200,6 +200,6 @@ npm run dev -- -p 3001
 
 ---
 
-**🎉 Bon développement avec Openli !**
+**🎉 Bon développement avec Unlocky !**
 
 *La clé est déjà dans leur téléphone.* 🔑📱

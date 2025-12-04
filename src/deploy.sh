@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Bash script pour déployer Openli Landing Page
+# Bash script pour déployer Unlocky Landing Page
 # Usage: chmod +x deploy.sh && ./deploy.sh
 
-echo "🚀 Déploiement Openli Landing Page"
+echo "🚀 Déploiement Unlocky Landing Page"
 echo ""
 
 # Couleurs
@@ -33,19 +33,19 @@ if [ ! -d .git ]; then
     echo -e "${CYAN}Initialisation du repository Git...${NC}"
     git init
     git add .
-    git commit -m "Initial commit - Openli Landing Page"
+    git commit -m "Initial commit - Unlocky Landing Page"
     git branch -M main
     
     echo ""
     echo -e "${YELLOW}⚠️  Configuration du remote GitHub requise:${NC}"
-    echo "git remote add origin https://github.com/VOTRE-USERNAME/openli-landing-page.git"
+    echo "git remote add origin https://github.com/VOTRE-USERNAME/unlocky-landing-page.git"
     echo "git push -u origin main"
     echo ""
     echo -e "${CYAN}Remplacez VOTRE-USERNAME par votre nom d'utilisateur GitHub${NC}"
 else
     echo -e "${CYAN}Repository Git détecté, ajout des changements...${NC}"
     git add .
-    git commit -m "Update - Openli Landing Page"
+    git commit -m "Update - Unlocky Landing Page"
     
     # Vérifier si un remote existe
     if git remote -v | grep -q origin; then
@@ -54,7 +54,7 @@ else
         echo -e "${GREEN}✅ Code pushé sur GitHub!${NC}"
     else
         echo -e "${YELLOW}⚠️  Aucun remote configuré. Ajoutez-le avec:${NC}"
-        echo "git remote add origin https://github.com/VOTRE-USERNAME/openli-landing-page.git"
+        echo "git remote add origin https://github.com/VOTRE-USERNAME/unlocky-landing-page.git"
         echo "git push -u origin main"
     fi
 fi
@@ -69,7 +69,7 @@ echo ""
 echo -e "${NC}Option A (Recommandée) - Interface Web:${NC}"
 echo "  1. Allez sur https://vercel.com/new"
 echo "  2. Connectez votre compte GitHub"
-echo "  3. Sélectionnez 'openli-landing-page'"
+echo "  3. Sélectionnez 'unlocky-landing-page'"
 echo "  4. Cliquez 'Deploy'"
 echo ""
 echo -e "${NC}Option B - CLI:${NC}"

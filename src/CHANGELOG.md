@@ -169,7 +169,7 @@ et ce projet adhère au [Semantic Versioning](https://semver.org/lang/fr/).
 ## Notes de Version
 
 ### [1.0.0] - Production Ready ✅
-Cette version constitue la première release production-ready du projet Openli Landing Page. Elle inclut tous les composants nécessaires pour une landing page premium de qualité 5-étoiles, avec un design iOS-inspired et une architecture Next.js moderne.
+Cette version constitue la première release production-ready du projet Unlocky Landing Page. Elle inclut tous les composants nécessaires pour une landing page premium de qualité 5-étoiles, avec un design iOS-inspired et une architecture Next.js moderne.
 
 **Prêt pour:**
 - ✅ Déploiement sur Vercel
@@ -187,5 +187,5 @@ Cette version constitue la première release production-ready du projet Openli L
 ---
 
 **Mainteneur**: Samuel Chetrit <sam.grailled@gmail.com>  
-**Repository**: https://github.com/samuel-chetrit/openli-landing  
+**Repository**: https://github.com/samuel-chetrit/unlocky-landing  
 **License**: Private / All Rights Reserved

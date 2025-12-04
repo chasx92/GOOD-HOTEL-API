@@ -309,7 +309,7 @@ export const translations: Record<Language, Translations> = {
     },
 
     benefits: {
-      title: 'Pourquoi choisir Openli ?',
+      title: 'Pourquoi choisir Unlocky ?',
       subtitle: 'Une solution qui bénéficie à tous : vos clients, votre équipe, votre établissement',
       benefit1: {
         title: 'Expérience client améliorée',
@@ -339,7 +339,7 @@ export const translations: Record<Language, Translations> = {
 
     socialProof: {
       title: 'Ce que disent nos clients',
-      quote: '"Openli a transformé notre expérience d\'arrivée. Nos clients adorent la simplicité, et notre équipe gagne un temps précieux. Le ROI a été immédiat."',
+      quote: '"Unlocky a transformé notre expérience d\'arrivée. Nos clients adorent la simplicité, et notre équipe gagne un temps précieux. Le ROI a été immédiat."',
       author: 'Directeur',
       role: 'Hôtel pilote confidentiel',
     },
@@ -396,15 +396,15 @@ export const translations: Record<Language, Translations> = {
 
     faq: {
       title: 'Questions fréquentes',
-      subtitle: 'Tout ce que vous devez savoir sur Openli',
+      subtitle: 'Tout ce que vous devez savoir sur Unlocky',
       questions: {
         q1: {
-          question: 'Comment fonctionne Openli avec nos serrures actuelles ?',
-          answer: 'Openli s\'intègre avec tous les principaux fabricants de serrures connectées (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Notre équipe technique réalise un audit de compatibilité gratuit et l\'installation se fait généralement en moins de 24h.',
+          question: 'Comment fonctionne Unlocky avec nos serrures actuelles ?',
+          answer: 'Unlocky s\'intègre avec tous les principaux fabricants de serrures connectées (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Notre équipe technique réalise un audit de compatibilité gratuit et l\'installation se fait généralement en moins de 24h.',
         },
         q2: {
           question: 'Que se passe-t-il si un client n\'a pas de smartphone ?',
-          answer: 'Votre système de cartes-clés traditionnel reste pleinement opérationnel. Openli s\'ajoute comme option premium pour vos clients équipés, sans remplacer vos processus existants.',
+          answer: 'Votre système de cartes-clés traditionnel reste pleinement opérationnel. Unlocky s\'ajoute comme option premium pour vos clients équipés, sans remplacer vos processus existants.',
         },
         q3: {
           question: 'Comment gérez-vous la sécurité des données clients ?',
@@ -442,7 +442,7 @@ export const translations: Record<Language, Translations> = {
         phone: { label: 'Téléphone', placeholder: '+33 1 23 45 67 89' },
         timeline: { label: 'Délai souhaité pour la mise en place', placeholder: 'Sélectionnez...' },
         comment: { label: 'Commentaire ou demande spécifique', placeholder: 'Ex: passage en mobile key T3, 3 propriétés à équiper' },
-        consent: 'J\'accepte que Openli collecte mes données pour me recontacter concernant ma demande. Conformément au RGPD, vos données sont sécurisées et ne seront jamais partagées.',
+        consent: 'J\'accepte que Unlocky collecte mes données pour me recontacter concernant ma demande. Conformément au RGPD, vos données sont sécurisées et ne seront jamais partagées.',
       },
       roomOptions: [
         { value: '1-20', label: '1-20 chambres' },
@@ -502,7 +502,7 @@ export const translations: Record<Language, Translations> = {
       privacy: 'Confidentialité',
       terms: 'CGV',
       methodology: 'Comment on mesure ?',
-      copyright: '© 2025 Openli. Tous droits réservés.',
+      copyright: '© 2025 Unlocky. Tous droits réservés.',
     },
 
     backToTop: {
@@ -593,7 +593,7 @@ export const translations: Record<Language, Translations> = {
     },
 
     benefits: {
-      title: 'Why choose Openli?',
+      title: 'Why choose Unlocky?',
       subtitle: 'A solution that benefits everyone: your guests, your team, your property',
       benefit1: {
         title: 'Enhanced guest experience',
@@ -623,7 +623,7 @@ export const translations: Record<Language, Translations> = {
 
     socialProof: {
       title: 'What our customers say',
-      quote: '"Openli transformed our arrival experience. Our guests love the simplicity, and our team saves precious time. The ROI was immediate."',
+      quote: '"Unlocky transformed our arrival experience. Our guests love the simplicity, and our team saves precious time. The ROI was immediate."',
       author: 'Director',
       role: 'Confidential pilot hotel',
     },
@@ -680,15 +680,15 @@ export const translations: Record<Language, Translations> = {
 
     faq: {
       title: 'Frequently Asked Questions',
-      subtitle: 'Everything you need to know about Openli',
+      subtitle: 'Everything you need to know about Unlocky',
       questions: {
         q1: {
-          question: 'How does Openli work with our current locks?',
-          answer: 'Openli integrates with all major connected lock manufacturers (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Our technical team performs a free compatibility audit and installation typically takes less than 24 hours.',
+          question: 'How does Unlocky work with our current locks?',
+          answer: 'Unlocky integrates with all major connected lock manufacturers (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Our technical team performs a free compatibility audit and installation typically takes less than 24 hours.',
         },
         q2: {
           question: 'What happens if a guest doesn\'t have a smartphone?',
-          answer: 'Your traditional key card system remains fully operational. Openli adds as a premium option for your equipped guests, without replacing your existing processes.',
+          answer: 'Your traditional key card system remains fully operational. Unlocky adds as a premium option for your equipped guests, without replacing your existing processes.',
         },
         q3: {
           question: 'How do you handle guest data security?',
@@ -726,7 +726,7 @@ export const translations: Record<Language, Translations> = {
         phone: { label: 'Phone', placeholder: '+1 234 567 8900' },
         timeline: { label: 'Desired implementation timeline', placeholder: 'Select...' },
         comment: { label: 'Comment or specific request', placeholder: 'E.g.: mobile key rollout Q3, 3 properties to equip' },
-        consent: 'I agree that Openli may collect my data to contact me regarding my request. In accordance with GDPR, your data is secure and will never be shared.',
+        consent: 'I agree that Unlocky may collect my data to contact me regarding my request. In accordance with GDPR, your data is secure and will never be shared.',
       },
       roomOptions: [
         { value: '1-20', label: '1-20 rooms' },
@@ -786,7 +786,7 @@ export const translations: Record<Language, Translations> = {
       privacy: 'Privacy',
       terms: 'Terms of sale',
       methodology: 'How we measure?',
-      copyright: '© 2025 Openli. All rights reserved.',
+      copyright: '© 2025 Unlocky. All rights reserved.',
     },
 
     backToTop: {

@@ -1,6 +1,6 @@
-# 🏨 Openli Landing Page
+# 🏨 Unlocky Landing Page
 
-> Landing page premium pour Openli (anciennement Keylessly) - Solution d'accès mobile aux chambres d'hôtel via Apple Wallet & Google Wallet
+> Landing page premium pour Unlocky (anciennement Keylessly) - Solution d'accès mobile aux chambres d'hôtel via Apple Wallet & Google Wallet
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue)](https://www.typescriptlang.org/)
@@ -8,7 +8,7 @@
 [![Motion](https://img.shields.io/badge/Motion-10.18-purple)](https://motion.dev/)
 [![License](https://img.shields.io/badge/License-Private-red)]()
 
-![Openli Landing Page Preview](https://via.placeholder.com/1200x630/F2F2F7/C3A36E?text=Openli+Landing+Page)
+![Unlocky Landing Page Preview](https://via.placeholder.com/1200x630/F2F2F7/C3A36E?text=Unlocky+Landing+Page)
 
 ---
 
@@ -23,8 +23,8 @@
 
 ```bash
 # 1. Cloner le projet (ou télécharger)
-git clone https://github.com/samuel-chetrit/openli-landing.git
-cd openli-landing
+git clone https://github.com/samuel-chetrit/unlocky-landing.git
+cd unlocky-landing
 
 # 2. Installer les dépendances
 npm install
@@ -57,9 +57,9 @@ npm run deploy-ready
 # 2. Push sur GitHub
 git init
 git add .
-git commit -m "🚀 Initial commit - Openli landing page"
+git commit -m "🚀 Initial commit - Unlocky landing page"
 git branch -M main
-git remote add origin https://github.com/VOTRE-USERNAME/openli-landing.git
+git remote add origin https://github.com/VOTRE-USERNAME/unlocky-landing.git
 git push -u origin main
 
 # 3. Importer sur Vercel
@@ -116,7 +116,7 @@ git push -u origin main
 ## 📁 Structure du Projet
 
 ```
-openli-landing-page/
+unlocky-landing-page/
 ├── 📁 app/
 │   ├── layout.tsx              # Layout + SEO
 │   ├── page.tsx                # Page principale
@@ -254,7 +254,7 @@ npm run lint             # ESLint check
 10. **Footer** - Liens & copyright
     - Liens rapides (Produit, Entreprise, Légal)
     - Réseaux sociaux ready
-    - Copyright Openli 2025
+    - Copyright Unlocky 2025
 
 ---
 
@@ -388,7 +388,7 @@ git push origin feature/nouvelle-section
 2. **Import sur Vercel:**
    - Aller sur [vercel.com/new](https://vercel.com/new)
    - Connecter GitHub
-   - Sélectionner `openli-landing-page`
+   - Sélectionner `unlocky-landing-page`
    - Cliquer "Deploy"
 3. **Attendre 1-2 minutes**
 4. **Site en ligne! 🎉**
@@ -402,7 +402,7 @@ git push origin feature/nouvelle-section
 ### Custom Domain
 
 1. Vercel Dashboard → Settings → Domains
-2. Ajouter `www.openli.com`
+2. Ajouter `www.unlocky.com`
 3. Configurer les DNS (A/CNAME records)
 4. SSL automatique ✅
 
@@ -423,7 +423,7 @@ git push origin feature/nouvelle-section
 
 ## 📝 License
 
-© 2025 Openli. Tous droits réservés.  
+© 2025 Unlocky. Tous droits réservés.  
 Ce projet est privé et confidentiel.
 
 ---
@@ -432,7 +432,7 @@ Ce projet est privé et confidentiel.
 
 - **Documentation**: Voir les fichiers `*.md` à la racine
 - **Issues**: Utiliser GitHub Issues
-- **Email**: contact@openli.com *(à configurer)*
+- **Email**: contact@unlocky.com *(à configurer)*
 
 ---
 
@@ -451,6 +451,6 @@ Ce projet est privé et confidentiel.
 
 ---
 
-**Made with ❤️ for Openli**
+**Made with ❤️ for Unlocky**
 
 *La clé est déjà dans leur téléphone.* 🔑📱

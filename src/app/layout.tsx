@@ -18,23 +18,23 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Openli - Clé d\'hôtel dans Apple & Google Wallet',
+  title: 'Unlocky - Clé d\'hôtel dans Apple & Google Wallet',
   description: 'La clé est déjà dans le téléphone de vos clients. Solution d\'accès mobile premium pour hôtels 5 étoiles.',
-  keywords: 'openli, keylessly, clé mobile, apple wallet, google wallet, hôtel, accès mobile, NFC',
-  authors: [{ name: 'Openli' }],
+  keywords: 'unlocky, keylessly, clé mobile, apple wallet, google wallet, hôtel, accès mobile, NFC',
+  authors: [{ name: 'Unlocky' }],
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
   themeColor: '#C3A36E',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
     alternateLocale: 'en_US',
-    title: 'Openli - Clé d\'hôtel dans Apple & Google Wallet',
+    title: 'Unlocky - Clé d\'hôtel dans Apple & Google Wallet',
     description: 'La clé est déjà dans le téléphone de vos clients.',
-    siteName: 'Openli',
+    siteName: 'Unlocky',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Openli - Clé d\'hôtel dans Apple & Google Wallet',
+    title: 'Unlocky - Clé d\'hôtel dans Apple & Google Wallet',
     description: 'La clé est déjà dans le téléphone de vos clients.',
   },
   robots: {

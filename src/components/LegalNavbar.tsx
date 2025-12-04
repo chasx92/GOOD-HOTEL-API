@@ -37,7 +37,7 @@ export function LegalNavbar() {
                             backgroundClip: 'text',
                             fontFamily: FONT_HEADING
                         }}>
-                            Openli
+                            Unlocky
                         </span>
                     </Link>
 

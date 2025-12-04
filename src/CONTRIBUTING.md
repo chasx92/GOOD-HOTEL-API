@@ -1,6 +1,6 @@
 # Guide de Contribution
 
-Merci de votre intérêt pour contribuer au projet **Openli Landing Page** ! 🎉
+Merci de votre intérêt pour contribuer au projet **Unlocky Landing Page** ! 🎉
 
 Ce document fournit les directives pour contribuer efficacement au projet.
 
@@ -59,8 +59,8 @@ Avant de commencer, assurez-vous d'avoir installé :
 
 ```bash
 # Fork le projet sur GitHub, puis :
-git clone https://github.com/VOTRE-USERNAME/openli-landing.git
-cd openli-landing
+git clone https://github.com/VOTRE-USERNAME/unlocky-landing.git
+cd unlocky-landing
 ```
 
 ### 2. Installer les Dépendances
@@ -519,7 +519,7 @@ Si vous avez des questions :
 
 ## 🎉 Merci !
 
-Vos contributions sont précieuses pour améliorer Openli Landing Page ! 🙏
+Vos contributions sont précieuses pour améliorer Unlocky Landing Page ! 🙏
 
 **Mainteneurs :**
 - Samuel Chetrit ([@samuel-chetrit](https://github.com/samuel-chetrit))

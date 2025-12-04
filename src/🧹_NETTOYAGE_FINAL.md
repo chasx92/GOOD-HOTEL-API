@@ -95,7 +95,7 @@
 ## 🗂️ STRUCTURE FINALE RECOMMANDÉE
 
 ```
-openli-landing/
+unlocky-landing/
 ├── 📄 README.md              ← Guide principal complet
 ├── 📄 COMMENCER_ICI.md      ← Quick start français
 ├── 📄 CHANGELOG.md          ← Historique versions
@@ -195,7 +195,7 @@ rm /🧹_NETTOYAGE_FINAL.md
 Après nettoyage, tu devrais avoir :
 
 ```
-📦 openli-landing/
+📦 unlocky-landing/
 ├── 📄 README.md                    (~300 lignes)
 ├── 📄 COMMENCER_ICI.md            (~150 lignes)
 ├── 📄 CHANGELOG.md                (~100 lignes)
@@ -241,11 +241,11 @@ npm run build
 # 2. Git init
 git init
 git add .
-git commit -m "🚀 Initial commit - Openli v1.0.0"
+git commit -m "🚀 Initial commit - Unlocky v1.0.0"
 git branch -M main
 
 # 3. Push
-git remote add origin https://github.com/samuel-chetrit/openli-landing.git
+git remote add origin https://github.com/samuel-chetrit/unlocky-landing.git
 git push -u origin main
 
 # 4. Deploy sur Vercel
