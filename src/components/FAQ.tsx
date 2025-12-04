@@ -1,38 +1,42 @@
-import { useState, useRef } from 'react';
-import { motion, AnimatePresence, useInView } from 'motion/react';
-import { Plus, Minus } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useRef, useState } from 'react';
+import { AnimatePresence, motion, useInView } from 'motion/react';
+import { Plus } from 'lucide-react';
 
 export function FAQ() {
-  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: t.faq.questions.q1.question,
-      answer: t.faq.questions.q1.answer
+      question: 'Comment fonctionne Openli avec nos serrures actuelles ?',
+      answer:
+        "Openli s'intègre avec tous les principaux fabricants de serrures connectées (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Notre équipe technique réalise un audit de compatibilité gratuit et l'installation se fait généralement en moins de 24h.",
     },
     {
-      question: t.faq.questions.q2.question,
-      answer: t.faq.questions.q2.answer
+      question: "Que se passe-t-il si un client n'a pas de smartphone ?",
+      answer:
+        "Votre système de cartes-clés traditionnel reste pleinement opérationnel. Openli s'ajoute comme option premium pour vos clients équipés, sans remplacer vos processus existants.",
     },
     {
-      question: t.faq.questions.q3.question,
-      answer: t.faq.questions.q3.answer
+      question: 'Comment gérez-vous la sécurité des données clients ?',
+      answer:
+        "Nous utilisons un chiffrement AES-256 de niveau bancaire, nos serveurs sont hébergés en Europe (conformité RGPD), et nous sommes certifiés ISO 27001. Aucune donnée personnelle n'est stockée sur les appareils.",
     },
     {
-      question: t.faq.questions.q4.question,
-      answer: t.faq.questions.q4.answer
+      question: 'Quel est le délai de mise en place ?',
+      answer:
+        "Après l'audit de compatibilité (48h), l'installation technique prend 4 à 8 heures selon la taille de l'établissement. La formation de votre équipe se fait en 2h. Vous pouvez être opérationnel en moins d'une semaine.",
     },
     {
-      question: t.faq.questions.q5.question,
-      answer: t.faq.questions.q5.answer
+      question: "Y a-t-il des frais cachés ou d'engagement longue durée ?",
+      answer:
+        "Non. Notre tarification est transparente : uniquement le coût par chambre/mois selon la formule choisie. Pas de frais d'installation, pas d'engagement minimum. Vous pouvez annuler à tout moment.",
     },
     {
-      question: t.faq.questions.q6.question,
-      answer: t.faq.questions.q6.answer
+      question: 'Quels PMS sont compatibles ?',
+      answer:
+        "Nous sommes intégrés avec les principaux PMS : Opera, Mews, Cloudbeds, Protel, Apaleo, et bien d'autres. Si votre PMS dispose d'une API, nous pouvons réaliser l'intégration rapidement.",
     },
   ];
 
@@ -41,207 +45,89 @@ export function FAQ() {
   };
 
   return (
-    <section 
+    <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="relative overflow-hidden scroll-mt-16"
       ref={ref}
-      style={{ 
-        background: '#FFFFFF',
-        paddingTop: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
-        paddingBottom: 'calc(var(--spacing) * 12)', // Réduit de 80px à 48px
-      }}
+      className="relative overflow-hidden bg-gradient-to-b from-[#0b0a09] via-[#0d0b0a] to-[#0b0a09] px-5 py-16 md:py-24 lg:py-28"
     >
-      <div className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24">
+      <div className="absolute inset-x-12 -top-32 h-64 bg-gradient-to-b from-[#d4af37]/15 via-transparent to-transparent blur-3xl" />
+      <div className="relative z-10 mx-auto max-w-5xl space-y-12 md:space-y-14 lg:space-y-16">
         {/* Header */}
         <motion.div
-          className="text-center px-4"
-          style={{ marginBottom: 'calc(var(--spacing) * 16)' }}
+          className="text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <p 
-            className="text-[11px] md:text-xs tracking-[0.12em] uppercase"
-            style={{ 
-              color: '#C3A36E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 600,
-              marginBottom: 'calc(var(--spacing) * 3)',
-            }}
-          >
-            Questions fréquentes
-          </p>
-          <h2 
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d4af37]/60 bg-black/40 px-4 py-2 text-[11px] tracking-[0.18em] text-[#d4af37]">
+            QUESTIONS FRÉQUENTES
+          </div>
+          <h2
             id="faq-heading"
-            className="text-[26px] md:text-3xl lg:text-4xl xl:text-5xl text-balance"
-            style={{
-              color: '#1C1C1E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 700,
-              letterSpacing: '-0.02em',
-              marginBottom: 'calc(var(--spacing) * 4)',
-            }}
+            className="text-balance text-[28px] font-semibold leading-tight text-white md:text-4xl lg:text-5xl"
           >
             Tout ce que vous devez savoir
           </h2>
-          <p 
-            className="max-w-[650px] mx-auto text-[15px] md:text-base lg:text-lg px-4"
-            style={{
-              color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontWeight: 400,
-            }}
-          >
+          <p className="mt-4 text-balance text-base text-[#e8e1cf] md:text-lg">
             Des réponses claires à vos questions techniques et commerciales.
           </p>
         </motion.div>
 
         {/* FAQ Accordion */}
-        <div className="max-w-[900px] mx-auto">
-          <div className="space-y-2.5 md:space-y-3">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                className="rounded-[14px] md:rounded-[16px] overflow-hidden"
-                style={{
-                  background: '#0B0B0F',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  boxShadow: openIndex === index
-                    ? '0 8px 32px rgba(0, 0, 0, 0.25)'
-                    : '0 4px 16px rgba(0, 0, 0, 0.15)',
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                whileHover={{
-                  scale: 1.005,
-                  transition: { duration: 0.2 }
-                }}
+        <div className="mx-auto max-w-3xl space-y-3 md:space-y-4">
+          {faqs.map((faq, index) => (
+            <motion.div
+              key={faq.question}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.35, delay: index * 0.05 }}
+              className="overflow-hidden rounded-2xl border border-[#d4af37]/25 bg-gradient-to-br from-black/60 via-[#0f0c0a]/90 to-black/70 shadow-[0_18px_45px_-28px_rgba(0,0,0,0.75)]"
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
+                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left md:px-6 md:py-5"
               >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  aria-expanded={openIndex === index}
-                  aria-controls={`faq-answer-${index}`}
-                  className="w-full px-4 md:px-5 lg:px-6 py-3.5 md:py-4 lg:py-5 flex items-start justify-between gap-3 md:gap-4 text-left cursor-pointer transition-colors"
-                  style={{
-                    background: '#0B0B0F',
-                    borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
-                  }}
+                <span className="flex-1 text-[15px] font-semibold leading-relaxed text-[#f5f0e6] md:text-lg">
+                  {faq.question}
+                </span>
+                <motion.div
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-[#d4af37]/50 bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] shadow-[0_0_0_1px_rgba(212,175,55,0.18)]"
+                  animate={{ rotate: openIndex === index ? 45 : 0, backgroundColor: openIndex === index ? '#d4af37' : undefined }}
+                  transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                  <span
-                    className="flex-1 pr-2 text-[15px] md:text-[16px] text-white"
-                    style={{
-                      fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                      fontWeight: 600,
-                      lineHeight: '1.5',
-                    }}
-                  >
-                    {faq.question}
-                  </span>
+                  <Plus
+                    className={`h-4 w-4 transition-colors ${openIndex === index ? 'text-black' : 'text-[#d4af37]'}`}
+                    strokeWidth={2.5}
+                  />
+                </motion.div>
+              </button>
 
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
                   <motion.div
-                    className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center"
-                    style={{
-                      background: openIndex === index
-                        ? 'rgba(255, 255, 255, 0.18)'
-                        : 'rgba(255, 255, 255, 0.12)',
-                    }}
-                    animate={{
-                      rotate: openIndex === index ? 180 : 0,
-                    }}
+                    id={`faq-answer-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-question-${index}`}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="overflow-hidden border-t border-[#d4af37]/20"
                   >
-                    {openIndex === index ? (
-                      <Minus className="w-4 h-4 text-white" strokeWidth={2.5} />
-                    ) : (
-                      <Plus className="w-4 h-4" style={{ color: '#8E8E93' }} strokeWidth={2.5} />
-                    )}
+                    <div className="bg-black/40 px-5 pb-5 pt-2 text-[#e6ddc7] md:px-6 md:pb-6">
+                      <p className="text-sm leading-relaxed text-[#d9d0bb] md:text-base">
+                        {faq.answer}
+                      </p>
+                    </div>
                   </motion.div>
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {openIndex === index && (
-                    <motion.div
-                      id={`faq-answer-${index}`}
-                      role="region"
-                      aria-labelledby={`faq-question-${index}`}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ 
-                        duration: 0.3,
-                        ease: [0.25, 0.1, 0.25, 1]
-                      }}
-                      style={{ overflow: 'hidden' }}
-                    >
-                      <div 
-                        className="px-5 md:px-6 pb-5 md:pb-6 pt-1"
-                        style={{
-                          background: '#FFFFFF',
-                        }}
-                      >
-                        <p 
-                          className="leading-relaxed"
-                          style={{
-                            color: '#3C3C43',
-                            fontFamily: '-apple-system, SF Pro Display, sans-serif',
-                            fontSize: '15px',
-                            fontWeight: 400,
-                          }}
-                        >
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-10 md:mt-12"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ delay: 0.6 }}
-        >
-          <p 
-            className="mb-4"
-            style={{
-              color: '#3C3C43',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontSize: '15px',
-            }}
-          >
-            Une autre question ?
-          </p>
-          <motion.a
-            href="#form"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('form')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[12px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007AFF]"
-            style={{
-              background: 'rgba(195, 163, 110, 0.1)',
-              border: '1.5px solid rgba(195, 163, 110, 0.3)',
-              color: '#C3A36E',
-              fontFamily: '-apple-system, SF Pro Display, sans-serif',
-              fontSize: '15px',
-              fontWeight: 600,
-            }}
-            whileHover={{ 
-              background: 'rgba(195, 163, 110, 0.15)',
-              scale: 1.02 
-            }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Contactez-nous
-          </motion.a>
-        </motion.div>
       </div>
     </section>
   );
