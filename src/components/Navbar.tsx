@@ -74,12 +74,9 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <img
-                src="/unlocky-logo.svg"
-                alt="Logo Unlocky"
-                className="h-10 w-auto drop-shadow-sm"
-                loading="lazy"
-              />
+              <span className="text-2xl font-bold tracking-tight text-black">
+                Unlocky
+              </span>
             </motion.a>
 
             {/* Desktop Navigation */}
