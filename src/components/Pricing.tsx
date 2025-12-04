@@ -9,20 +9,20 @@ export function Pricing() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const features = [
-    "Intégration complète avec votre PMS",
-    "Clés Apple & Google Wallet illimitées",
-    "Formation de vos équipes incluse",
-    "Support technique 24/7",
-    "Mises à jour et évolutions incluses",
-    "Tableau de bord analytics temps réel",
-    "Multi-sites (groupes hôteliers)",
-    "API complète pour personnalisation",
+    "Full integration with your PMS",
+    "Unlimited Apple & Google Wallet keys",
+    "Training for your teams included",
+    "24/7 technical support",
+    "Updates and enhancements included",
+    "Real-time analytics dashboard",
+    "Multi-property (hotel groups)",
+    "Full API for customization",
   ];
 
   const addons = [
-    { label: "Apple Watch", desc: "Clé sur montre connectée" },
-    { label: "Parking & Spa", desc: "Accès zones annexes" },
-    { label: "Mobile Check-in", desc: "Interface booking intégrée" },
+    { label: "Apple Watch", desc: "Key on smartwatch" },
+    { label: "Parking & Spa", desc: "Access to amenity areas" },
+    { label: "Mobile Check-in", desc: "Integrated booking interface" },
   ];
 
   return (
@@ -31,10 +31,10 @@ export function Pricing() {
       aria-labelledby="pricing-heading"
       className="relative overflow-hidden scroll-mt-16" 
       ref={ref}
-      style={{ 
+      style={{
         background: 'linear-gradient(180deg, #F2F2F7 0%, #FFFFFF 100%)',
-        paddingTop: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
-        paddingBottom: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
+        paddingTop: 'calc(var(--spacing) * 14)', // Reduced from 80px to 56px
+        paddingBottom: 'calc(var(--spacing) * 14)', // Reduced from 80px to 56px
       }}
     >
       {/* Subtle gradient overlay */}
@@ -57,13 +57,13 @@ export function Pricing() {
         >
           <p 
             className="text-[11px] md:text-xs tracking-[0.12em] uppercase"
-            style={{ 
+            style={{
               color: '#007AFF',
                             fontWeight: 600,
               marginBottom: 'calc(var(--spacing) * 3)',
             }}
           >
-            Tarification
+            Pricing
           </p>
           <h2 
             id="pricing-heading"
@@ -118,13 +118,13 @@ export function Pricing() {
               transition={{ duration: 0.5, delay: 0.4, type: "spring" }}
             >
               <Zap className="w-3.5 h-3.5 text-white" fill="white" />
-              <span 
+              <span
                 className="text-xs text-white"
-                style={{ 
+                style={{
                                     fontWeight: 700,
                 }}
               >
-                Le plus demandé
+                Most popular
               </span>
             </motion.div>
 
@@ -141,7 +141,7 @@ export function Pricing() {
                 Keylessly Premium
               </h3>
               <div className="flex items-baseline gap-2 mb-3">
-                <span 
+                <span
                   className="text-4xl md:text-5xl lg:text-6xl"
                   style={{
                     color: '#007AFF',
@@ -149,16 +149,16 @@ export function Pricing() {
                     letterSpacing: '-0.02em',
                   }}
                 >
-                  Sur devis
+                  Custom quote
                 </span>
               </div>
-              <p 
+              <p
                 className="text-sm"
                 style={{
                   color: '#8E8E93',
                                   }}
               >
-                Tarif personnalisé selon la taille de votre établissement et vos besoins. Devis gratuit sous 24h.
+                Custom pricing based on your property size and needs. Free quote within 24h.
               </p>
             </div>
 
@@ -172,7 +172,7 @@ export function Pricing() {
                   fontWeight: 600,
                 }}
               >
-                Tout inclus :
+                Everything included:
               </p>
               <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3">
                 {features.map((feature, index) => (
@@ -220,7 +220,7 @@ export function Pricing() {
                   fontWeight: 600,
                 }}
               >
-                Options disponibles :
+                Available add-ons:
               </p>
               <div className="flex flex-wrap gap-3">
                 {addons.map((addon, index) => (
@@ -277,7 +277,7 @@ export function Pricing() {
                   fontWeight: 600,
                 }}
               >
-                Obtenir un devis personnalisé
+                Get a personalized quote
                 <motion.div
                   animate={{ x: [0, 4, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
@@ -321,15 +321,15 @@ export function Pricing() {
                 fontWeight: 600,
               }}
             >
-              💰 ROI moyen : remboursé en 4 mois
+              💰 Average ROI: paid back in 4 months
             </p>
-            <p 
+            <p
               className="text-sm max-w-[600px] mx-auto"
               style={{
                 color: '#3C3C43',
                               }}
             >
-              Économies sur cartes perdues, réduction temps réception, et amélioration satisfaction client. Nos hôtels partenaires constatent un retour sur investissement dès le 3 à 4ème mois.
+              Savings on lost cards, faster front-desk operations, and higher guest satisfaction. Our partner hotels see a return on investment by month 3 or 4.
             </p>
           </div>
         </motion.div>
