@@ -12,31 +12,34 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('fr');
-  const [mounted, setMounted] = useState(false);
+  const getInitialLanguage = (): Language => {
+    if (typeof window === 'undefined') return 'fr';
 
-  // Detect browser language on mount
-  useEffect(() => {
-    setMounted(true);
-    const browserLang = navigator.language.toLowerCase();
     const savedLang = localStorage.getItem('unlocky-language') as Language | null;
-    
-    if (savedLang && (savedLang === 'fr' || savedLang === 'en')) {
-      setLanguageState(savedLang);
-    } else if (browserLang.startsWith('en')) {
-      setLanguageState('en');
-    } else {
-      setLanguageState('fr'); // Default to French
-    }
-  }, []);
+    const browserLang = navigator.language.toLowerCase();
 
-  // Update localStorage and HTML lang attribute when language changes
+    if (savedLang === 'fr' || savedLang === 'en') {
+      return savedLang;
+    }
+
+    return browserLang.startsWith('en') ? 'en' : 'fr';
+  };
+
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+
+  // Sync language to DOM and storage when it changes
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = language;
+    }
+
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('unlocky-language', language);
+    }
+  }, [language]);
+
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('unlocky-language', lang);
-      document.documentElement.lang = lang;
-    }
   };
 
   const value = {
@@ -44,10 +47,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguage,
     t: translations[language],
   };
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <LanguageContext.Provider value={value}>
