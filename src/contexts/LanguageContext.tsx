@@ -11,30 +11,25 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('fr');
-  const [mounted, setMounted] = useState(false);
-
-  // Detect browser language on mount
-  useEffect(() => {
-    try {
-      const browserLang = navigator.language.toLowerCase();
+// Safely determine the initial language preference so the UI can render immediately
+function getInitialLanguage(): Language {
+  try {
+    if (typeof window !== 'undefined') {
       const savedLang = localStorage.getItem('unlocky-language') as Language | null;
+      if (savedLang === 'fr' || savedLang === 'en') return savedLang;
 
-      if (savedLang && (savedLang === 'fr' || savedLang === 'en')) {
-        setLanguageState(savedLang);
-      } else if (browserLang.startsWith('en')) {
-        setLanguageState('en');
-      } else {
-        setLanguageState('fr'); // Default to French
-      }
-    } catch {
-      // If storage or navigator access fails, keep the safe default
-      setLanguageState('fr');
-    } finally {
-      setMounted(true);
+      const browserLang = navigator.language.toLowerCase();
+      if (browserLang.startsWith('en')) return 'en';
     }
-  }, []);
+  } catch {
+    // Fallback to default if storage or navigator access fails
+  }
+
+  return 'fr';
+}
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
 
   // Update localStorage and HTML lang attribute when language changes
   const setLanguage = (lang: Language) => {
@@ -50,15 +45,22 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  // Ensure the html lang attribute stays in sync on initial render
+  useEffect(() => {
+    try {
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = language;
+      }
+    } catch {
+      // Ignore DOM access errors
+    }
+  }, [language]);
+
   const value = {
     language,
     setLanguage,
     t: translations[language],
   };
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <LanguageContext.Provider value={value}>
