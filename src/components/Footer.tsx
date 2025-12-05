@@ -26,7 +26,7 @@ export function Footer() {
               <Phone className="w-4 h-4 text-white" aria-hidden="true" />
             </a>
             <a
-              href="mailto:samuel@letincelle.pro"
+              href="mailto:contact@unlocky.fr"
               className="p-2 rounded-full btn-gradient"
               aria-label="Contact par email"
             >
