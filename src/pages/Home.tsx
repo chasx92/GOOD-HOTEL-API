@@ -10,17 +10,17 @@ import { FAQ } from '../components/FAQ';
 import { LeadForm } from '../components/LeadForm';
 
 export function Home() {
-    return (
-        <>
-            <Hero />
-            <ProofBar />
-            <Steps />
-            <Security />
-            <Benefits />
-            <Testimonials />
-            <Pricing />
-            <FAQ />
-            <LeadForm />
-        </>
-    );
+  return (
+    <main className="flex flex-col">
+      <Hero />
+      <ProofBar />
+      <Steps />
+      <Security />
+      <Benefits />
+      <Testimonials />
+      <Pricing />
+      <FAQ />
+      <LeadForm />
+    </main>
+  );
 }

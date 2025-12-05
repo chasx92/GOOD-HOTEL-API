@@ -1,41 +1,21 @@
-import { useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence, useInView } from 'motion/react';
 import { Plus, Minus } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { FONT_BODY, FONT_HEADING } from '../styles/typography';
 
-export function FAQ() {
-  const { t } = useLanguage();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  export function FAQ() {
+    const { t } = useLanguage();
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "-100px" });
+    const faqs = t.faq.questions;
+    const [openIndex, setOpenIndex] = useState<number | null>(() =>
+      faqs.length > 0 ? 0 : null
+    );
 
-  const faqs = [
-    {
-      question: t.faq.questions.q1.question,
-      answer: t.faq.questions.q1.answer
-    },
-    {
-      question: t.faq.questions.q2.question,
-      answer: t.faq.questions.q2.answer
-    },
-    {
-      question: t.faq.questions.q3.question,
-      answer: t.faq.questions.q3.answer
-    },
-    {
-      question: t.faq.questions.q4.question,
-      answer: t.faq.questions.q4.answer
-    },
-    {
-      question: t.faq.questions.q5.question,
-      answer: t.faq.questions.q5.answer
-    },
-    {
-      question: t.faq.questions.q6.question,
-      answer: t.faq.questions.q6.answer
-    },
-  ];
+    useEffect(() => {
+      setOpenIndex(faqs.length > 0 ? 0 : null);
+    }, [faqs]);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

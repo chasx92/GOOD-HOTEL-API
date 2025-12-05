@@ -187,14 +187,7 @@ export interface Translations {
     subtitle: string;
     contactPrompt: string;
     contactCta: string;
-    questions: {
-      q1: { question: string; answer: string };
-      q2: { question: string; answer: string };
-      q3: { question: string; answer: string };
-      q4: { question: string; answer: string };
-      q5: { question: string; answer: string };
-      q6: { question: string; answer: string };
-    };
+    questions: { question: string; answer: string }[];
   };
 
   // Lead Form
@@ -497,32 +490,32 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Des réponses claires à vos questions techniques et commerciales.',
       contactPrompt: 'Une autre question ?',
       contactCta: 'Contactez-nous',
-      questions: {
-        q1: {
+      questions: [
+        {
           question: 'Comment fonctionne Unlocky avec nos serrures actuelles ?',
-          answer: 'Unlocky s\'intègre avec tous les principaux fabricants de serrures connectées (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Notre équipe technique réalise un audit de compatibilité gratuit et l\'installation se fait généralement en moins de 24h.',
+          answer:
+            "Unlocky s'intègre avec tous les principaux fabricants de serrures connectées (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Notre équipe technique réalise un audit de compatibilité gratuit et l'installation se fait généralement en moins de 24h.",
         },
-        q2: {
+        {
           question: 'Que se passe-t-il si un client n\'a pas de smartphone ?',
-          answer: 'Votre système de cartes-clés traditionnel reste pleinement opérationnel. Unlocky s\'ajoute comme option premium pour vos clients équipés, sans remplacer vos processus existants.',
+          answer:
+            "Votre système de cartes-clés traditionnel reste pleinement opérationnel. Unlocky s'ajoute comme option premium pour vos clients équipés, sans remplacer vos processus existants.",
         },
-        q3: {
+        {
           question: 'Comment gérez-vous la sécurité des données clients ?',
-          answer: 'Nous utilisons un chiffrement AES-256 de niveau bancaire, nos serveurs sont hébergés en Europe (conformité RGPD), et nous sommes certifiés ISO 27001. Aucune donnée personnelle n\'est stockée sur les appareils.',
+          answer: 'La sécurité des données client est déjà mise en place par vos PMS, aucune donnée n\'en sortira.',
         },
-        q4: {
-          question: 'Quel est le délai de mise en place ?',
-          answer: 'Après l\'audit de compatibilité (48h), l\'installation technique prend 4 à 8 heures selon la taille de l\'établissement. La formation de votre équipe se fait en 2h. Vous pouvez être opérationnel en moins d\'une semaine.',
-        },
-        q5: {
+        {
           question: 'Y a-t-il des frais cachés ou d\'engagement longue durée ?',
-          answer: 'Non. Notre tarification est transparente : uniquement le coût par chambre/mois selon la formule choisie. Pas de frais d\'installation, pas d\'engagement minimum. Vous pouvez annuler à tout moment.',
+          answer:
+            "Non. Notre tarification est simple : Des frais d’installations suivit d’un simple abonnement mensuel. Vous pouvez annuler à tout moment.",
         },
-        q6: {
+        {
           question: 'Quels PMS sont compatibles ?',
-          answer: 'Nous sommes intégrés avec les principaux PMS : Opera, Mews, Cloudbeds, Protel, Apaleo, et bien d\'autres. Si votre PMS dispose d\'une API, nous pouvons réaliser l\'intégration rapidement.',
+          answer:
+            'Nous sommes intégrés avec les principaux PMS : Opera, Mews, Cloudbeds, Protel, Apaleo, et bien d\'autres. Si votre PMS dispose d\'une API, nous pouvons réaliser l\'intégration rapidement.',
         },
-      },
+      ],
     },
 
     form: {
@@ -847,32 +840,38 @@ export const translations: Record<Language, Translations> = {
       subtitle: 'Clear answers to your technical and business questions.',
       contactPrompt: 'Another question?',
       contactCta: 'Contact us',
-      questions: {
-        q1: {
+      questions: [
+        {
           question: 'How does Unlocky work with our current locks?',
-          answer: 'Unlocky integrates with all major connected lock manufacturers (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Our technical team performs a free compatibility audit and installation typically takes less than 24 hours.',
+          answer:
+            'Unlocky integrates with all major connected lock manufacturers (ASSA ABLOY, dormakaba, SALTO, OpenKey, etc.). Our technical team performs a free compatibility audit and installation typically takes less than 24 hours.',
         },
-        q2: {
+        {
           question: 'What happens if a guest doesn\'t have a smartphone?',
-          answer: 'Your traditional key card system remains fully operational. Unlocky adds as a premium option for your equipped guests, without replacing your existing processes.',
+          answer:
+            'Your traditional key card system remains fully operational. Unlocky adds as a premium option for your equipped guests, without replacing your existing processes.',
         },
-        q3: {
+        {
           question: 'How do you handle guest data security?',
-          answer: 'We use bank-level AES-256 encryption, our servers are hosted in Europe (GDPR compliant), and we are ISO 27001 certified. No personal data is stored on devices.',
+          answer:
+            'We use bank-level AES-256 encryption, our servers are hosted in Europe (GDPR compliant), and we are ISO 27001 certified. No personal data is stored on devices.',
         },
-        q4: {
+        {
           question: 'What is the implementation timeline?',
-          answer: 'After the compatibility audit (48h), technical installation takes 4 to 8 hours depending on property size. Staff training is done in 2 hours. You can be operational in less than a week.',
+          answer:
+            'After the compatibility audit (48h), technical installation takes 4 to 8 hours depending on property size. Staff training is done in 2 hours. You can be operational in less than a week.',
         },
-        q5: {
+        {
           question: 'Are there hidden fees or long-term commitments?',
-          answer: 'No. Our pricing is transparent: only the cost per room/month according to the chosen plan. No installation fees, no minimum commitment. You can cancel anytime.',
+          answer:
+            'No. Our pricing is transparent: only the cost per room/month according to the chosen plan. No installation fees, no minimum commitment. You can cancel anytime.',
         },
-        q6: {
+        {
           question: 'Which PMS are compatible?',
-          answer: 'We integrate with major PMS: Opera, Mews, Cloudbeds, Protel, Apaleo, and many others. If your PMS has an API, we can implement the integration quickly.',
+          answer:
+            'We integrate with major PMS: Opera, Mews, Cloudbeds, Protel, Apaleo, and many others. If your PMS has an API, we can implement the integration quickly.',
         },
-      },
+      ],
     },
 
     form: {
