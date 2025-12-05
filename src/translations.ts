@@ -1,5 +1,7 @@
 export type Language = 'fr' | 'en';
 
+export const DEFAULT_LANGUAGE: Language = 'fr';
+
 export interface Translations {
   // Navbar
   navbar: {
