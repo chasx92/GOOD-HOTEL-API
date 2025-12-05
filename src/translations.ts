@@ -298,7 +298,7 @@ export const translations: Record<Language, Translations> = {
       chip3: 'Aucune app à télécharger',
     },
     proofBar: {
-      title: 'Ils nous font confiance',
+      title: 'Compatible avec :',
     },
     steps: {
       title: 'Clés digitales. Simplicité. Efficacité',
