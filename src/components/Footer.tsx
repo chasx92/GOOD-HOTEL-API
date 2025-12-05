@@ -50,13 +50,13 @@ export function Footer() {
                 🇫🇷 Made in France
               </div>
               <Link
-                to="/terms"
+                to="/conditions-generales"
                 className="px-3 py-1 rounded-md border border-gray-200 bg-white text-xs font-medium text-gray-700 hover:text-gray-900 hover:border-gray-300 transition-colors"
               >
                 CGV
               </Link>
               <Link
-                to="/legal"
+                to="/mentions-legales"
                 className="px-3 py-1 rounded-md border border-gray-200 bg-white text-xs font-medium text-gray-700 hover:text-gray-900 hover:border-gray-300 transition-colors"
               >
                 Mentions légales

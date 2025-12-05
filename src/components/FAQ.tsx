@@ -10,32 +10,7 @@ export function FAQ() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs = [
-    {
-      question: t.faq.questions.q1.question,
-      answer: t.faq.questions.q1.answer
-    },
-    {
-      question: t.faq.questions.q2.question,
-      answer: t.faq.questions.q2.answer
-    },
-    {
-      question: t.faq.questions.q3.question,
-      answer: t.faq.questions.q3.answer
-    },
-    {
-      question: t.faq.questions.q4.question,
-      answer: t.faq.questions.q4.answer
-    },
-    {
-      question: t.faq.questions.q5.question,
-      answer: t.faq.questions.q5.answer
-    },
-    {
-      question: t.faq.questions.q6.question,
-      answer: t.faq.questions.q6.answer
-    },
-  ];
+  const faqs = t.faq.questions;
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
