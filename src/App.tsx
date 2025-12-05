@@ -42,8 +42,8 @@ function AppContent() {
         <main id="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/legal" element={<LegalNotice />} />
-            <Route path="/terms" element={<TermsOfSales />} />
+            <Route path="/mentions-legales" element={<LegalNotice />} />
+            <Route path="/conditions-generales" element={<TermsOfSales />} />
           </Routes>
         </main>
 
