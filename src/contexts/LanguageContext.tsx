@@ -17,25 +17,36 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   // Detect browser language on mount
   useEffect(() => {
-    setMounted(true);
-    const browserLang = navigator.language.toLowerCase();
-    const savedLang = localStorage.getItem('unlocky-language') as Language | null;
-    
-    if (savedLang && (savedLang === 'fr' || savedLang === 'en')) {
-      setLanguageState(savedLang);
-    } else if (browserLang.startsWith('en')) {
-      setLanguageState('en');
-    } else {
-      setLanguageState('fr'); // Default to French
+    try {
+      const browserLang = navigator.language.toLowerCase();
+      const savedLang = localStorage.getItem('unlocky-language') as Language | null;
+
+      if (savedLang && (savedLang === 'fr' || savedLang === 'en')) {
+        setLanguageState(savedLang);
+      } else if (browserLang.startsWith('en')) {
+        setLanguageState('en');
+      } else {
+        setLanguageState('fr'); // Default to French
+      }
+    } catch {
+      // If storage or navigator access fails, keep the safe default
+      setLanguageState('fr');
+    } finally {
+      setMounted(true);
     }
   }, []);
 
   // Update localStorage and HTML lang attribute when language changes
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('unlocky-language', lang);
-      document.documentElement.lang = lang;
+
+    try {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('unlocky-language', lang);
+        document.documentElement.lang = lang;
+      }
+    } catch {
+      // Ignore storage errors to avoid crashing the app when persisting the language
     }
   };
 
