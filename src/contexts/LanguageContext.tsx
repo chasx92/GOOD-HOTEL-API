@@ -11,30 +11,60 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('fr');
-  const [mounted, setMounted] = useState(false);
+const SAFE_DEFAULT_LANGUAGE: Language = 'fr';
 
-  // Detect browser language on mount
+function getInitialLanguage(): Language {
+  // Use lazy initialization so the function only runs on first render
+  try {
+    if (typeof window === 'undefined') {
+      return SAFE_DEFAULT_LANGUAGE;
+    }
+
+    const savedLang = localStorage.getItem('unlocky-language') as Language | null;
+    if (savedLang === 'fr' || savedLang === 'en') {
+      return savedLang;
+    }
+
+    const browserLang = window.navigator?.language?.toLowerCase();
+    if (browserLang?.startsWith('en')) {
+      return 'en';
+    }
+
+    return SAFE_DEFAULT_LANGUAGE;
+  } catch {
+    return SAFE_DEFAULT_LANGUAGE;
+  }
+}
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+
+  // Sync preferred language when the component is mounted in the browser
   useEffect(() => {
     try {
-      const browserLang = navigator.language.toLowerCase();
       const savedLang = localStorage.getItem('unlocky-language') as Language | null;
+      const browserLang = window.navigator?.language?.toLowerCase();
 
-      if (savedLang && (savedLang === 'fr' || savedLang === 'en')) {
+      if (savedLang === 'fr' || savedLang === 'en') {
         setLanguageState(savedLang);
-      } else if (browserLang.startsWith('en')) {
+      } else if (browserLang?.startsWith('en')) {
         setLanguageState('en');
-      } else {
-        setLanguageState('fr'); // Default to French
       }
     } catch {
-      // If storage or navigator access fails, keep the safe default
-      setLanguageState('fr');
-    } finally {
-      setMounted(true);
+      // Ignore storage or navigator errors to avoid crashing the app
     }
   }, []);
+
+  // Keep the <html lang> attribute in sync with the active language
+  useEffect(() => {
+    try {
+      if (typeof document !== 'undefined') {
+        document.documentElement.lang = language;
+      }
+    } catch {
+      // Ignore DOM errors to avoid blocking the UI
+    }
+  }, [language]);
 
   // Update localStorage and HTML lang attribute when language changes
   const setLanguage = (lang: Language) => {
@@ -55,10 +85,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLanguage,
     t: translations[language],
   };
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <LanguageContext.Provider value={value}>
