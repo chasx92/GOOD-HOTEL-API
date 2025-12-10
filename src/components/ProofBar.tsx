@@ -110,12 +110,11 @@ export function ProofBar() {
         </motion.div>
 
         {/* Partners logos - Desktop with grayscale */}
-        <div
-          className="hidden md:flex items-center justify-center overflow-x-auto"
-          style={{
+        <div 
+          className="hidden md:flex flex-wrap items-center justify-center"
+          style={{ 
             gap: 'calc(var(--spacing) * 12)',
             marginBottom: 'calc(var(--spacing) * 8)',
-            flexWrap: 'nowrap',
           }}
         >
           {partners.map((partner, index) => {
