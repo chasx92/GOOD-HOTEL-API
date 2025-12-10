@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Globe, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface NavbarProps {
@@ -96,6 +97,13 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                   {link.label}
                 </motion.a>
               ))}
+
+              <Link
+                to="/mobile"
+                className="relative text-[15px] font-bold text-black nav-link-underline transition-colors"
+              >
+                {t.navbar.mobile}
+              </Link>
             </div>
 
             {/* Actions */}
@@ -160,6 +168,14 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                   {link.label}
                 </a>
               ))}
+
+              <Link
+                to="/mobile"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-lg font-bold text-black"
+              >
+                {t.navbar.mobile}
+              </Link>
 
               <div className="pt-4 border-t border-gray-100 flex flex-col gap-4">
                 <button

@@ -9,6 +9,7 @@ import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { Home } from './pages/Home';
 import { LegalNotice } from './pages/LegalNotice';
 import { TermsOfSales } from './pages/TermsOfSales';
+import { MobileHome } from './pages/MobileHome';
 import { FONT_BODY } from './styles/typography';
 
 function AppContent() {
@@ -44,6 +45,7 @@ function AppContent() {
             <Route path="/" element={<Home />} />
             <Route path="/mentions-legales" element={<LegalNotice />} />
             <Route path="/conditions-generales" element={<TermsOfSales />} />
+            <Route path="/mobile" element={<MobileHome />} />
           </Routes>
         </main>
 
