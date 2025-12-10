@@ -20,7 +20,7 @@ const CLASS_NAMES = {
   statusBadge: 'inline-flex items-center gap-2.5 mb-6',
   statusDot: 'relative flex h-2 w-2',
   walletIcon: 'w-3.5 h-3.5 fill-current',
-  heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight font-heading mt-6 md:mt-0',
+  heading: 'text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight font-heading mt-10 md:mt-0',
   subtitle: 'text-lg md:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed',
   primaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg btn-gradient cta-hover-effect',
   secondaryButton: 'group relative overflow-hidden rounded-xl px-8 py-3.5 text-white shadow-md transition-all hover:shadow-lg cta-hover-effect',
