@@ -75,7 +75,7 @@ export function Hero({ onPrimaryClick }: HeroProps) {
           >
             {/* Status Badge */}
             <motion.div
-              className={CLASS_NAMES.statusBadge}
+              className={`${CLASS_NAMES.statusBadge} hidden md:inline-flex`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.1 }}
