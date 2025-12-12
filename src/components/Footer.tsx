@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone } from 'lucide-react';
+import { Linkedin, Mail, Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function Footer() {
@@ -31,6 +31,15 @@ export function Footer() {
               aria-label="Contact par email"
             >
               <Mail className="w-4 h-4 text-white" aria-hidden="true" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/samuel-chetrit/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full btn-gradient"
+              aria-label="Profil LinkedIn de Samuel Chetrit"
+            >
+              <Linkedin className="w-4 h-4 text-white" aria-hidden="true" />
             </a>
           </div>
         </div>
