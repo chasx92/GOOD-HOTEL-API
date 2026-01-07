@@ -200,9 +200,6 @@ export interface Translations {
       city: { label: string; placeholder: string };
       country: { label: string; placeholder: string };
       roomCount: { label: string; placeholder: string };
-      lockProvider: { label: string; placeholder: string };
-      lockProviderOther: { label: string; placeholder: string };
-      pms: { label: string; subtitle: string };
       name: { label: string; placeholder: string };
       role: { label: string; placeholder: string };
       email: { label: string; placeholder: string };
@@ -212,8 +209,6 @@ export interface Translations {
       consent: string;
     };
     roomOptions: { value: string; label: string }[];
-    lockProviders: { value: string; label: string }[];
-    pmsOptions: { value: string; label: string }[];
     timelineOptions: { value: string; label: string }[];
     errors: {
       hotelNameRequired: string;
@@ -542,9 +537,6 @@ export const translations: Record<Language, Translations> = {
         city: { label: 'Ville', placeholder: 'Paris' },
         country: { label: 'Pays', placeholder: 'France' },
         roomCount: { label: 'Nombre de chambres', placeholder: '120' },
-        lockProvider: { label: 'Fournisseur de serrures', placeholder: 'ASSA ABLOY, SALTO…' },
-        lockProviderOther: { label: 'Autre fournisseur', placeholder: 'Précisez si nécessaire' },
-        pms: { label: 'PMS', subtitle: 'Nous vous aidons si vous ne savez pas' },
         name: { label: 'Votre nom', placeholder: 'Marie Dupont' },
         role: { label: 'Votre rôle', placeholder: 'Directrice de l’hôtel' },
         email: { label: 'Email professionnel', placeholder: 'contact@hotel.fr' },
@@ -558,18 +550,6 @@ export const translations: Record<Language, Translations> = {
         { value: '51-100', label: '51-100' },
         { value: '101-200', label: '101-200' },
         { value: '200+', label: '200+' },
-      ],
-      lockProviders: [
-        { value: 'assa abloy', label: 'ASSA ABLOY' },
-        { value: 'dormakaba', label: 'dormakaba' },
-        { value: 'salto', label: 'SALTO' },
-        { value: 'autre', label: 'Autre' },
-      ],
-      pmsOptions: [
-        { value: 'opex', label: 'OpeX' },
-        { value: 'mews', label: 'Mews' },
-        { value: 'openerp', label: 'Opera PMS' },
-        { value: 'autre', label: 'Autre' },
       ],
       timelineOptions: [
         { value: 'urgent', label: 'Immédiat' },
@@ -900,9 +880,6 @@ export const translations: Record<Language, Translations> = {
         city: { label: 'City', placeholder: 'Paris' },
         country: { label: 'Country', placeholder: 'France' },
         roomCount: { label: 'Number of rooms', placeholder: '120' },
-        lockProvider: { label: 'Lock provider', placeholder: 'ASSA ABLOY, SALTO…' },
-        lockProviderOther: { label: 'Other provider', placeholder: 'Specify if needed' },
-        pms: { label: 'PMS', subtitle: "We can help if you're unsure" },
         name: { label: 'Your name', placeholder: 'Mary Smith' },
         role: { label: 'Your role', placeholder: 'General Manager' },
         email: { label: 'Work email', placeholder: 'contact@hotel.com' },
@@ -916,18 +893,6 @@ export const translations: Record<Language, Translations> = {
         { value: '51-100', label: '51-100' },
         { value: '101-200', label: '101-200' },
         { value: '200+', label: '200+' },
-      ],
-      lockProviders: [
-        { value: 'assa abloy', label: 'ASSA ABLOY' },
-        { value: 'dormakaba', label: 'dormakaba' },
-        { value: 'salto', label: 'SALTO' },
-        { value: 'other', label: 'Other' },
-      ],
-      pmsOptions: [
-        { value: 'opex', label: 'OpeX' },
-        { value: 'mews', label: 'Mews' },
-        { value: 'openerp', label: 'Opera PMS' },
-        { value: 'other', label: 'Other' },
       ],
       timelineOptions: [
         { value: 'urgent', label: 'Immediately' },
