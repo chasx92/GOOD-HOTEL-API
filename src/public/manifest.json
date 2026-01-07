@@ -4,7 +4,7 @@
   "description": "Solution premium de clés digitales Apple & Google Wallet pour hôtels de luxe",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F2F2F7",
+  "background_color": "#FFFFFF",
   "theme_color": "#C3A36E",
   "orientation": "portrait-primary",
   "scope": "/",

@@ -6,7 +6,7 @@ export function TermsOfSales() {
     return (
         <>
             <LegalNavbar />
-            <div className="min-h-screen bg-[#F2F2F7] pt-32 pb-20 px-4 md:px-6">
+            <div className="min-h-screen bg-white pt-32 pb-20 px-4 md:px-6">
                 <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm p-8 md:p-12 border border-gray-100">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

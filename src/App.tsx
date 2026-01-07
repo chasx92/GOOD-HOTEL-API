@@ -17,7 +17,7 @@ function AppContent() {
 
   return (
     <Router>
-      <div className="min-h-screen overflow-x-hidden" style={{ background: '#F2F2F7' }}>
+      <div className="min-h-screen overflow-x-hidden" style={{ background: '#FFFFFF' }}>
         {/* SEO Meta Tags & Structured Data */}
         <SEOHead />
 
