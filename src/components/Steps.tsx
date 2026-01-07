@@ -39,7 +39,7 @@ export function Steps() {
       className="relative overflow-hidden scroll-mt-16"
       ref={ref}
       style={{
-        background: '#F2F2F7',
+        background: '#FFFFFF',
         paddingTop: 'calc(var(--spacing) * 12)', // Réduit de 64px à 48px
         paddingBottom: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
       }}

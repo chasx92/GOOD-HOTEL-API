@@ -3,7 +3,6 @@ import { MobileHeader } from '../components/mobile/MobileHeader';
 import { MobileHero } from '../components/mobile/MobileHero';
 import { MobileFeatures } from '../components/mobile/MobileFeatures';
 import { MobileSteps } from '../components/mobile/MobileSteps';
-import { MobileSecurity } from '../components/mobile/MobileSecurity';
 import { MobileCTA } from '../components/mobile/MobileCTA';
 
 export function MobileHome() {
@@ -18,7 +17,6 @@ export function MobileHome() {
         <MobileHero />
         <MobileFeatures />
         <MobileSteps />
-        <MobileSecurity />
         <MobileCTA />
       </main>
     </div>
