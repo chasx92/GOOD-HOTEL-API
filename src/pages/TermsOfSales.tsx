@@ -6,8 +6,11 @@ export function TermsOfSales() {
     return (
         <>
             <LegalNavbar />
-            <div className="min-h-screen bg-white pt-32 pb-20 px-4 md:px-6">
-                <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm p-8 md:p-12 border border-gray-100">
+            <div className="min-h-screen pt-32 pb-20 px-4 md:px-6" style={{ background: 'var(--page-gradient)' }}>
+                <div
+                    className="max-w-3xl mx-auto rounded-2xl shadow-sm p-8 md:p-12 border border-gray-100"
+                    style={{ background: 'rgba(255, 255, 255, 0.92)' }}
+                >
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

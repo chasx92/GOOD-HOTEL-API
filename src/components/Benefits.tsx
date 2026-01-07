@@ -7,7 +7,6 @@ export function Benefits() {
   const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const SECTION_GRADIENT = 'linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 55%, #EAF2FF 100%)';
 
   // OPTIMIZED: 3 couleurs max (Bleu/Vert/Or) au lieu de 6
   const ACCENT_COLORS = {
@@ -74,7 +73,7 @@ export function Benefits() {
       className="relative overflow-hidden scroll-mt-16"
       ref={ref}
       style={{ 
-        background: SECTION_GRADIENT,
+        background: 'transparent',
         paddingTop: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
         paddingBottom: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
       }}

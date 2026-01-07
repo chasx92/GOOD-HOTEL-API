@@ -19,7 +19,7 @@ export function Pricing() {
       className="relative overflow-hidden scroll-mt-16" 
       ref={ref}
       style={{
-        background: '#FFFFFF',
+        background: 'transparent',
         paddingTop: 'calc(var(--spacing) * 14)', // Reduced from 80px to 56px
         paddingBottom: 'calc(var(--spacing) * 14)', // Reduced from 80px to 56px
       }}

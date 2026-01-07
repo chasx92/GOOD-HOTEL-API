@@ -4,7 +4,7 @@ export function MobileFeatures() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-white py-12 px-4" id="mobile-features">
+    <section className="py-12 px-4" id="mobile-features">
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="space-y-2">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#C3A36E]">{t.mobilePage.featuresTitle}</p>
