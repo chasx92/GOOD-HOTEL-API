@@ -9,9 +9,6 @@ interface FormData {
   city: string;
   country: string;
   roomCount: string;
-  lockProvider: string;
-  lockProviderOther: string;
-  pms: string[];
   name: string;
   role: string;
   email: string;
@@ -32,9 +29,6 @@ export function LeadForm() {
     city: '',
     country: '',
     roomCount: '',
-    lockProvider: '',
-    lockProviderOther: '',
-    pms: [],
     name: '',
     role: '',
     email: '',
@@ -45,8 +39,6 @@ export function LeadForm() {
   });
 
   const roomOptions = t.form.roomOptions;
-  const lockProviders = t.form.lockProviders;
-  const pmsOptions = t.form.pmsOptions;
   const timelineOptions = t.form.timelineOptions;
 
   const validateEmail = (email: string) => {
@@ -59,9 +51,6 @@ export function LeadForm() {
       `Nom de l'établissement : ${data.hotelName || 'Non fourni'}`,
       data.city || data.country ? `Localisation : ${[data.city, data.country].filter(Boolean).join(', ')}` : null,
       data.roomCount ? `Nombre de chambres : ${data.roomCount}` : null,
-      data.lockProvider ? `Fournisseur de serrures : ${data.lockProvider}` : null,
-      data.lockProviderOther ? `Autre fournisseur : ${data.lockProviderOther}` : null,
-      data.pms.length ? `PMS : ${data.pms.join(', ')}` : null,
       data.name ? `Nom du contact : ${data.name}` : null,
       data.role ? `Rôle : ${data.role}` : null,
       `Email : ${data.email}`,
@@ -85,9 +74,6 @@ export function LeadForm() {
     payload.append("Nom de l'établissement", data.hotelName || 'Non fourni');
     payload.append('Localisation', data.city || data.country ? [data.city, data.country].filter(Boolean).join(', ') : 'Non fournie');
     payload.append('Nombre de chambres', data.roomCount || 'Non fourni');
-    payload.append('Fournisseur de serrures', data.lockProvider || 'Non fourni');
-    payload.append('Autre fournisseur', data.lockProviderOther || 'Non fourni');
-    payload.append('PMS', data.pms.length ? data.pms.join(', ') : 'Non fourni');
     payload.append('Nom du contact', data.name || 'Non fourni');
     payload.append('Rôle', data.role || 'Non fourni');
     payload.append('Email', data.email);
@@ -150,15 +136,6 @@ export function LeadForm() {
     }
   };
 
-  const togglePMS = (value: string) => {
-    setFormData((prev) => {
-      const newPMS = prev.pms.includes(value)
-        ? prev.pms.filter(p => p !== value)
-        : [...prev.pms, value];
-      return { ...prev, pms: newPMS };
-    });
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -193,9 +170,6 @@ export function LeadForm() {
           city: '',
           country: '',
           roomCount: '',
-          lockProvider: '',
-          lockProviderOther: '',
-          pms: [],
           name: '',
           role: '',
           email: '',
@@ -218,8 +192,8 @@ export function LeadForm() {
       <section 
         id="form" 
         className="scroll-mt-16"
-        style={{ 
-          background: '#FFFFFF',
+        style={{
+          background: 'linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 55%, #EAF2FF 100%)',
           paddingTop: 'calc(var(--spacing) * 20)',
           paddingBottom: 'calc(var(--spacing) * 20)',
         }}
@@ -285,7 +259,6 @@ export function LeadForm() {
     );
   }
 
-  const showLockProviderOther = formData.lockProvider === 'other';
   const showTimeline = formData.roomCount !== '';
 
   return (
@@ -294,8 +267,8 @@ export function LeadForm() {
       aria-labelledby="form-heading"
       ref={sectionRef}
       className="scroll-mt-16"
-      style={{ 
-        background: '#FFFFFF',
+      style={{
+        background: 'linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 55%, #EAF2FF 100%)',
         paddingTop: 'calc(var(--spacing) * 12)', // Réduit de 80px à 48px
         paddingBottom: 'calc(var(--spacing) * 16)', // Réduit de 80px à 64px pour le footer
       }}
@@ -518,124 +491,6 @@ export function LeadForm() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
-
-          {/* Lock Provider */}
-          <div>
-            <label 
-              htmlFor="lockProvider" 
-              className="block mb-2 text-[14px] md:text-[15px]"
-              style={{
-                color: '#1C1C1E',
-                fontFamily: FONT_BODY,
-                fontWeight: 600,
-              }}
-            >
-              {t.form.fields.lockProvider.label}
-            </label>
-            <div className="relative">
-              <ChevronDown 
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none z-10" 
-                style={{ color: '#8E8E93' }}
-              />
-              <select
-                id="lockProvider"
-                name="lockProvider"
-                value={formData.lockProvider}
-                onChange={handleChange}
-                className="w-full px-4 py-3.5 rounded-[12px] transition-all focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[#007AFF] text-[16px] appearance-none cursor-pointer"
-                style={{
-                  background: '#F2F2F7',
-                  border: '2px solid transparent',
-                  color: formData.lockProvider ? '#1C1C1E' : '#8E8E93',
-                  fontFamily: FONT_BODY,
-                }}
-              >
-                <option value="">{t.form.fields.lockProvider.placeholder}</option>
-                {lockProviders.map(opt => (
-                  <option key={opt.value} value={opt.value}>{opt.label}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Lock Provider Other */}
-          <AnimatePresence>
-            {showLockProviderOther && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <label 
-                  htmlFor="lockProviderOther" 
-                  className="block mb-2 text-[14px] md:text-[15px]"
-                  style={{
-                    color: '#1C1C1E',
-                    fontFamily: FONT_BODY,
-                    fontWeight: 600,
-                  }}
-                >
-                  {t.form.fields.lockProviderOther.label}
-                </label>
-                <input
-                  type="text"
-                  id="lockProviderOther"
-                  name="lockProviderOther"
-                  value={formData.lockProviderOther}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3.5 rounded-[12px] transition-all focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-[#007AFF] text-[16px]"
-                  style={{
-                    background: '#F2F2F7',
-                    border: '2px solid transparent',
-                    color: '#1C1C1E',
-                    fontFamily: FONT_BODY,
-                  }}
-                  placeholder={t.form.fields.lockProviderOther.placeholder}
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* PMS */}
-          <div>
-            <label 
-              className="block mb-3 text-[14px] md:text-[15px]"
-              style={{
-                color: '#1C1C1E',
-                fontFamily: FONT_BODY,
-                fontWeight: 600,
-              }}
-            >
-              {t.form.fields.pms.label}
-            </label>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-              {pmsOptions.map((pms) => (
-                <motion.button
-                  key={pms.value}
-                  type="button"
-                  onClick={() => togglePMS(pms.value)}
-                  className="px-3 py-2.5 rounded-[10px] text-[14px] transition-all relative overflow-hidden"
-                  style={{
-                    background: formData.pms.includes(pms.value) ? 'rgba(0, 122, 255, 0.1)' : '#F2F2F7',
-                    border: formData.pms.includes(pms.value) ? '2px solid #007AFF' : '2px solid transparent',
-                    color: formData.pms.includes(pms.value) ? '#007AFF' : '#1C1C1E',
-                    fontFamily: FONT_BODY,
-                    fontWeight: formData.pms.includes(pms.value) ? 600 : 500,
-                  }}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span className="relative z-10 flex items-center justify-center gap-1.5">
-                    {formData.pms.includes(pms.value) && (
-                      <Check className="w-3.5 h-3.5" />
-                    )}
-                    {pms.label}
-                  </span>
-                </motion.button>
-              ))}
-            </div>
           </div>
 
           {/* Contact Info Header */}
