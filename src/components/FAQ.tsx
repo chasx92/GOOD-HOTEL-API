@@ -23,7 +23,7 @@ export function FAQ() {
       className="relative overflow-hidden scroll-mt-16"
       ref={ref}
       style={{ 
-        background: '#FFFFFF',
+        background: '#F2F2F7',
         paddingTop: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
         paddingBottom: 'calc(var(--spacing) * 12)', // Réduit de 80px à 48px
       }}

@@ -41,7 +41,6 @@ export function Navbar({ onCTAClick }: NavbarProps) {
 
   const navLinks = [
     { label: t.navbar.features, href: 'steps' },
-    { label: t.navbar.security, href: 'security' },
     { label: t.navbar.pricing, href: 'pricing' },
     { label: t.navbar.faq, href: 'faq' },
     { label: t.navbar.contact, href: 'contact' },
