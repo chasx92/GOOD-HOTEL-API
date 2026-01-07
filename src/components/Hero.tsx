@@ -7,7 +7,7 @@ import { FONT_BODY, FONT_HEADING } from '../styles/typography';
 
 // Constants for Hero component
 const HERO_STYLES = {
-  background: '#FFFFFF',
+  background: 'transparent',
   brandColor: '#C3A36E',
   fontFamily: FONT_BODY,
   paddingTop: 'calc(var(--spacing) * 12)',

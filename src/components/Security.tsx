@@ -43,7 +43,7 @@ export function Security() {
       className="relative overflow-hidden scroll-mt-16"
       ref={ref}
       style={{ 
-        background: '#FFFFFF',
+        background: 'transparent',
         paddingTop: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
         paddingBottom: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
       }}
@@ -52,7 +52,7 @@ export function Security() {
       <div 
         className="absolute inset-x-0 top-0 h-24 pointer-events-none"
         style={{
-          background: 'linear-gradient(180deg, rgba(242, 242, 247, 0.8) 0%, rgba(255, 255, 255, 0) 100%)',
+          background: 'linear-gradient(180deg, rgba(232, 241, 255, 0.85) 0%, rgba(255, 255, 255, 0) 100%)',
         }}
       />
       
@@ -60,7 +60,7 @@ export function Security() {
       <div 
         className="absolute inset-x-0 bottom-0 h-24 pointer-events-none"
         style={{
-          background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(242, 242, 247, 0.8) 100%)',
+          background: 'linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(232, 241, 255, 0.85) 100%)',
         }}
       />
       

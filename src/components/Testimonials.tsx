@@ -16,7 +16,7 @@ export function Testimonials() {
       className="relative overflow-hidden scroll-mt-16"
       ref={ref}
       style={{ 
-        background: 'linear-gradient(180deg, #F2F2F7 0%, #FFFFFF 50%, #F2F2F7 100%)',
+        background: 'transparent',
         paddingTop: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
         paddingBottom: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
       }}

@@ -11,7 +11,7 @@ export function Footer() {
       role="contentinfo"
       aria-label="Informations de bas de page"
       style={{
-        background: '#FFFFFF',
+        background: 'rgba(255, 255, 255, 0.8)',
         borderTop: '1px solid #E5E5EA',
               }}
     >

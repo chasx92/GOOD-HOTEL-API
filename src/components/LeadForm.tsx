@@ -193,7 +193,7 @@ export function LeadForm() {
         id="form" 
         className="scroll-mt-16"
         style={{
-          background: '#FFFFFF',
+          background: 'transparent',
           paddingTop: 'calc(var(--spacing) * 20)',
           paddingBottom: 'calc(var(--spacing) * 20)',
         }}
@@ -268,7 +268,7 @@ export function LeadForm() {
       ref={sectionRef}
       className="scroll-mt-16"
       style={{
-        background: '#FFFFFF',
+        background: 'transparent',
         paddingTop: 'calc(var(--spacing) * 12)', // Réduit de 80px à 48px
         paddingBottom: 'calc(var(--spacing) * 16)', // Réduit de 80px à 64px pour le footer
       }}

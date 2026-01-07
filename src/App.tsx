@@ -17,7 +17,7 @@ function AppContent() {
 
   return (
     <Router>
-      <div className="min-h-screen overflow-x-hidden" style={{ background: '#FFFFFF' }}>
+      <div className="min-h-screen overflow-x-hidden" style={{ background: 'var(--page-gradient)' }}>
         {/* SEO Meta Tags & Structured Data */}
         <SEOHead />
 

@@ -9,7 +9,6 @@ export function FAQ() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const SECTION_GRADIENT = 'linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 55%, #EAF2FF 100%)';
 
   const faqs = t.faq.questions;
 
@@ -24,7 +23,7 @@ export function FAQ() {
       className="relative overflow-hidden scroll-mt-16"
       ref={ref}
       style={{ 
-        background: SECTION_GRADIENT,
+        background: 'transparent',
         paddingTop: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
         paddingBottom: 'calc(var(--spacing) * 12)', // Réduit de 80px à 48px
       }}
