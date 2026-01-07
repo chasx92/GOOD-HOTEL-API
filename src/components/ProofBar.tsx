@@ -65,6 +65,7 @@ export function ProofBar() {
   const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const SECTION_GRADIENT = 'linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 55%, #EAF2FF 100%)';
 
   const partners = [
     { name: 'SALTO', component: SaltoLogo, width: 180, height: 56 },
@@ -81,7 +82,7 @@ export function ProofBar() {
       className="relative overflow-hidden scroll-mt-16" 
       ref={ref}
       style={{ 
-        background: '#F2F2F7',
+        background: SECTION_GRADIENT,
         paddingTop: 'calc(var(--spacing) * 8)', // Augmenté de 24px à 32px
         paddingBottom: 'calc(var(--spacing) * 10)', // Augmenté de 32px à 40px
       }}

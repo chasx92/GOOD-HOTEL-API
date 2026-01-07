@@ -11,7 +11,7 @@ export function MobileHome() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f5f5f7] text-gray-900">
+    <div className="min-h-screen bg-white text-gray-900">
       <MobileHeader />
       <main className="space-y-8">
         <MobileHero />
