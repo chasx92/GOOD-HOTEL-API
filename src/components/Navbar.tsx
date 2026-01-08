@@ -75,8 +75,15 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <span className="text-2xl font-bold tracking-tight text-black">
-                Unlocky
+              <span className="flex items-center gap-3">
+                <img
+                  src="/logo.svg"
+                  alt="Logo Unlocky"
+                  className="h-9 w-9"
+                />
+                <span className="text-2xl font-bold tracking-tight text-black">
+                  Unlocky
+                </span>
               </span>
             </motion.a>
 
