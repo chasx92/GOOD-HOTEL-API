@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="unlockyMarkTitle">
+  <title id="unlockyMarkTitle">Unlocky logo</title>
+  <rect width="256" height="256" fill="white" rx="32" />
+  <path
+    d="M80 48 V168 Q80 208 128 208 Q176 208 176 160 V96 Q176 48 128 48 Q104 48 104 80 V144"
+    fill="none"
+    stroke="#111111"
+    stroke-width="40"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
