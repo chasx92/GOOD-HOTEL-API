@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" role="img" aria-labelledby="unlockyTitle">
-  <title id="unlockyTitle">Unlocky logo</title>
-  <rect width="512" height="256" fill="white" rx="32"/>
-  <text x="32" y="172" fill="#0047FF" font-family="'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="140">
-    Unlocky
-  </text>
-</svg>
