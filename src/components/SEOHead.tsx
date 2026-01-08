@@ -97,15 +97,6 @@ export function SEOHead({
     }
     linkManifest.href = '/manifest.json';
 
-    // Add Apple touch icon
-    let linkAppleIcon = document.querySelector('link[rel="apple-touch-icon"]') as HTMLLinkElement;
-    if (!linkAppleIcon) {
-      linkAppleIcon = document.createElement('link');
-      linkAppleIcon.rel = 'apple-touch-icon';
-      document.head.appendChild(linkAppleIcon);
-    }
-    linkAppleIcon.href = '/apple-touch-icon.png';
-
     // Inject JSON-LD structured data
     const structuredData = {
       "@context": "https://schema.org",
@@ -116,12 +107,6 @@ export function SEOHead({
           "@id": `${canonicalUrl}/#organization`,
           "name": "Keylessly",
           "url": canonicalUrl,
-          "logo": {
-            "@type": "ImageObject",
-            "url": `${canonicalUrl}/logo.svg`,
-            "width": 256,
-            "height": 256
-          },
           "description": "Solution premium de clés digitales Apple & Google Wallet pour hôtels de luxe",
           "address": {
             "@type": "PostalAddress",
