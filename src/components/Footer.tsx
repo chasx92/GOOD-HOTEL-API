@@ -10,10 +10,7 @@ export function Footer() {
     <footer
       role="contentinfo"
       aria-label="Informations de bas de page"
-      style={{
-        background: 'rgba(255, 255, 255, 0.8)',
-        borderTop: '1px solid #E5E5EA',
-              }}
+      className="bg-transparent"
     >
       <div id="contact" className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
         <div className="flex flex-col items-center gap-4 mb-12 text-center">
