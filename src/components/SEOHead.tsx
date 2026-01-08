@@ -118,9 +118,9 @@ export function SEOHead({
           "url": canonicalUrl,
           "logo": {
             "@type": "ImageObject",
-            "url": `${canonicalUrl}/logo.png`,
-            "width": 512,
-            "height": 512
+            "url": `${canonicalUrl}/logo.svg`,
+            "width": 256,
+            "height": 256
           },
           "description": "Solution premium de clés digitales Apple & Google Wallet pour hôtels de luxe",
           "address": {
