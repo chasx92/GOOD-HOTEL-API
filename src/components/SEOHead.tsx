@@ -88,15 +88,6 @@ export function SEOHead({
     }
     linkCanonical.href = canonicalUrl;
 
-    // Add manifest link
-    let linkManifest = document.querySelector('link[rel="manifest"]') as HTMLLinkElement;
-    if (!linkManifest) {
-      linkManifest = document.createElement('link');
-      linkManifest.rel = 'manifest';
-      document.head.appendChild(linkManifest);
-    }
-    linkManifest.href = '/manifest.json';
-
     // Inject JSON-LD structured data
     const structuredData = {
       "@context": "https://schema.org",
