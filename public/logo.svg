@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="unlockyMarkTitle">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 668 509" role="img" aria-labelledby="unlockyMarkTitle">
   <title id="unlockyMarkTitle">Unlocky logo</title>
-  <rect width="256" height="256" fill="white" rx="32" />
+  <rect width="668" height="509" fill="white" />
   <path
-    d="M80 48 V168 Q80 208 128 208 Q176 208 176 160 V96 Q176 48 128 48 Q104 48 104 80 V144"
+    d="M186 82 V332 Q186 436 334 436 Q482 436 482 332 V176 Q482 82 334 82 Q266 82 266 150 V284"
     fill="none"
     stroke="#111111"
-    stroke-width="40"
+    stroke-width="80"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
