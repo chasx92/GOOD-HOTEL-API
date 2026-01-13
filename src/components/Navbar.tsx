@@ -14,6 +14,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const isMobileLanding = location.pathname === '/mobile';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,9 +41,9 @@ export function Navbar({ onCTAClick }: NavbarProps) {
     onCTAClick?.();
   };
 
-  const scrollToSection = (id: string) => {
-    if (location.pathname !== '/') {
-      navigate({ pathname: '/', hash: `#${id}` });
+  const scrollToSection = (id: string, path = '/') => {
+    if (location.pathname !== path) {
+      navigate({ pathname: path, hash: `#${id}` });
       setMobileMenuOpen(false);
       return;
     }
@@ -55,7 +56,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
   };
 
   useEffect(() => {
-    if (location.pathname !== '/' || !location.hash) {
+    if (!['/', '/mobile'].includes(location.pathname) || !location.hash) {
       return;
     }
 
@@ -70,12 +71,21 @@ export function Navbar({ onCTAClick }: NavbarProps) {
     }
   }, [location.hash, location.pathname]);
 
-  const navLinks = [
-    { label: t.navbar.features, href: 'steps' },
-    { label: t.navbar.pricing, href: 'pricing' },
-    { label: t.navbar.faq, href: 'faq' },
-    { label: t.navbar.contact, href: 'contact' },
-  ];
+  const navLinks = isMobileLanding
+    ? [
+        { label: t.mobileNav.features, href: 'mobile-features', path: '/mobile' },
+        { label: t.mobileNav.steps, href: 'mobile-steps', path: '/mobile' },
+        { label: t.mobileNav.contact, href: 'mobile-contact', path: '/mobile' },
+      ]
+    : [
+        { label: t.navbar.features, href: 'steps', path: '/' },
+        { label: t.navbar.pricing, href: 'pricing', path: '/' },
+        { label: t.navbar.faq, href: 'faq', path: '/' },
+        { label: t.navbar.contact, href: 'contact', path: '/' },
+      ];
+  const mobileSwitch = isMobileLanding
+    ? { to: '/', label: t.mobilePage.ctaSecondary }
+    : { to: '/mobile', label: t.navbar.mobile };
 
   return (
     <motion.nav
@@ -100,7 +110,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               href="#hero"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('hero');
+                scrollToSection(isMobileLanding ? 'mobile-hero' : 'hero', isMobileLanding ? '/mobile' : '/');
               }}
               className="flex items-center cursor-pointer group"
               whileHover={{ scale: 1.02 }}
@@ -119,7 +129,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                   href={`#${link.href}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(link.href);
+                    scrollToSection(link.href, link.path);
                   }}
                   className="relative text-[15px] font-bold text-black nav-link-underline transition-colors"
                   whileHover={{ y: -1 }}
@@ -129,10 +139,10 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               ))}
 
               <Link
-                to="/mobile"
+                to={mobileSwitch.to}
                 className="relative text-[15px] font-bold text-black nav-link-underline transition-colors"
               >
-                {t.navbar.mobile}
+                {mobileSwitch.label}
               </Link>
             </div>
 
@@ -191,7 +201,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                   href={`#${link.href}`}
                   onClick={(e) => {
                     e.preventDefault();
-                    scrollToSection(link.href);
+                    scrollToSection(link.href, link.path);
                   }}
                   className="block text-lg font-bold text-black"
                 >
@@ -200,11 +210,11 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               ))}
 
               <Link
-                to="/mobile"
+                to={mobileSwitch.to}
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-lg font-bold text-black"
               >
-                {t.navbar.mobile}
+                {mobileSwitch.label}
               </Link>
 
               <div className="pt-4 border-t border-gray-100 flex flex-col gap-4">

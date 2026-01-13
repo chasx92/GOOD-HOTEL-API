@@ -284,6 +284,12 @@ export interface Translations {
     contactCTA: string;
     desktopCTA: string;
   };
+
+  mobileNav: {
+    features: string;
+    steps: string;
+    contact: string;
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -648,6 +654,11 @@ export const translations: Record<Language, Translations> = {
       contactCTA: 'Planifier un appel',
       desktopCTA: 'Afficher la version ordinateur',
     },
+    mobileNav: {
+      features: 'Fonctionnalités',
+      steps: 'Parcours',
+      contact: 'Contact',
+    },
   },
   en: {
     navbar: {
@@ -990,6 +1001,11 @@ export const translations: Record<Language, Translations> = {
       contactSubtitle: 'Let’s schedule a quick call right from your phone.',
       contactCTA: 'Schedule a call',
       desktopCTA: 'View desktop version',
+    },
+    mobileNav: {
+      features: 'Features',
+      steps: 'Steps',
+      contact: 'Contact',
     },
   },
 };
