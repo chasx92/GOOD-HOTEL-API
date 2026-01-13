@@ -42,17 +42,20 @@ export function Navbar({ onCTAClick }: NavbarProps) {
   };
 
   const scrollToSection = (id: string, path = '/') => {
-    if (location.pathname !== path) {
-      navigate({ pathname: path, hash: `#${id}` });
-      setMobileMenuOpen(false);
-      return;
+    const targetHash = `#${id}`;
+    const shouldNavigate = location.pathname !== path || location.hash !== targetHash;
+    setMobileMenuOpen(false);
+
+    if (shouldNavigate) {
+      navigate({ pathname: path, hash: targetHash });
     }
 
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-    setMobileMenuOpen(false);
+    requestAnimationFrame(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   };
 
   useEffect(() => {
@@ -94,8 +97,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      style={{
-              }}
+      style={{}}
     >
       <div
         className={`w-full transition-all duration-300 ${isScrolled
