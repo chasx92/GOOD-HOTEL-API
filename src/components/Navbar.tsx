@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Globe, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface NavbarProps {
@@ -12,6 +12,8 @@ export function Navbar({ onCTAClick }: NavbarProps) {
   const { language, setLanguage, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +25,13 @@ export function Navbar({ onCTAClick }: NavbarProps) {
   }, []);
 
   const scrollToForm = () => {
+    if (location.pathname !== '/') {
+      navigate({ pathname: '/', hash: '#form' });
+      setMobileMenuOpen(false);
+      onCTAClick?.();
+      return;
+    }
+
     const formSection = document.getElementById('form');
     if (formSection) {
       formSection.scrollIntoView({ behavior: 'smooth' });
@@ -32,12 +41,34 @@ export function Navbar({ onCTAClick }: NavbarProps) {
   };
 
   const scrollToSection = (id: string) => {
+    if (location.pathname !== '/') {
+      navigate({ pathname: '/', hash: `#${id}` });
+      setMobileMenuOpen(false);
+      return;
+    }
+
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
     setMobileMenuOpen(false);
   };
+
+  useEffect(() => {
+    if (location.pathname !== '/' || !location.hash) {
+      return;
+    }
+
+    const targetId = location.hash.replace('#', '');
+    if (!targetId) {
+      return;
+    }
+
+    const target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location.hash, location.pathname]);
 
   const navLinks = [
     { label: t.navbar.features, href: 'steps' },
