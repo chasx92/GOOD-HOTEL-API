@@ -11,7 +11,6 @@ const HERO_STYLES = {
   brandColor: '#C3A36E',
   fontFamily: FONT_BODY,
   paddingTop: 'calc(var(--spacing) * 12)',
-  paddingBottom: 'calc(var(--spacing) * 6)',
   maxWidth: '1440px',
 } as const;
 
@@ -56,11 +55,10 @@ export function Hero({ onPrimaryClick }: HeroProps) {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="relative flex items-center overflow-hidden"
+      className="relative flex items-center overflow-hidden pb-10 md:pb-16"
       style={{
         background: HERO_STYLES.background,
         paddingTop: HERO_STYLES.paddingTop,
-        paddingBottom: HERO_STYLES.paddingBottom,
         fontFamily: HERO_STYLES.fontFamily,
       }}
     >

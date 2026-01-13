@@ -36,11 +36,10 @@ export function Steps() {
     <section
       id="steps"
       aria-labelledby="steps-heading"
-      className="relative overflow-hidden scroll-mt-16"
+      className="relative overflow-hidden scroll-mt-16 pt-8 md:pt-12"
       ref={ref}
       style={{
         background: 'transparent',
-        paddingTop: 'calc(var(--spacing) * 12)', // Réduit de 64px à 48px
         paddingBottom: 'calc(var(--spacing) * 14)', // Réduit de 80px à 56px
       }}
     >
