@@ -7,7 +7,9 @@ import { MobileCTA } from '../components/mobile/MobileCTA';
 
 export function MobileHome() {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
   }, []);
 
   return (
