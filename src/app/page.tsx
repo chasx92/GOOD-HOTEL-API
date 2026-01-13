@@ -2,7 +2,6 @@
 
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
-import { ProofBar } from '@/components/ProofBar';
 import { Steps } from '@/components/Steps';
 import { Security } from '@/components/Security';
 import { Benefits } from '@/components/Benefits';
@@ -20,7 +19,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <ProofBar />
         <Steps />
         <Security />
         <Benefits />
