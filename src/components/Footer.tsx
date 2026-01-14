@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Linkedin, Mail, Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { Logo } from './Logo';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -13,7 +14,11 @@ export function Footer() {
       className="bg-transparent"
     >
       <div id="contact" className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
-        <div className="flex flex-col items-center gap-4 mb-12 text-center">
+        <div className="flex flex-col items-center gap-6 mb-12 text-center">
+          {/* Logo */}
+          <Logo className="h-12 text-black" />
+
+          {/* Social Icons */}
           <div className="flex items-center gap-3">
             <a
               href="tel:0695857756"

@@ -8,12 +8,12 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = "Unlocky - Clés Digitales Apple & Google Wallet pour Hôtels Premium",
-  description = "Transformez l'expérience de vos clients avec des clés digitales dans Apple & Google Wallet. Solution premium pour hôtels 5 étoiles. Intégration ASSA ABLOY, dormakaba, SALTO. Réduisez vos coûts, augmentez la satisfaction client.",
+  title = "Unlocky - La Clé Mobile et Digitale pour Hôtels Premium",
+  description = "Transformez le smartphone de vos clients en clé d'hôtel. Unlocky digitalise vos accès pour une arrivée simplifiée : Web, App ou Wallet. Modernisez votre accueil.",
   ogImage = "https://unlocky.io/og-image.jpg",
   canonicalUrl = "https://unlocky.io"
 }: SEOHeadProps) {
-  
+
   useEffect(() => {
     // Set document title
     document.title = title;
@@ -25,12 +25,12 @@ export function SEOHead({
       { name: 'keywords', content: 'clé digitale hôtel, Apple Wallet clé chambre, Google Wallet hôtel, accès mobile chambre, keyless entry hôtel, clé smartphone, ASSA ABLOY, dormakaba, SALTO, clé NFC, hôtel 5 étoiles, digital key hotel' },
       { name: 'author', content: 'Unlocky' },
       { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
-      
+
       // Language & Geo
       { name: 'language', content: 'fr' },
       { name: 'geo.region', content: 'FR' },
       { name: 'geo.placename', content: 'Paris' },
-      
+
       // Open Graph / Facebook
       { property: 'og:type', content: 'website' },
       { property: 'og:site_name', content: 'Unlocky' },
@@ -42,7 +42,7 @@ export function SEOHead({
       { property: 'og:image:alt', content: 'Unlocky - Clé digitale dans Apple Wallet sur iPhone 15 Pro' },
       { property: 'og:url', content: canonicalUrl },
       { property: 'og:locale', content: 'fr_FR' },
-      
+
       // Twitter Card
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@Unlocky' },
@@ -51,13 +51,13 @@ export function SEOHead({
       { name: 'twitter:description', content: description },
       { name: 'twitter:image', content: ogImage },
       { name: 'twitter:image:alt', content: 'Unlocky - Clé digitale dans Apple Wallet sur iPhone 15 Pro' },
-      
+
       // Mobile & Apple specific
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       { name: 'apple-mobile-web-app-title', content: 'Unlocky' },
       { name: 'format-detection', content: 'telephone=no' },
-      
+
       // Theme color
       { name: 'theme-color', content: '#F2F2F7' },
       { name: 'msapplication-TileColor', content: '#C3A36E' },
@@ -67,15 +67,15 @@ export function SEOHead({
     metaTags.forEach(({ name, property, content }) => {
       const attribute = name ? 'name' : 'property';
       const value = name || property;
-      
+
       let metaElement = document.querySelector(`meta[${attribute}="${value}"]`) as HTMLMetaElement;
-      
+
       if (!metaElement) {
         metaElement = document.createElement('meta');
         metaElement.setAttribute(attribute, value!);
         document.head.appendChild(metaElement);
       }
-      
+
       metaElement.setAttribute('content', content);
     });
 
