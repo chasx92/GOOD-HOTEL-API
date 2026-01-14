@@ -272,7 +272,7 @@ export const translations: Record<Language, Translations> = {
       title: 'La clé est déjà dans le {highlight} de vos clients',
       titleHighlight: 'téléphone',
       subtitle:
-        "Transformez l'expérience d'arrivée avec des clés Apple Wallet et Google Wallet. Sans application à télécharger, sans carte plastique, sans friction.",
+        "Transformez l'expérience d'arrivée avec des clés Apple Wallet et Google Wallet. Sans carte plastique, sans friction.",
       statusAvailable: 'Disponible maintenant',
       cta: 'Demander une démo',
       ctaSecondary: 'Comment ça marche',
@@ -302,7 +302,7 @@ export const translations: Record<Language, Translations> = {
       step1: {
         title: 'Réservation confirmée',
         description:
-          "Le client reçoit automatiquement sa clé digitale dans Apple Wallet ou Google Wallet. Aucune application à télécharger.",
+          'Le client reçoit automatiquement sa clé digitale dans Apple Wallet ou Google Wallet.',
       },
       step2: {
         title: "Arrivée à l'hôtel",
