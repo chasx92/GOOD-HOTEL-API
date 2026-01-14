@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Globe, ChevronRight } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface NavbarProps {
@@ -14,7 +14,6 @@ export function Navbar({ onCTAClick }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const isMobileLanding = location.pathname === '/mobile';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +58,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
   };
 
   useEffect(() => {
-    if (!['/', '/mobile'].includes(location.pathname) || !location.hash) {
+    if (location.pathname !== '/' || !location.hash) {
       return;
     }
 
@@ -74,21 +73,12 @@ export function Navbar({ onCTAClick }: NavbarProps) {
     }
   }, [location.hash, location.pathname]);
 
-  const navLinks = isMobileLanding
-    ? [
-        { label: t.mobileNav.features, href: 'mobile-features', path: '/mobile' },
-        { label: t.mobileNav.steps, href: 'mobile-steps', path: '/mobile' },
-        { label: t.mobileNav.contact, href: 'mobile-contact', path: '/mobile' },
-      ]
-    : [
-        { label: t.navbar.features, href: 'steps', path: '/' },
-        { label: t.navbar.pricing, href: 'pricing', path: '/' },
-        { label: t.navbar.faq, href: 'faq', path: '/' },
-        { label: t.navbar.contact, href: 'contact', path: '/' },
-      ];
-  const mobileSwitch = isMobileLanding
-    ? { to: '/', label: t.mobilePage.ctaSecondary }
-    : { to: '/mobile', label: t.navbar.mobile };
+  const navLinks = [
+    { label: t.navbar.features, href: 'steps', path: '/' },
+    { label: t.navbar.pricing, href: 'pricing', path: '/' },
+    { label: t.navbar.faq, href: 'faq', path: '/' },
+    { label: t.navbar.contact, href: 'contact', path: '/' },
+  ];
 
   return (
     <motion.nav
@@ -112,7 +102,7 @@ export function Navbar({ onCTAClick }: NavbarProps) {
               href="#hero"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection(isMobileLanding ? 'mobile-hero' : 'hero', isMobileLanding ? '/mobile' : '/');
+                scrollToSection('hero', '/');
               }}
               className="flex items-center cursor-pointer group"
               whileHover={{ scale: 1.02 }}
@@ -140,12 +130,6 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                 </motion.a>
               ))}
 
-              <Link
-                to={mobileSwitch.to}
-                className="relative text-[15px] font-bold text-black nav-link-underline transition-colors"
-              >
-                {mobileSwitch.label}
-              </Link>
             </div>
 
             {/* Actions */}
@@ -210,14 +194,6 @@ export function Navbar({ onCTAClick }: NavbarProps) {
                   {link.label}
                 </a>
               ))}
-
-              <Link
-                to={mobileSwitch.to}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-lg font-bold text-black"
-              >
-                {mobileSwitch.label}
-              </Link>
 
               <div className="pt-4 border-t border-gray-100 flex flex-col gap-4">
                 <button

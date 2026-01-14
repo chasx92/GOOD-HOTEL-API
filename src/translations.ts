@@ -9,7 +9,6 @@ export interface Translations {
     faq: string;
     contact: string;
     cta: string;
-    mobile: string;
   };
 
   // Hero
@@ -257,39 +256,6 @@ export interface Translations {
     button: string;
   };
 
-  // Mobile landing
-  mobilePage: {
-    badge: string;
-    title: string;
-    subtitle: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
-    featuresTitle: string;
-    featuresSubtitle: string;
-    features: {
-      title: string;
-      description: string;
-    }[];
-    stepsTitle: string;
-    stepsSubtitle: string;
-    steps: {
-      title: string;
-      description: string;
-    }[];
-    securityTitle: string;
-    securitySubtitle: string;
-    securityNotes: string[];
-    contactTitle: string;
-    contactSubtitle: string;
-    contactCTA: string;
-    desktopCTA: string;
-  };
-
-  mobileNav: {
-    features: string;
-    steps: string;
-    contact: string;
-  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -301,7 +267,6 @@ export const translations: Record<Language, Translations> = {
       faq: 'FAQ',
       contact: 'Contact',
       cta: 'Demander une démo',
-      mobile: 'Version mobile',
     },
     hero: {
       title: 'La clé est déjà dans le {highlight} de vos clients',
@@ -603,62 +568,6 @@ export const translations: Record<Language, Translations> = {
       text: 'Prêt à offrir des clés numériques à vos clients ?',
       button: 'Planifier une démo',
     },
-    mobilePage: {
-      badge: 'Expérience mobile dédiée',
-      title: 'Une landing pensée uniquement pour vos clients sur smartphone',
-      subtitle:
-        "Présentez Unlocky dans un format compact, avec des sections indépendantes pour ne jamais casser la version ordinateur.",
-      ctaPrimary: 'Découvrir la page mobile',
-      ctaSecondary: 'Retour à la version ordinateur',
-      featuresTitle: 'Pensée pour les écrans mobiles',
-      featuresSubtitle: 'Des blocs courts, lisibles et testés pour une navigation du pouce.',
-      features: [
-        {
-          title: 'Navigation rapide',
-          description: 'Sections compactes et ancrages clairs pour guider vos prospects en mobilité.',
-        },
-        {
-          title: 'CTA toujours visible',
-          description: 'Appels à l’action répétés pour réserver une démo en un geste.',
-        },
-        {
-          title: 'Contenus séparés',
-          description: 'Les composants mobiles sont isolés pour éviter d’impacter la version desktop.',
-        },
-      ],
-      stepsTitle: 'Un parcours simple en 3 étapes',
-      stepsSubtitle: 'Présentez le fonctionnement en quelques lignes pour les écrans réduits.',
-      steps: [
-        {
-          title: 'Clé envoyée',
-          description: 'La clé arrive dans Apple Wallet ou Google Wallet dès la réservation.',
-        },
-        {
-          title: 'Arrivée immédiate',
-          description: 'Le client ouvre sa chambre avec son téléphone, sans passage à la réception.',
-        },
-        {
-          title: 'Départ automatique',
-          description: 'La clé expire seule, sans carte à rendre ni friction.',
-        },
-      ],
-      securityTitle: 'Sécurité et rassurance',
-      securitySubtitle: 'Des rappels essentiels pour les décideurs qui consultent sur mobile.',
-      securityNotes: [
-        'Chiffrement et authentification biométrique toujours mis en avant.',
-        'Révocation immédiate en cas de perte du téléphone.',
-        'Infrastructure conforme RGPD hébergée en Europe.',
-      ],
-      contactTitle: 'Prêt à démarrer ? ',
-      contactSubtitle: 'Programmons un échange rapide directement depuis votre téléphone.',
-      contactCTA: 'Planifier un appel',
-      desktopCTA: 'Afficher la version ordinateur',
-    },
-    mobileNav: {
-      features: 'Fonctionnalités',
-      steps: 'Parcours',
-      contact: 'Contact',
-    },
   },
   en: {
     navbar: {
@@ -668,7 +577,6 @@ export const translations: Record<Language, Translations> = {
       faq: 'FAQ',
       contact: 'Contact',
       cta: 'Book a demo',
-      mobile: 'Mobile version',
     },
     hero: {
       title: 'The key is already in your guests’ {highlight}',
@@ -950,62 +858,6 @@ export const translations: Record<Language, Translations> = {
     stickyCTA: {
       text: 'Ready to offer digital keys to your guests?',
       button: 'Plan a demo',
-    },
-    mobilePage: {
-      badge: 'Dedicated mobile experience',
-      title: 'A standalone landing page designed for smartphones',
-      subtitle:
-        'Showcase Unlocky in a compact, mobile-first format so desktop updates never affect the phone experience.',
-      ctaPrimary: 'View the mobile page',
-      ctaSecondary: 'Back to desktop version',
-      featuresTitle: 'Built for small screens',
-      featuresSubtitle: 'Short sections, thumb-friendly spacing and clear anchor points.',
-      features: [
-        {
-          title: 'Fast navigation',
-          description: 'Compact sections with clear anchors to guide prospects on the go.',
-        },
-        {
-          title: 'Always-on CTA',
-          description: 'Repeated calls to action so booking a demo stays one tap away.',
-        },
-        {
-          title: 'Isolated content',
-          description: 'Mobile components live separately to avoid breaking the desktop layout.',
-        },
-      ],
-      stepsTitle: 'A simple 3-step journey',
-      stepsSubtitle: 'Explain how it works in just a few lines for mobile readers.',
-      steps: [
-        {
-          title: 'Key delivered',
-          description: 'The key lands in Apple Wallet or Google Wallet as soon as the booking is confirmed.',
-        },
-        {
-          title: 'Instant arrival',
-          description: 'Guests open their room with their phone—no reception detour.',
-        },
-        {
-          title: 'Automatic checkout',
-          description: 'The key expires on its own—no card drop-off, no friction.',
-        },
-      ],
-      securityTitle: 'Security and reassurance',
-      securitySubtitle: 'Mobile-friendly reminders for decision makers on the move.',
-      securityNotes: [
-        'Encryption and biometric authentication stay front and center.',
-        'Instant revocation if a phone is lost.',
-        'GDPR-compliant infrastructure hosted in Europe.',
-      ],
-      contactTitle: 'Ready to get started?',
-      contactSubtitle: 'Let’s schedule a quick call right from your phone.',
-      contactCTA: 'Schedule a call',
-      desktopCTA: 'View desktop version',
-    },
-    mobileNav: {
-      features: 'Features',
-      steps: 'Steps',
-      contact: 'Contact',
     },
   },
 };
