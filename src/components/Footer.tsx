@@ -16,7 +16,9 @@ export function Footer() {
       <div id="contact" className="max-w-[1440px] mx-auto px-5 md:px-6 lg:px-24 pt-12 pb-8">
         <div className="flex flex-col items-center gap-6 mb-12 text-center">
           {/* Logo */}
-          <Logo className="h-12 text-black" />
+          <div className="my-6 md:my-8">
+            <Logo className="h-12 text-black" />
+          </div>
 
           {/* Social Icons */}
           <div className="flex items-center gap-3">
