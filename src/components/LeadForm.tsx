@@ -283,7 +283,7 @@ export function LeadForm() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <h2
-            className="text-[28px] md:text-3xl lg:text-4xl text-balance"
+            className="text-[26px] md:text-3xl lg:text-4xl xl:text-5xl text-balance"
             style={{
               color: '#1C1C1E',
               fontFamily: FONT_HEADING,
@@ -295,7 +295,7 @@ export function LeadForm() {
             {t.form.title}
           </h2>
           <p 
-            className="text-[15px] md:text-[16px] max-w-md mx-auto text-pretty"
+            className="text-[15px] md:text-base lg:text-lg max-w-md mx-auto text-pretty"
             style={{
               color: '#3C3C43',
               fontFamily: FONT_BODY,
