@@ -270,7 +270,7 @@ export function LeadForm() {
       style={{
         background: 'transparent',
         paddingTop: 'calc(var(--spacing) * 12)', // Réduit de 80px à 48px
-        paddingBottom: 'calc(var(--spacing) * 16)', // Réduit de 80px à 64px pour le footer
+        paddingBottom: 'calc(var(--spacing) * 6)', // Aligné avec l'espacement du footer
       }}
     >
       <div className="max-w-[700px] mx-auto px-5 md:px-6">
