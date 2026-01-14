@@ -9,7 +9,7 @@ export function Steps() {
     <section
       id="steps"
       aria-label="Séparateurs de section"
-      className="relative overflow-hidden scroll-mt-16"
+      className="relative overflow-hidden scroll-mt-16 lg:-mt-6"
       ref={ref}
       style={{
         background: 'transparent',
